@@ -3,518 +3,653 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
+  <meta name="description" content="HEAR introduces the VSLA paradigm with causal audio memory and temporal grounding for sound-centric robot manipulation in simulation and real-world settings.">
+  <meta name="keywords" content="robot learning, VLA, VSLA, sound-centric manipulation, multimodal learning, imitation learning, HEAR-Bench, OpenX-Sound">
+  <meta name="author" content="Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Shanghai Jiao Tong University - Intelligent Robotics">
+  <meta property="og:title" content="Towards the Vision-Sound-Language-Action Paradigm: HEAR">
+  <meta property="og:description" content="A VSLA framework for sound-centric manipulation with streaming audio memory, temporal prediction, and robust action chunk generation.">
+  <meta property="og:url" content="https://biubiu3.github.io/HEAR-Web/">
+  <meta property="og:image" content="https://biubiu3.github.io/HEAR-Web/static/images/headpic.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:image:alt" content="HEAR framework overview">
+  <meta property="article:published_time" content="2026-03-16T00:00:00.000Z">
+  <meta property="article:author" content="Chang Nie">
+  <meta property="article:section" content="Robotics">
+  <meta property="article:tag" content="Vision-Sound-Language-Action">
+  <meta property="article:tag" content="Robot Manipulation">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Towards the Vision-Sound-Language-Action Paradigm: HEAR">
+  <meta name="twitter:description" content="Sound-centric robotic manipulation with causal audio persistence and temporal grounding.">
+  <meta name="twitter:image" content="https://biubiu3.github.io/HEAR-Web/static/images/headpic.png">
+  <meta name="twitter:image:alt" content="HEAR framework overview">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
+  <meta name="citation_author" content="Nie, Chang">
+  <meta name="citation_author" content="Deng, Tianchen">
+  <meta name="citation_author" content="Wang, Guangming">
+  <meta name="citation_author" content="Liu, Zhe">
+  <meta name="citation_author" content="Wang, Hesheng">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="International Journal of Robotics Research (under review)">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/ARXIV_ID.pdf">
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>HEAR: Towards Vision-Sound-Language-Action | Project Page</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="icon" type="image/png" href="static/images/logo3.png">
+  <link rel="apple-touch-icon" href="static/images/logo3.png">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script data-goatcounter="https://hear.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+    "description": "We formalize Vision-Sound-Language-Action (VSLA) and introduce HEAR, a framework with causal audio memory and temporal dynamics learning for sound-centric manipulation.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Chang Nie"},
+      {"@type": "Person", "name": "Tianchen Deng"},
+      {"@type": "Person", "name": "Guangming Wang"},
+      {"@type": "Person", "name": "Zhe Liu"},
+      {"@type": "Person", "name": "Hesheng Wang"}
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-03-16",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "Shanghai Jiao Tong University"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "url": "https://biubiu3.github.io/HEAR-Web/",
+    "image": "https://biubiu3.github.io/HEAR-Web/static/images/headpic.png",
+    "keywords": ["VSLA", "VLA", "robot manipulation", "sound-centric manipulation", "multimodal learning"],
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+      "@id": "https://biubiu3.github.io/HEAR-Web/"
+    }
   }
   </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
   <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Project quick links">
+      <i class="fas fa-link"></i>
+      Quick Links
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
+        <h4>Project Resources</h4>
         <button class="close-btn" onclick="toggleMoreWorks()">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+        <a href="#story" class="work-item">
           <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
+            <h5>From VLA to VSLA</h5>
+            <p>How audio exposes the limits of standard VLA control.</p>
+            <span class="work-venue">Section</span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
+          <i class="fas fa-arrow-right"></i>
         </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+        <a href="#framework" class="work-item">
           <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>HEAR Framework</h5>
+            <p>System overview and the role of each module.</p>
+            <span class="work-venue">Section</span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
+          <i class="fas fa-arrow-right"></i>
         </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+        <a href="#evaluation" class="work-item">
           <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
+            <h5>Evaluation Design</h5>
+            <p>How the benchmark and real-robot experiments are constructed.</p>
+            <span class="work-venue">Section</span>
           </div>
-          <i class="fas fa-external-link-alt"></i>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#videos" class="work-item">
+          <div class="work-info">
+            <h5>Experiment Videos</h5>
+            <p>Real-robot qualitative demonstrations.</p>
+            <span class="work-venue">Section</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
         </a>
       </div>
     </div>
   </div>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-fluid">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <img src="static/images/logo2.png" alt="HEAR project logo" class="project-logo" loading="eager">
+              <h1 class="title is-1 publication-title">
+                <span class="publication-title-line">Towards the Vision-Sound-Language-Action Paradigm:</span>
+                <span class="publication-title-line">The HEAR Framework for Sound-Centric Manipulation</span>
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Chang Nie<sup>1</sup>,</span>
+                <span class="author-block">Tianchen Deng<sup>1</sup>,</span>
+                <span class="author-block">Guangming Wang<sup>2</sup>,</span>
+                <span class="author-block">Zhe Liu<sup>1</sup>,</span>
+                <span class="author-block">Hesheng Wang<sup>1</sup></span>
+              </div>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University, China</span>
+                <span class="author-block"><sup>2</sup>University of Cambridge, UK</span>
+              </div>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/ARXIV_ID.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/biubiu3/HEAR-Web" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+    <section class="section" id="story">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">From VLA to VSLA</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Modern Vision-Language-Action policies have shown that large multimodal models can map images, language, and robot state directly to action.
+            This works well when task-relevant evidence is visually persistent.
+            A cup stays on the table, a drawer remains open, and the camera can observe those facts over many control cycles.
+            Recent systems have started to add audio, but in most cases sound is still treated as an episodic input before action or as a channel mainly for speech understanding.
+          </p>
+          <p>
+            Sound-centric manipulation is different.
+            Here the critical evidence may be a brief beep, a collision click, a subtle change in boiling sound, or the prosody of a spoken confirmation.
+            These cues are often short, non-repeatable, and only meaningful if the robot listens at the right moment during execution.
+            The problem is not just adding one more modality, but dealing with the fact that audio is distributed over time very differently from vision.
+          </p>
+          <p>
+            Existing ways of attaching sound to VLA are often too static for this setting.
+            Automatic speech recognition throws away non-speech cues and prosody, while waveform-as-image adapters flatten a temporal signal into a single visual snapshot.
+            Both approaches become brittle when the cue is brief, when the cue happens between two policy queries, or when the task depends on how sound evolves rather than on one isolated event.
+          </p>
+          <p>
+            This is exactly where modern action chunking becomes a problem.
+            Large policies often predict a chunk of actions and execute it open-loop to keep motion smooth.
+            During that interval, new observations cannot change the current command sequence.
+            For sound-centric tasks, this creates a structural blind spot: a short cue can happen and vanish before the next decision ever sees it.
+            We refer to this as the <b>Blind Execution Interval</b>.
+          </p>
+          <p>
+            These limitations motivate the <b>Vision-Sound-Language-Action</b> paradigm.
+            VSLA extends VLA from “see and act” to “see, hear, remember, and react” under delayed asynchronous control.
+            In this paper we instantiate that paradigm with <b>HEAR</b>, and we accompany it with a pretraining dataset and a sound-causal benchmark so that the whole pipeline can be trained and evaluated consistently.
+          </p>
+        </div>
+        <figure class="image figure-panel">
+          <img src="static/images/headpic.png" alt="HEAR framework and sound-centric manipulation overview" loading="lazy">
+        </figure>
+        <p class="figure-caption">
+          HEAR reframes manipulation from a vision-dominant setting into a sound-causal one: the policy must preserve fleeting acoustic evidence, reason over multi-sensory context, and only act after the right sound condition has actually occurred.
+        </p>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What We Propose</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our response has three parts.
+            First, we formalize VSLA as a control setting in which each decision receives delayed multi-view vision, a causal audio segment, language, and proprioception.
+            Second, we design HEAR as a concrete architecture for that setting.
+            Third, we build the surrounding resources needed to train and test such a system at scale.
+          </p>
+          <p>
+            HEAR is designed around two bottlenecks identified in the paper.
+            The first is <b>causal persistence</b>: transient cues must survive across execution gaps.
+            The second is <b>temporal grounding</b>: during long waiting periods with quasi-static vision, the policy still needs a sense of how the task is progressing over time.
+          </p>
+          <p>
+            Beyond the model itself, the paper also contributes <b>OpenX-Sound</b> for large-scale audio-augmented pretraining and <b>HEAR-Bench</b> for strict sound-causal evaluation.
+            This matters because a system like HEAR is only meaningful if the benchmark explicitly rejects visually plausible but acoustically wrong behavior.
+          </p>
+        </div>
+        <div class="columns is-multiline story-grid">
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">VSLA</h3>
+              <p>A control paradigm for delayed robot decisions conditioned on vision, streaming sound, language, and proprioception.</p>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">HEAR</h3>
+              <p>An architecture that couples causal audio memory with multimodal reasoning, temporal prediction, and smooth action generation.</p>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">OpenX-Sound</h3>
+              <p>An audio-augmented pretraining resource that extends Open X-Embodiment with synchronized sound.</p>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">HEAR-Bench</h3>
+              <p>A sound-causal benchmark that rejects premature actions and tests whether the policy truly listens before acting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="framework">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">How HEAR Works</h2>
+        <div class="content has-text-justified">
+          <p>
+            The overall logic of HEAR follows the same progression as the problem itself.
+            If sound can be lost between two policy queries, the system first needs a memory mechanism.
+            If long waiting periods make the task temporally ambiguous, the system then needs a representation that understands progression over time.
+            If the final policy is executed in chunks, it also needs an action generator that stays smooth enough to avoid introducing unnecessary ego-noise.
+          </p>
+        </div>
+        <figure class="image figure-panel">
+          <img src="static/images/overview.png" alt="HEAR full architecture overview" loading="lazy">
+        </figure>
+        <p class="figure-caption">
+          HEAR processes sound continuously, reasons over integrated multi-sensory context at decision time, learns temporal progression through future-audio prediction, and produces smooth action chunks for execution.
+        </p>
+
+        <h3 class="title is-4 has-text-centered module-title">Historizer</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="static/images/Historizer.png" alt="Historizer module figure" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              The <b>Historizer</b> is a streaming stateful transformer that updates a compact causal memory from incoming audio packets.
+              It directly targets the BEI issue by preserving short-lived cues that would otherwise disappear from a fixed per-query window.
+            </p>
+            <p>
+              Instead of forcing the backbone to process very long raw windows, it carries forward a compressed memory state aligned with real execution gaps.
+              This is what lets the next decision know that a critical cue just happened even if the cue itself has already vanished.
+            </p>
+            <p>
+              In other words, the Historizer is the part that keeps the system causally aware of the recent acoustic past.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Envisioner</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="static/images/Envisioner.png" alt="Envisioner module figure" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              The <b>Envisioner</b> is a hierarchical multimodal reasoner.
+              A high-level omni-model fuses vision, language, proprioception, current audio window, and Historizer memory into semantic context;
+              a low-level model reuses this context for control-oriented features.
+            </p>
+            <p>
+              This split is important because sound-centric tasks often contain visually similar phases with different intent, such as waiting, monitoring, reacting, or overriding an action already in progress.
+              The Envisioner turns those subtle differences into a control-ready representation.
+            </p>
+            <p>
+              It is also the module that lets HEAR bind sound evidence to task context, instead of treating audio as an isolated side channel.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Advancer</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="static/images/Advancer.png" alt="Advancer module figure" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              The <b>Advancer</b> predicts near-future audio codes from latent representations.
+              This auxiliary objective injects explicit temporal grounding, helping the policy disambiguate long quasi-static waiting phases.
+            </p>
+            <p>
+              This matters most in process-monitoring tasks, where the robot must detect progression over time rather than respond to a single spike.
+              The Advancer encourages the latent space to encode how the scene is evolving acoustically.
+            </p>
+            <p>
+              This turns audio from a mere detection signal into a source of temporal structure for long-horizon control.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Realizer</h3>
+        <div class="module-panel text-only-panel">
+          <div class="content has-text-justified">
+            <p>
+              The <b>Realizer</b> transforms the inferred control state into smooth joint-position action chunks using conditional flow matching.
+              This design is not just about nicer motion.
+              In sound-centric manipulation, jerky behavior injects ego-noise and can mask weak task-relevant acoustic cues.
+            </p>
+            <p>
+              By generating smoother chunks, the Realizer improves both control quality and acoustic observability, which is especially important in tasks that alternate between waiting, listening, and fast reaction.
+            </p>
+            <p>
+              The Realizer closes the loop by making the action side consistent with the auditory demands of the task.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="evaluation">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Training Data and Evaluation Pipeline</h2>
+        <div class="content has-text-justified">
+          <p>
+            The paper argues that a new architecture alone is not enough.
+            Sound-centric manipulation also lacks the large-scale pretraining data and the timing-aware benchmarks that made VLA progress possible in the first place.
+            For that reason, HEAR is paired with both a training resource and a dedicated evaluation suite.
+          </p>
+          <p>
+            <b>OpenX-Sound</b> augments Open X-Embodiment trajectories with synchronized audio so that the model can first learn broad multi-sensory representations.
+            After that pretraining stage, HEAR is fine-tuned on task-specific demonstrations and evaluated in settings where sound is genuinely necessary for success.
+          </p>
+          <p>
+            <b>HEAR-Bench</b> is designed specifically for sound-causal manipulation.
+            Its tasks span four categories of acoustic cues: event-triggered alarms, human speech, continuous process sounds, and physical interaction feedback.
+            Across the suite, success is timing-sensitive: if the robot reaches the goal before the required sound cue occurs, the rollout is marked as failure.
+          </p>
+        </div>
+        <div class="columns is-multiline story-grid">
+          <div class="column is-half">
+            <div class="box text-card">
+              <h3 class="title is-5">Simulation benchmark</h3>
+              <p>
+                The seven simulation tasks are carefully chosen to cover complementary sound-centric challenges.
+                Alarm Clock and Microwave test waiting and transient triggers; Check Yes and Interrupt test speech timing and prosody; Check Materials tests impact acoustics; Pour Water and Boil Water test long-horizon process monitoring.
+              </p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box text-card">
+              <h3 class="title is-5">Real-robot deployment</h3>
+              <p>
+                The physical tasks increase difficulty with room reverberation, background noise, mechanical ego-noise, and stronger visual aliasing.
+                Moka Coffee requires process monitoring, Answer Phone is a multi-stage speech-and-event task, Shake Bottle uses active acoustic sensing, and Real Alarm Clock tests robust waiting under domain shift.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            These experiments are intentionally constructed rather than merely collected.
+            Each task isolates a specific failure mode of memoryless audio integration, such as transient cue dropout, prosody loss, visual aliasing, or long-horizon process monitoring.
+            Under this evaluation protocol, HEAR reaches <b>81%</b> average success in simulation and <b>54%</b> on real-robot tasks, with especially strong gains on brief non-speech triggers and process-monitoring scenarios.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
+    <section class="section" id="videos">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Experiment Videos</h2>
+        <div class="content has-text-justified">
+          <p>
+            This page currently highlights only <b>real-robot deployments</b>.
+            The selected tasks focus on long-horizon monitoring, active acoustic sensing, speech-conditioned progress tracking, and transient cue reaction under real-world noise and reverberation.
+            Each example is designed to answer a concrete question about what kind of sound-causal competence the model has learned.
+            Videos auto-play when they enter the viewport and pause once they leave it.
+          </p>
+        </div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <!--
+        Simulation task videos are intentionally hidden for the current page version.
+        Keep this block for easy restoration in future updates.
+        <h3 class="title is-5">Simulation Tasks</h3>
+        <div class="columns is-multiline single-video-list">
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Alarm Clock</b></p>
+              <p class="video-note"><b>Why this task:</b> The stop button is always visible, so a vision-only policy is strongly tempted to press early.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the robot can wait indefinitely, ignore a visually plausible shortcut, and only act after a sustained acoustic trigger actually begins.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/alarm_clock.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Microwave</b></p>
+              <p class="video-note"><b>Why this task:</b> A microwave ding is extremely brief and can disappear before the next policy query.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the model can survive cue dropout during chunked execution and act correctly even after the sound itself has already vanished.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/microwave.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Check Yes</b></p>
+              <p class="video-note"><b>Why this task:</b> The lexical content of the spoken feedback is effectively the same, so transcript-level supervision is insufficient.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the model can use intonation and prosody, not just words, to decide whether to keep the current object or switch to the alternative.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/check_yes.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Check Materials</b></p>
+              <p class="video-note"><b>Why this task:</b> The candidate surfaces are visually ambiguous, so appearance alone cannot reveal the correct material.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the robot can actively create informative contact audio and use impact timbre as a low-cost physical sensing signal.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/check_materials.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Interrupt</b></p>
+              <p class="video-note"><b>Why this task:</b> A speech command arrives during an ongoing motion rather than before the robot starts acting.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the policy can bind a spoken command to the current action state, interrupt safely, and switch behavior mid-execution.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/interrupt.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <h3 class="title is-5">Real-Robot Deployments</h3>
+        <div class="columns is-multiline single-video-list">
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Moka Coffee</b></p>
+              <p class="video-note"><b>Why this task:</b> A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.</p>
+              <p class="video-note"><b>What it tests:</b> Long-horizon process monitoring in a noisy real environment, where the robot must detect the transition to the sputtering phase before pouring.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/moka_pot_all_web.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Answer Phone</b></p>
+              <p class="video-note"><b>Why this task:</b> The robot revisits nearly identical visual states at different semantic stages of the task.</p>
+              <p class="video-note"><b>What it tests:</b> Multi-stage progress tracking with ring detection, speech understanding, and end-of-call recognition under severe visual aliasing.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/telephone_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Shake Bottle (Empty)</b></p>
+              <p class="video-note"><b>Why this task:</b> The hidden state cannot be recovered passively; the robot must first create the evidence itself.</p>
+              <p class="video-note"><b>What it tests:</b> Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/empty_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Shake Bottle (Occupied)</b></p>
+              <p class="video-note"><b>Why this task:</b> This companion case shows the same active sensing behavior under a different hidden physical state.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/occupied_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Real Alarm Clock</b></p>
+              <p class="video-note"><b>Why this task:</b> The simulation alarm setting is transferred into the physical world, where reverberation and background chatter distort the cue.</p>
+              <p class="video-note"><b>What it tests:</b> Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/alarm_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title has-text-centered">Paper PDF</h2>
+          <p class="mb-4">ArXiv PDF link placeholder. Replace <code>ARXIV_ID</code> once available.</p>
+          <a href="https://arxiv.org/pdf/ARXIV_ID.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Open arXiv PDF</span>
+          </a>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    </section>
 
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+<pre id="bibtex-code"><code>@article{nie2026hear,
+  title={Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation},
+  author={Nie, Chang and Deng, Tianchen and Wang, Guangming and Liu, Zhe and Wang, Hesheng},
+  journal={International Journal of Robotics Research (under review)},
+  year={2026},
+  url={https://biubiu3.github.io/HEAR-Web/}
+}</code></pre>
+      </div>
+    </section>
 
+    <section class="section" id="visits" data-goatcounter-site="hear" data-goatcounter-start="2026-03-16">
+      <div class="container is-max-desktop">
+        <div class="visit-card">
+          <div class="visit-header">
+            <div>
+              <h2 class="title is-3">Page Clicks</h2>
+              <p class="visit-subtitle">Cumulative opens of this project page after public tracking started.</p>
+            </div>
+            <div class="visit-summary">
+              <span class="visit-summary-label">Total clicks</span>
+              <strong id="visit-total">--</strong>
+            </div>
+          </div>
+          <div class="visit-chart-shell">
+            <div id="visit-chart-loading" class="visit-chart-loading">Loading cumulative clicks...</div>
+            <svg id="visit-chart" class="visit-chart" viewBox="0 0 960 360" role="img" aria-labelledby="visit-chart-title visit-chart-desc"></svg>
+            <div id="visit-chart-empty" class="visit-chart-empty" hidden>
+              Public click data is not available yet. In GoatCounter, enable visitor counts for your site and wait for the first tracked page loads.
+            </div>
+          </div>
+          <p id="visit-footnote" class="visit-footnote">Daily points are pulled from GoatCounter and plotted as a cumulative click trajectory.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+  <footer class="footer">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page is adapted from the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+              (based on <a href="https://nerfies.github.io" target="_blank">Nerfies</a>).
+              Source page: <a href="https://biubiu3.github.io/HEAR-Web/" target="_blank">https://biubiu3.github.io/HEAR-Web/</a>.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
