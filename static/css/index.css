@@ -128,16 +128,6 @@ body {
     margin-right: auto;
 }
 
-.publication-title-line {
-  display: block;
-}
-
-@media screen and (min-width: 1280px) {
-  .publication-title-line {
-    white-space: nowrap;
-  }
-}
-
 .project-logo {
   width: 132px;
   height: auto;
@@ -601,6 +591,7 @@ iframe {
   backdrop-filter: blur(8px);
 }
 
+.visit-chart-loading[hidden],
 .visit-chart-empty[hidden] {
   display: none;
 }
