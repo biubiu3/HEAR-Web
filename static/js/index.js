@@ -293,8 +293,8 @@ function renderVisitChart(svg, points) {
         : '';
 
     svg.innerHTML = `
-        <title id="visit-chart-title">Cumulative page clicks</title>
-        <desc id="visit-chart-desc">A cumulative line chart of project page clicks tracked by GoatCounter.</desc>
+        <title id="visit-chart-title">Cumulative visits</title>
+        <desc id="visit-chart-desc">A cumulative line chart of project page visits tracked by GoatCounter.</desc>
         <defs>
             <linearGradient id="visit-area-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stop-color="#2563eb" stop-opacity="0.24"></stop>
@@ -324,7 +324,7 @@ async function setupVisitChart() {
     const total = document.getElementById('visit-total');
     const footnote = document.getElementById('visit-footnote');
 
-    if (!section || !svg || !loading || !empty || !total || !footnote) return;
+    if (!section || !svg || !loading || !empty || !total) return;
 
     const siteCode = section.dataset.goatcounterSite;
     const startDate = section.dataset.goatcounterStart;
@@ -336,8 +336,11 @@ async function setupVisitChart() {
 
     if (start > today) {
         loading.hidden = true;
+        loading.style.display = 'none';
         empty.hidden = false;
-        footnote.textContent = 'The tracking start date is later than today. Update the visit chart configuration in index.html.';
+        if (footnote) {
+            footnote.textContent = '';
+        }
         return;
     }
 
@@ -347,14 +350,20 @@ async function setupVisitChart() {
 
         renderVisitChart(svg, points);
         total.textContent = formatDisplayNumber(points[points.length - 1].count);
-        footnote.textContent = `Tracking starts on ${start.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}. If you want every refresh to count as a click, disable Sessions in GoatCounter settings. Public counter data is cached and may lag slightly behind real time.`;
         loading.hidden = true;
+        loading.style.display = 'none';
+        if (footnote) {
+            footnote.textContent = '';
+        }
     } catch (error) {
         console.error('Failed to load visit chart:', error);
         loading.hidden = true;
+        loading.style.display = 'none';
         empty.hidden = false;
         total.textContent = '--';
-        footnote.textContent = 'If this stays empty after deployment, enable the public counter in GoatCounter or check whether a privacy blocker is preventing the request.';
+        if (footnote) {
+            footnote.textContent = '';
+        }
     }
 }
 
