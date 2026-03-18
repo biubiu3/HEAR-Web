@@ -38,40 +38,64 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+function copyUsingExecCommand(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.setAttribute('readonly', '');
+    textArea.style.position = 'fixed';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    textArea.setSelectionRange(0, textArea.value.length);
+    const copied = document.execCommand('copy');
+    document.body.removeChild(textArea);
+    return copied;
+}
+
+function updateCopyFeedback(button, copyText, ok) {
+    if (!button || !copyText) return;
+    button.classList.remove('copy-pop');
+    // Force reflow so repeated clicks replay the animation.
+    void button.offsetWidth;
+    button.classList.add('copy-pop');
+    button.classList.toggle('copied', ok);
+    copyText.textContent = ok ? 'Copied' : 'Failed';
+    setTimeout(function() {
+        button.classList.remove('copy-pop');
+        button.classList.remove('copied');
+        copyText.textContent = 'Copy';
+    }, 1800);
+}
+
 // Copy BibTeX to clipboard
 function copyBibTeX() {
     const bibtexElement = document.getElementById('bibtex-code');
     const button = document.querySelector('.copy-bibtex-btn');
-    const copyText = button.querySelector('.copy-text');
-    
-    if (bibtexElement) {
-        navigator.clipboard.writeText(bibtexElement.textContent).then(function() {
-            // Success feedback
-            button.classList.add('copied');
-            copyText.textContent = 'Cop';
-            
-            setTimeout(function() {
-                button.classList.remove('copied');
-                copyText.textContent = 'Copy';
-            }, 2000);
-        }).catch(function(err) {
-            console.error('Failed to copy: ', err);
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = bibtexElement.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            button.classList.add('copied');
-            copyText.textContent = 'Cop';
-            setTimeout(function() {
-                button.classList.remove('copied');
-                copyText.textContent = 'Copy';
-            }, 2000);
-        });
+    const copyText = button ? button.querySelector('.copy-text') : null;
+    if (!bibtexElement || !button || !copyText) return;
+
+    const text = bibtexElement.innerText.trim();
+    // Always try synchronous copy first to keep iOS/Safari user-gesture context.
+    const copiedSync = copyUsingExecCommand(text);
+    if (copiedSync) {
+        updateCopyFeedback(button, copyText, true);
+        return;
     }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function() {
+            updateCopyFeedback(button, copyText, true);
+        }).catch(function(err) {
+            console.warn('Clipboard API failed:', err);
+            updateCopyFeedback(button, copyText, false);
+        });
+        return;
+    }
+
+    updateCopyFeedback(button, copyText, false);
 }
 
 // Scroll to top functionality

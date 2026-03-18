@@ -681,8 +681,20 @@ code {
   background: #10b981;
 }
 
-.copy-bibtex-btn.copied .copy-text::after {
-  content: "ied!";
+.copy-bibtex-btn.copy-pop {
+  animation: copy-pop 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes copy-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Scroll to Top Button */
