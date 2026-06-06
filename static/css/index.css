@@ -572,6 +572,7 @@ body {
 }
 
 .ablation-factor-list {
+  counter-reset: ablation-factor;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem 0.75rem;
@@ -581,26 +582,34 @@ body {
 }
 
 .ablation-factor-list li {
+  counter-increment: ablation-factor;
   position: relative;
   color: var(--text-primary);
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  padding: 0.55rem 0.7rem 0.55rem 1.6rem;
+  padding: 0.55rem 0.7rem 0.55rem 2.25rem;
   font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.45;
 }
 
 .ablation-factor-list li::before {
-  content: '';
+  content: counter(ablation-factor);
   position: absolute;
-  left: 0.7rem;
-  top: 1.05rem;
-  width: 0.38rem;
-  height: 0.38rem;
+  left: 0.65rem;
+  top: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: #ffffff;
   background: var(--accent-color);
   border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 #teaser-video {

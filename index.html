@@ -683,15 +683,15 @@
               <p class="video-note">Robustness trial for continuous process monitoring where the robot must still detect the acoustic transition to the sputtering phase despite real deployment disturbances.</p>
               <div class="ablation-factor-callout">
                 <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness factors shown in this video</p>
-                <ul class="ablation-factor-list">
-                  <li>Traffic noise mixed into the microphone stream</li>
-                  <li>White noise added as broadband acoustic interference</li>
-                  <li>Robot operation ego-noise during manipulation and waiting</li>
-                  <li>Multi-person dialogue noise around the robot</li>
-                  <li>Microphone position changes that alter sound intensity and directionality</li>
-                  <li>Moka pot and cup position shifts that change the scene geometry</li>
-                  <li>Extra distractor objects near the workspace</li>
-                </ul>
+                <ol class="ablation-factor-list">
+                  <li>Traffic noise</li>
+                  <li>White noise</li>
+                  <li>Robot ego-noise</li>
+                  <li>Multi-person dialogue noise</li>
+                  <li>Microphone position shift</li>
+                  <li>Object position shift</li>
+                  <li>Extra distractor objects</li>
+                </ol>
               </div>
               <video class="auto-play-video" controls muted loop playsinline preload="metadata">
                 <source src="static/videos/coffee_ablation_audio.mp4" type="video/mp4">
@@ -704,16 +704,16 @@
               <p class="video-note">Robustness trial for speech-and-event progress tracking, testing whether the policy remains grounded in the current spoken instruction and call state under confounding audio and language variants.</p>
               <div class="ablation-factor-callout">
                 <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness factors shown in this video</p>
-                <ul class="ablation-factor-list">
-                  <li>Traffic noise during ringing, answering, and call monitoring</li>
-                  <li>White noise added to reduce clean speech/audio conditions</li>
-                  <li>Robot operation ego-noise during reaching and phone interaction</li>
-                  <li>Multi-person dialogue noise that competes with the target speaker</li>
-                  <li>Microphone position changes that alter speech capture quality</li>
-                  <li>Phone and object position shifts that change the visual layout</li>
-                  <li>Extra distractor objects around the phone workspace</li>
-                  <li>Different phone-call speech contents, testing robustness beyond one fixed script</li>
-                </ul>
+                <ol class="ablation-factor-list">
+                  <li>Traffic noise</li>
+                  <li>White noise</li>
+                  <li>Robot ego-noise</li>
+                  <li>Multi-person dialogue noise</li>
+                  <li>Microphone position shift</li>
+                  <li>Object position shift</li>
+                  <li>Extra distractor objects</li>
+                  <li>Speech content variants</li>
+                </ol>
               </div>
               <video class="auto-play-video" controls muted loop playsinline preload="metadata">
                 <source src="static/videos/phone_ablation_audio.mp4" type="video/mp4">
@@ -726,15 +726,15 @@
               <p class="video-note">Robustness trial for active acoustic sensing, where the empty-bottle judgment must remain stable even when the self-generated shaking cue is degraded or visually confounded.</p>
               <div class="ablation-factor-callout">
                 <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness factors shown in this video</p>
-                <ul class="ablation-factor-list">
-                  <li>Traffic noise overlaid on the bottle-shaking sound</li>
-                  <li>White noise masking weak rattling cues</li>
-                  <li>Robot operation ego-noise from arm motion during active sensing</li>
-                  <li>Multi-person dialogue noise in the surrounding environment</li>
-                  <li>Microphone position changes that affect captured shake amplitude</li>
-                  <li>Bottle and target position shifts across trials</li>
-                  <li>Extra distractor objects placed near candidate bottles</li>
-                </ul>
+                <ol class="ablation-factor-list">
+                  <li>Traffic noise</li>
+                  <li>White noise</li>
+                  <li>Robot ego-noise</li>
+                  <li>Multi-person dialogue noise</li>
+                  <li>Microphone position shift</li>
+                  <li>Object position shift</li>
+                  <li>Extra distractor objects</li>
+                </ol>
               </div>
               <video class="auto-play-video" controls muted loop playsinline preload="metadata">
                 <source src="static/videos/empty_ablation_audio.mp4" type="video/mp4">
@@ -747,15 +747,15 @@
               <p class="video-note">Companion robustness trial for the occupied-bottle condition, testing whether the policy still distinguishes the filled-state rattling response under the same disturbance family.</p>
               <div class="ablation-factor-callout">
                 <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness factors shown in this video</p>
-                <ul class="ablation-factor-list">
-                  <li>Traffic noise mixed with the occupied-bottle shaking sound</li>
-                  <li>White noise as broadband acoustic masking</li>
-                  <li>Robot operation ego-noise from repeated shake motions</li>
-                  <li>Multi-person dialogue noise that overlaps with the sensing interval</li>
-                  <li>Microphone position changes that alter the captured material sound</li>
-                  <li>Bottle and object position shifts that change reach and viewpoint geometry</li>
-                  <li>Extra distractor objects near the active sensing workspace</li>
-                </ul>
+                <ol class="ablation-factor-list">
+                  <li>Traffic noise</li>
+                  <li>White noise</li>
+                  <li>Robot ego-noise</li>
+                  <li>Multi-person dialogue noise</li>
+                  <li>Microphone position shift</li>
+                  <li>Object position shift</li>
+                  <li>Extra distractor objects</li>
+                </ol>
               </div>
               <video class="auto-play-video" controls muted loop playsinline preload="metadata">
                 <source src="static/videos/full_ablation_audio.mp4" type="video/mp4">
@@ -768,15 +768,15 @@
               <p class="video-note">Robustness trial for transient alarm detection, where the robot must avoid premature pressing and still react only after the alarm cue appears under acoustic and layout disturbances.</p>
               <div class="ablation-factor-callout">
                 <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness factors shown in this video</p>
-                <ul class="ablation-factor-list">
-                  <li>Traffic noise that competes with the alarm cue</li>
-                  <li>White noise that masks brief high-frequency alarm evidence</li>
-                  <li>Robot operation ego-noise during waiting and button-press motion</li>
-                  <li>Multi-person dialogue noise near the robot</li>
-                  <li>Microphone position changes that shift alarm loudness and directionality</li>
-                  <li>Alarm clock and target object position shifts</li>
-                  <li>Extra distractor objects that make early visual shortcuts less reliable</li>
-                </ul>
+                <ol class="ablation-factor-list">
+                  <li>Traffic noise</li>
+                  <li>White noise</li>
+                  <li>Robot ego-noise</li>
+                  <li>Multi-person dialogue noise</li>
+                  <li>Microphone position shift</li>
+                  <li>Object position shift</li>
+                  <li>Extra distractor objects</li>
+                </ol>
               </div>
               <video class="auto-play-video" controls muted loop playsinline preload="metadata">
                 <source src="static/videos/alarm_ablation_audio.mp4" type="video/mp4">
