@@ -72,7 +72,6 @@
   </noscript>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <script data-goatcounter="https://hear.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -152,6 +151,14 @@
           </div>
           <i class="fas fa-arrow-right"></i>
         </a>
+        <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="work-item">
+          <div class="work-info">
+            <h5>OpenX-Sound Dataset</h5>
+            <p>Audio-augmented robot trajectories released on Hugging Face.</p>
+            <span class="work-venue">Dataset</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
         <a href="#videos" class="work-item">
           <div class="work-info">
             <h5>Experiment Videos</h5>
@@ -203,6 +210,12 @@
                   <a href="https://arxiv.org/abs/2603.16086" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                     <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Dataset</span>
                   </a>
                 </span>
               </div>
@@ -292,6 +305,10 @@
             <div class="box text-card">
               <h3 class="title is-5">OpenX-Sound</h3>
               <p>An audio-augmented pretraining resource that extends Open X-Embodiment with synchronized sound.</p>
+              <a class="inline-resource-link" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener">
+                <i class="fas fa-database"></i>
+                View dataset
+              </a>
             </div>
           </div>
           <div class="column is-half-tablet is-one-quarter-desktop">
@@ -421,6 +438,18 @@
             Across the suite, success is timing-sensitive: if the robot reaches the goal before the required sound cue occurs, the rollout is marked as failure.
           </p>
         </div>
+        <div class="dataset-panel">
+          <div>
+            <h3 class="title is-5">OpenX-Sound Dataset</h3>
+            <p>
+              We release the audio-augmented pretraining data on Hugging Face, providing synchronized sound for large-scale robot trajectory learning under the VSLA setting.
+            </p>
+          </div>
+          <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fas fa-database"></i></span>
+            <span>Open Dataset</span>
+          </a>
+        </div>
         <div class="columns is-multiline story-grid">
           <div class="column is-half">
             <div class="box text-card">
@@ -521,7 +550,7 @@
         </div>
         -->
 
-        <h3 class="title is-5">Real-Robot Deployments</h3>
+        <h3 class="title is-5">External-View Real-Robot Deployments</h3>
         <div class="columns is-multiline single-video-list">
           <div class="column is-full">
             <div class="box video-card">
@@ -574,6 +603,126 @@
             </div>
           </div>
         </div>
+
+        <h3 class="title is-5 video-subsection-title">Robot Onboard Input Recordings</h3>
+        <div class="sensor-note-panel">
+          <p>
+            The videos below are captured from the robot's own sensing streams: head camera, hand camera, and synchronized microphone audio.
+            They supplement the external-view demonstrations above by showing the actual visual and acoustic inputs available to the policy during execution, rather than footage from a third-person camera.
+          </p>
+        </div>
+        <div class="columns is-multiline sensor-video-list">
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card">
+              <p class="mb-2"><b>Moka Coffee - onboard input</b></p>
+              <p class="video-note">Direct head-camera, hand-camera, and microphone recording for the long-horizon coffee process-monitoring task.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/coffee_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card">
+              <p class="mb-2"><b>Answer Phone - onboard input</b></p>
+              <p class="video-note">Robot-perspective recording of ring detection, speech-conditioned progress tracking, and call-completion recognition.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/phone_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card">
+              <p class="mb-2"><b>Shake Bottle (Empty) - onboard input</b></p>
+              <p class="video-note">Robot-perspective active acoustic sensing record for the empty-bottle condition.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/empty_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card">
+              <p class="mb-2"><b>Shake Bottle (Occupied) - onboard input</b></p>
+              <p class="video-note">Companion robot-perspective recording for the occupied-bottle condition, where the policy must rely on the self-generated rattling sound.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/full_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card">
+              <p class="mb-2"><b>Real Alarm Clock - onboard input</b></p>
+              <p class="video-note">Direct robot input streams for the transient alarm-cue task, where the robot must wait until the sound actually occurs.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/alarm_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-5 video-subsection-title">Robustness Ablations with Added Disturbances</h3>
+        <div class="ablation-summary-panel">
+          <p>
+            These ablation recordings stress the same robot-input pipeline under controlled acoustic, sensor-placement, and scene-layout disturbances.
+            Across the ablation set, we add the following perturbations:
+          </p>
+          <div class="ablation-chip-grid" aria-label="Ablation disturbance factors">
+            <span>Traffic noise</span>
+            <span>White noise</span>
+            <span>Robot ego-noise</span>
+            <span>Multi-person dialogue noise</span>
+            <span>Microphone position shifts</span>
+            <span>Object position shifts</span>
+            <span>Extra distractor objects</span>
+            <span>Phone speech-content variants</span>
+          </div>
+        </div>
+        <div class="columns is-multiline sensor-video-list">
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card ablation-video-card">
+              <p class="mb-2"><b>Moka Coffee - ablation</b></p>
+              <p class="video-note">Robustness trial for continuous process monitoring under added acoustic noise, microphone placement changes, object relocation, and distractor objects.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/coffee_ablation_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card ablation-video-card">
+              <p class="mb-2"><b>Answer Phone - ablation</b></p>
+              <p class="video-note">Robustness trial with added background noise and phone-task speech-content variants, testing whether the policy remains grounded in the current spoken instruction and call state.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/phone_ablation_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card ablation-video-card">
+              <p class="mb-2"><b>Shake Bottle (Empty) - ablation</b></p>
+              <p class="video-note">Robustness trial for active acoustic sensing with noise injection, changed microphone/object positions, and additional distractor objects.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/empty_ablation_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card ablation-video-card">
+              <p class="mb-2"><b>Shake Bottle (Occupied) - ablation</b></p>
+              <p class="video-note">Companion robustness trial for the occupied-bottle condition under the same acoustic and scene perturbation family.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/full_ablation_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card sensor-video-card ablation-video-card">
+              <p class="mb-2"><b>Real Alarm Clock - ablation</b></p>
+              <p class="video-note">Robustness trial for transient alarm detection under added noise, robot self-noise, microphone shifts, object shifts, and visual distractors.</p>
+              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+                <source src="static/videos/alarm_ablation_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -611,29 +760,6 @@
   primaryClass={cs.RO},
   url={https://arxiv.org/abs/2603.16086},
 }</code></pre>
-      </div>
-    </section>
-
-    <section class="section" id="visits" data-goatcounter-site="hear" data-goatcounter-start="2026-03-16">
-      <div class="container is-max-desktop">
-        <div class="visit-card">
-          <div class="visit-header">
-            <div>
-              <h2 class="title is-3">Visits</h2>
-            </div>
-            <div class="visit-summary">
-              <span class="visit-summary-label">Total visits</span>
-              <strong id="visit-total">--</strong>
-            </div>
-          </div>
-          <div class="visit-chart-shell">
-            <div id="visit-chart-loading" class="visit-chart-loading">Loading visits...</div>
-            <svg id="visit-chart" class="visit-chart" viewBox="0 0 960 360" role="img" aria-labelledby="visit-chart-title visit-chart-desc"></svg>
-            <div id="visit-chart-empty" class="visit-chart-empty" hidden>
-              Public visit data is not available yet.
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </main>
