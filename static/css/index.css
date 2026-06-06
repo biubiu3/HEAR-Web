@@ -548,6 +548,61 @@ body {
   border-left: 4px solid var(--accent-color);
 }
 
+.ablation-factor-callout {
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  border: 1px solid rgb(14 165 233 / 0.28);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.05rem;
+  margin: 0.9rem 0 1.15rem;
+}
+
+.ablation-factor-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.96rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.ablation-factor-title .fas {
+  color: var(--accent-color);
+}
+
+.ablation-factor-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ablation-factor-list li {
+  position: relative;
+  color: var(--text-primary);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem 0.55rem 1.6rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.ablation-factor-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.7rem;
+  top: 1.05rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
 #teaser-video {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-xl);
@@ -918,6 +973,14 @@ code {
 
   .sensor-video-card video {
     max-height: 360px;
+  }
+
+  .ablation-factor-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ablation-factor-list li {
+    font-size: 0.88rem;
   }
 
   .paper-pdf-frame {
