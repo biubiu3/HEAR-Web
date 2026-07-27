@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Draft manuscripts and local build output
+*.aux
+*.bib
+*.blg
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.tex
+
+# Raw/private media should never be published from this repository
+private/
+raw/
+*.avi
+*.mkv
+*.mov

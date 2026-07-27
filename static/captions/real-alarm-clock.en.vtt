@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00.000 --> 00:08.000
+The alarm clock is placed in the workspace.
+
+00:08.000 --> 00:16.000
+The robot waits without pressing the visible button.
+
+00:16.000 --> 00:24.000
+[The alarm begins ringing.] The robot detects the acoustic trigger and moves toward the clock.
+
+00:24.000 --> 00:31.416
+The robot presses the button after the alarm has begun.

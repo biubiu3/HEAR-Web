@@ -5,32 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
-  <meta name="description" content="HEAR introduces the VSLA paradigm with causal audio memory and temporal grounding for sound-centric robot manipulation in simulation and real-world settings.">
+  <meta name="description" content="HEAR, accepted for publication in The International Journal of Robotics Research, introduces the VSLA paradigm for sound-centric robot manipulation.">
   <meta name="keywords" content="robot learning, VLA, VSLA, sound-centric manipulation, multimodal learning, imitation learning, HEAR-Bench, OpenX-Sound">
   <meta name="author" content="Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self' data:; frame-src 'none'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; form-action 'none'; upgrade-insecure-requests">
 
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Shanghai Jiao Tong University - Intelligent Robotics">
-  <meta property="og:title" content="Towards the Vision-Sound-Language-Action Paradigm: HEAR">
-  <meta property="og:description" content="A VSLA framework for sound-centric manipulation with streaming audio memory, temporal prediction, and robust action chunk generation.">
-  <meta property="og:url" content="https://biubiu3.github.io/HEAR-Web/">
-  <meta property="og:image" content="https://biubiu3.github.io/HEAR-Web/static/images/headpic.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="HEAR framework overview">
-  <meta property="article:published_time" content="2026-03-16T00:00:00.000Z">
+  <meta property="og:site_name" content="HEAR Project">
+  <meta property="og:title" content="HEAR — Accepted at IJRR">
+  <meta property="og:description" content="A VSLA framework for sound-centric manipulation with causal audio persistence and temporal grounding.">
+  <meta property="og:url" content="https://hear.irmv.top/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:image:width" content="3200">
+  <meta property="og:image:height" content="2092">
+  <meta property="og:image:alt" content="Overview of the HEAR architecture">
   <meta property="article:author" content="Chang Nie">
   <meta property="article:section" content="Robotics">
   <meta property="article:tag" content="Vision-Sound-Language-Action">
   <meta property="article:tag" content="Robot Manipulation">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Towards the Vision-Sound-Language-Action Paradigm: HEAR">
-  <meta name="twitter:description" content="Sound-centric robotic manipulation with causal audio persistence and temporal grounding.">
-  <meta name="twitter:image" content="https://biubiu3.github.io/HEAR-Web/static/images/headpic.png">
-  <meta name="twitter:image:alt" content="HEAR framework overview">
+  <meta name="twitter:title" content="HEAR — Accepted at IJRR">
+  <meta name="twitter:description" content="Sound-centric robot manipulation with causal audio persistence and temporal grounding.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="twitter:image:alt" content="Overview of the HEAR architecture">
 
   <meta name="citation_title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
   <meta name="citation_author" content="Nie, Chang">
@@ -39,7 +40,7 @@
   <meta name="citation_author" content="Liu, Zhe">
   <meta name="citation_author" content="Wang, Hesheng">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="International Journal of Robotics Research (under review)">
+  <meta name="citation_journal_title" content="The International Journal of Robotics Research">
   <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2603.16086.pdf">
 
   <meta name="theme-color" content="#2563eb">
@@ -47,36 +48,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <title>HEAR: Towards Vision-Sound-Language-Action | Project Page</title>
+  <title>HEAR: Towards Vision-Sound-Language-Action | IJRR</title>
 
   <link rel="icon" type="image/png" href="static/images/logo3.png">
   <link rel="apple-touch-icon" href="static/images/logo3.png">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=ablation-layout-2">
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="static/css/index.css?v=ijrr-accepted">
 
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
   <script type="application/ld+json">
@@ -92,29 +72,34 @@
       {"@type": "Person", "name": "Zhe Liu"},
       {"@type": "Person", "name": "Hesheng Wang"}
     ],
-    "datePublished": "2026-03-16",
+    "dateCreated": "2026-03-17",
+    "creativeWorkStatus": "Accepted for publication",
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "The International Journal of Robotics Research"
+    },
     "publisher": {
       "@type": "Organization",
-      "name": "Shanghai Jiao Tong University"
+      "name": "SAGE Publications"
     },
-    "url": "https://biubiu3.github.io/HEAR-Web/",
-    "image": "https://biubiu3.github.io/HEAR-Web/static/images/headpic.png",
+    "url": "https://hear.irmv.top/",
+    "sameAs": "https://arxiv.org/abs/2603.16086",
+    "image": "https://hear.irmv.top/static/images/overview.png",
     "keywords": ["VSLA", "VLA", "robot manipulation", "sound-centric manipulation", "multimodal learning"],
-    "isAccessibleForFree": true,
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://biubiu3.github.io/HEAR-Web/"
+      "@id": "https://hear.irmv.top/"
     }
   }
   </script>
 </head>
 <body>
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+  <button class="scroll-to-top" type="button" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
   <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Project quick links">
+    <button class="more-works-btn" type="button" title="Project quick links" aria-expanded="false" aria-controls="moreWorksDropdown">
       <i class="fas fa-link"></i>
       Quick Links
       <i class="fas fa-chevron-down dropdown-arrow"></i>
@@ -122,11 +107,19 @@
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
         <h4>Project Resources</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
+        <button class="close-btn" type="button" aria-label="Close project quick links">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
+        <a href="#paper" class="work-item">
+          <div class="work-info">
+            <h5>IJRR Publication</h5>
+            <p>Acceptance status and public preprint.</p>
+            <span class="work-venue">Publication</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
         <a href="#story" class="work-item">
           <div class="work-info">
             <h5>From VLA to VSLA</h5>
@@ -151,7 +144,7 @@
           </div>
           <i class="fas fa-arrow-right"></i>
         </a>
-        <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="work-item">
+        <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="work-item">
           <div class="work-info">
             <h5>OpenX-Sound Dataset</h5>
             <p>Audio-augmented robot trajectories released on Hugging Face.</p>
@@ -193,27 +186,31 @@
                 <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University, China</span>
                 <span class="author-block"><sup>2</sup>University of Cambridge, UK</span>
               </div>
+              <div class="publication-status" role="status">
+                <span class="status-label">Accepted for publication</span>
+                <span class="status-venue">The International Journal of Robotics Research (IJRR)</span>
+              </div>
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
+                    <span>Preprint</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/IRMVLab/HEAR" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/IRMVLab/HEAR" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2603.16086" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <a href="https://arxiv.org/abs/2603.16086" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-book-open"></i></span>
                     <span>arXiv</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-database"></i></span>
                     <span>Dataset</span>
                   </a>
@@ -305,7 +302,7 @@
             <div class="box text-card">
               <h3 class="title is-5">OpenX-Sound</h3>
               <p>An audio-augmented pretraining resource that extends Open X-Embodiment with synchronized sound.</p>
-              <a class="inline-resource-link" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener">
+              <a class="inline-resource-link" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-database"></i>
                 View dataset
               </a>
@@ -445,7 +442,7 @@
               We release the audio-augmented pretraining data on Hugging Face, providing synchronized sound for large-scale robot trajectory learning under the VSLA setting.
             </p>
           </div>
-          <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+          <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
             <span class="icon"><i class="fas fa-database"></i></span>
             <span>Open Dataset</span>
           </a>
@@ -474,7 +471,7 @@
           <p>
             These experiments are intentionally constructed rather than merely collected.
             Each task isolates a specific failure mode of memoryless audio integration, such as transient cue dropout, prosody loss, visual aliasing, or long-horizon process monitoring.
-            Under this evaluation protocol, HEAR reaches <b>81%</b> average success in simulation and <b>54%</b> on real-robot tasks, with especially strong gains on brief non-speech triggers and process-monitoring scenarios.
+            Under this evaluation protocol, HEAR reaches an <b>81%</b> sound-causal success rate on HEAR-Bench and <b>70%</b> across four real-world Franka tasks, with especially strong gains on brief non-speech triggers and process-monitoring scenarios.
           </p>
         </div>
       </div>
@@ -485,70 +482,12 @@
         <h2 class="title is-3 has-text-centered">Experiment Videos</h2>
         <div class="content has-text-justified">
           <p>
-            This page currently highlights only <b>real-robot deployments</b>.
-            The selected tasks focus on long-horizon monitoring, active acoustic sensing, speech-conditioned progress tracking, and transient cue reaction under real-world noise and reverberation.
+            This page retains a compact set of <b>core real-robot demonstrations</b>.
+            They cover long-horizon monitoring, active acoustic sensing, speech-conditioned progress tracking, and transient cue reaction under real-world noise and reverberation.
             Each example is designed to answer a concrete question about what kind of sound-causal competence the model has learned.
-            Videos auto-play when they enter the viewport and pause once they leave it.
+            Videos load from this site and play only when requested.
           </p>
         </div>
-
-        <!--
-        Simulation task videos are intentionally hidden for the current page version.
-        Keep this block for easy restoration in future updates.
-        <h3 class="title is-5">Simulation Tasks</h3>
-        <div class="columns is-multiline single-video-list">
-          <div class="column is-full">
-            <div class="box video-card">
-              <p class="mb-3"><b>Alarm Clock</b></p>
-              <p class="video-note"><b>Why this task:</b> The stop button is always visible, so a vision-only policy is strongly tempted to press early.</p>
-              <p class="video-note"><b>What it tests:</b> Whether the robot can wait indefinitely, ignore a visually plausible shortcut, and only act after a sustained acoustic trigger actually begins.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/alarm_clock.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card">
-              <p class="mb-3"><b>Microwave</b></p>
-              <p class="video-note"><b>Why this task:</b> A microwave ding is extremely brief and can disappear before the next policy query.</p>
-              <p class="video-note"><b>What it tests:</b> Whether the model can survive cue dropout during chunked execution and act correctly even after the sound itself has already vanished.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/microwave.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card">
-              <p class="mb-3"><b>Check Yes</b></p>
-              <p class="video-note"><b>Why this task:</b> The lexical content of the spoken feedback is effectively the same, so transcript-level supervision is insufficient.</p>
-              <p class="video-note"><b>What it tests:</b> Whether the model can use intonation and prosody, not just words, to decide whether to keep the current object or switch to the alternative.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/check_yes.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card">
-              <p class="mb-3"><b>Check Materials</b></p>
-              <p class="video-note"><b>Why this task:</b> The candidate surfaces are visually ambiguous, so appearance alone cannot reveal the correct material.</p>
-              <p class="video-note"><b>What it tests:</b> Whether the robot can actively create informative contact audio and use impact timbre as a low-cost physical sensing signal.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/check_materials.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card">
-              <p class="mb-3"><b>Interrupt</b></p>
-              <p class="video-note"><b>Why this task:</b> A speech command arrives during an ongoing motion rather than before the robot starts acting.</p>
-              <p class="video-note"><b>What it tests:</b> Whether the policy can bind a spoken command to the current action state, interrupt safely, and switch behavior mid-execution.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/interrupt.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-        -->
 
         <h3 class="title is-5">External-View Real-Robot Deployments</h3>
         <div class="columns is-multiline single-video-list">
@@ -557,8 +496,9 @@
               <p class="mb-3"><b>Moka Coffee</b></p>
               <p class="video-note"><b>Why this task:</b> A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.</p>
               <p class="video-note"><b>What it tests:</b> Long-horizon process monitoring in a noisy real environment, where the robot must detect the transition to the sputtering phase before pouring.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+              <video controls playsinline preload="metadata">
                 <source src="static/videos/moka_pot_all_web.mp4" type="video/mp4">
+                <track kind="captions" src="static/captions/moka-coffee.en.vtt" srclang="en" label="English">
               </video>
             </div>
           </div>
@@ -567,8 +507,9 @@
               <p class="mb-3"><b>Answer Phone</b></p>
               <p class="video-note"><b>Why this task:</b> The robot revisits nearly identical visual states at different semantic stages of the task.</p>
               <p class="video-note"><b>What it tests:</b> Multi-stage progress tracking with ring detection, speech understanding, and end-of-call recognition under severe visual aliasing.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+              <video controls playsinline preload="metadata">
                 <source src="static/videos/telephone_all.mp4" type="video/mp4">
+                <track kind="captions" src="static/captions/answer-phone.en.vtt" srclang="en" label="English">
               </video>
             </div>
           </div>
@@ -577,8 +518,9 @@
               <p class="mb-3"><b>Shake Bottle (Empty)</b></p>
               <p class="video-note"><b>Why this task:</b> The hidden state cannot be recovered passively; the robot must first create the evidence itself.</p>
               <p class="video-note"><b>What it tests:</b> Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+              <video controls playsinline preload="metadata">
                 <source src="static/videos/empty_all.mp4" type="video/mp4">
+                <track kind="captions" src="static/captions/shake-empty.en.vtt" srclang="en" label="English">
               </video>
             </div>
           </div>
@@ -587,8 +529,9 @@
               <p class="mb-3"><b>Shake Bottle (Occupied)</b></p>
               <p class="video-note"><b>Why this task:</b> This companion case shows the same active sensing behavior under a different hidden physical state.</p>
               <p class="video-note"><b>What it tests:</b> Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+              <video controls playsinline preload="metadata">
                 <source src="static/videos/occupied_all.mp4" type="video/mp4">
+                <track kind="captions" src="static/captions/shake-occupied.en.vtt" srclang="en" label="English">
               </video>
             </div>
           </div>
@@ -597,208 +540,31 @@
               <p class="mb-3"><b>Real Alarm Clock</b></p>
               <p class="video-note"><b>Why this task:</b> The simulation alarm setting is transferred into the physical world, where reverberation and background chatter distort the cue.</p>
               <p class="video-note"><b>What it tests:</b> Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
+              <video controls playsinline preload="metadata">
                 <source src="static/videos/alarm_all.mp4" type="video/mp4">
+                <track kind="captions" src="static/captions/real-alarm-clock.en.vtt" srclang="en" label="English">
               </video>
             </div>
           </div>
         </div>
 
-        <h3 class="title is-5 video-subsection-title">Robot Onboard Input Recordings</h3>
-        <div class="sensor-note-panel">
-          <p>
-            The videos below are captured from the robot's own sensing streams: head camera, hand camera, and synchronized microphone audio.
-            They supplement the external-view demonstrations above by showing the actual visual and acoustic inputs available to the policy during execution, rather than footage from a third-person camera.
-          </p>
-        </div>
-        <div class="columns is-multiline sensor-video-list">
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card">
-              <p class="mb-2"><b>Moka Coffee - onboard input</b></p>
-              <p class="video-note">Direct head-camera, hand-camera, and microphone recording for the long-horizon coffee process-monitoring task.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/coffee_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card">
-              <p class="mb-2"><b>Answer Phone - onboard input</b></p>
-              <p class="video-note">Robot-perspective recording of ring detection, speech-conditioned progress tracking, and call-completion recognition.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/phone_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card">
-              <p class="mb-2"><b>Shake Bottle (Empty) - onboard input</b></p>
-              <p class="video-note">Robot-perspective active acoustic sensing record for the empty-bottle condition.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/empty_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card">
-              <p class="mb-2"><b>Shake Bottle (Occupied) - onboard input</b></p>
-              <p class="video-note">Companion robot-perspective recording for the occupied-bottle condition, where the policy must rely on the self-generated rattling sound.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/full_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card">
-              <p class="mb-2"><b>Real Alarm Clock - onboard input</b></p>
-              <p class="video-note">Direct robot input streams for the transient alarm-cue task, where the robot must wait until the sound actually occurs.</p>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/alarm_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="title is-5 video-subsection-title">Robustness Ablations with Added Disturbances</h3>
-        <div class="ablation-summary-panel">
-          <p>
-            These ablation recordings stress the same robot-input pipeline under controlled acoustic, sensor-placement, and scene-layout disturbances.
-            Each video card below explicitly lists the perturbations tested in that trial, making the robustness coverage visible at the task level.
-          </p>
-          <div class="ablation-chip-grid" aria-label="Ablation disturbance factors">
-            <span>Traffic noise</span>
-            <span>White noise</span>
-            <span>Robot ego-noise</span>
-            <span>Multi-person dialogue noise</span>
-            <span>Microphone position shifts</span>
-            <span>Object position shifts</span>
-            <span>Extra distractor objects</span>
-            <span>Phone speech-content variants</span>
-          </div>
-        </div>
-        <div class="columns is-multiline sensor-video-list">
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card ablation-video-card">
-              <p class="mb-2"><b>Moka Coffee - ablation</b></p>
-              <p class="video-note">Robustness trial for continuous process monitoring where the robot must still detect the acoustic transition to the sputtering phase despite real deployment disturbances.</p>
-              <div class="ablation-factor-callout">
-                <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness stressors</p>
-                <ol class="ablation-factor-list">
-                  <li>Traffic noise</li>
-                  <li>White noise</li>
-                  <li>Robot ego-noise</li>
-                  <li>Multi-person dialogue noise</li>
-                  <li>Microphone position shift</li>
-                  <li>Object position shift</li>
-                  <li>Extra distractor objects</li>
-                </ol>
-              </div>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/coffee_ablation_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card ablation-video-card">
-              <p class="mb-2"><b>Answer Phone - ablation</b></p>
-              <p class="video-note">Robustness trial for speech-and-event progress tracking, testing whether the policy remains grounded in the current spoken instruction and call state under confounding audio and language variants.</p>
-              <div class="ablation-factor-callout">
-                <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness stressors</p>
-                <ol class="ablation-factor-list">
-                  <li>Traffic noise</li>
-                  <li>White noise</li>
-                  <li>Robot ego-noise</li>
-                  <li>Multi-person dialogue noise</li>
-                  <li>Microphone position shift</li>
-                  <li>Object position shift</li>
-                  <li>Extra distractor objects</li>
-                  <li>Speech content variants</li>
-                </ol>
-              </div>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/phone_ablation_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card ablation-video-card">
-              <p class="mb-2"><b>Shake Bottle (Empty) - ablation</b></p>
-              <p class="video-note">Robustness trial for active acoustic sensing, where the empty-bottle judgment must remain stable even when the self-generated shaking cue is degraded or visually confounded.</p>
-              <div class="ablation-factor-callout">
-                <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness stressors</p>
-                <ol class="ablation-factor-list">
-                  <li>Traffic noise</li>
-                  <li>White noise</li>
-                  <li>Robot ego-noise</li>
-                  <li>Multi-person dialogue noise</li>
-                  <li>Microphone position shift</li>
-                  <li>Object position shift</li>
-                  <li>Extra distractor objects</li>
-                </ol>
-              </div>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/empty_ablation_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card ablation-video-card">
-              <p class="mb-2"><b>Shake Bottle (Occupied) - ablation</b></p>
-              <p class="video-note">Companion robustness trial for the occupied-bottle condition, testing whether the policy still distinguishes the filled-state rattling response under the same disturbance family.</p>
-              <div class="ablation-factor-callout">
-                <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness stressors</p>
-                <ol class="ablation-factor-list">
-                  <li>Traffic noise</li>
-                  <li>White noise</li>
-                  <li>Robot ego-noise</li>
-                  <li>Multi-person dialogue noise</li>
-                  <li>Microphone position shift</li>
-                  <li>Object position shift</li>
-                  <li>Extra distractor objects</li>
-                </ol>
-              </div>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/full_ablation_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="column is-full">
-            <div class="box video-card sensor-video-card ablation-video-card">
-              <p class="mb-2"><b>Real Alarm Clock - ablation</b></p>
-              <p class="video-note">Robustness trial for transient alarm detection, where the robot must avoid premature pressing and still react only after the alarm cue appears under acoustic and layout disturbances.</p>
-              <div class="ablation-factor-callout">
-                <p class="ablation-factor-title"><i class="fas fa-shield-alt"></i> Robustness stressors</p>
-                <ol class="ablation-factor-list">
-                  <li>Traffic noise</li>
-                  <li>White noise</li>
-                  <li>Robot ego-noise</li>
-                  <li>Multi-person dialogue noise</li>
-                  <li>Microphone position shift</li>
-                  <li>Object position shift</li>
-                  <li>Extra distractor objects</li>
-                </ol>
-              </div>
-              <video class="auto-play-video" controls muted loop playsinline preload="metadata">
-                <source src="static/videos/alarm_ablation_audio.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="hero is-small">
+    <section class="section publication-note" id="paper">
       <div class="hero-body">
         <div class="container is-max-desktop">
-          <h2 class="title has-text-centered">Paper PDF</h2>
-          <p class="has-text-centered mb-4">Read the paper directly here or open the arXiv PDF in a new tab.</p>
+          <h2 class="title has-text-centered">Publication</h2>
+          <p class="has-text-centered publication-copy">
+            This work has been accepted for publication in <i>The International Journal of Robotics Research</i>.
+            The archival DOI has not yet been assigned; the public arXiv preprint remains available below.
+          </p>
           <div class="has-text-centered mb-4">
-            <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+            <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Open arXiv PDF</span>
+              <span>Open arXiv preprint</span>
             </a>
           </div>
-          <iframe class="paper-pdf-frame" src="https://arxiv.org/pdf/2603.16086.pdf#view=FitH" title="HEAR paper on arXiv" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -807,15 +573,17 @@
       <div class="container is-max-desktop content">
         <div class="bibtex-header">
           <h2 class="title">BibTeX</h2>
-          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <button class="copy-bibtex-btn" type="button" title="Copy BibTeX to clipboard" aria-label="Copy BibTeX to clipboard">
             <i class="fas fa-copy"></i>
             <span class="copy-text">Copy</span>
           </button>
         </div>
-<pre id="bibtex-code"><code>@article{nie2026visionsoundlanguageactionparadigmhearframework,
+<pre id="bibtex-code" role="region" tabindex="0" aria-label="BibTeX citation"><code>@article{nie2026visionsoundlanguageactionparadigmhearframework,
   title={Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation},
   author={Chang Nie and Tianchen Deng and Guangming Wang and Zhe Liu and Hesheng Wang},
+  journal={The International Journal of Robotics Research},
   year={2026},
+  note={Accepted for publication},
   eprint={2603.16086},
   archivePrefix={arXiv},
   primaryClass={cs.RO},
@@ -824,5 +592,14 @@
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="container is-max-desktop content has-text-centered">
+      <p>
+        This project page uses no analytics, cookies, or third-party embeds.
+        Images and videos are served by this site, and external resources are opened only after you select a link.
+      </p>
+      <p class="footer-update">Updated July 2026 following acceptance at IJRR.</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,33 +1,25 @@
-window.HELP_IMPROVE_VIDEOJS = false;
-
-// More Works Dropdown Functionality
 function toggleMoreWorks() {
     const dropdown = document.getElementById('moreWorksDropdown');
     const button = document.querySelector('.more-works-btn');
     if (!dropdown || !button) return;
-    
-    if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    } else {
-        dropdown.classList.add('show');
-        button.classList.add('active');
-    }
+
+    const isOpen = dropdown.classList.toggle('show');
+    button.classList.toggle('active', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
 }
 
-// Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
     const container = document.querySelector('.more-works-container');
     const dropdown = document.getElementById('moreWorksDropdown');
     const button = document.querySelector('.more-works-btn');
-    
+
     if (container && dropdown && button && !container.contains(event.target)) {
         dropdown.classList.remove('show');
         button.classList.remove('active');
+        button.setAttribute('aria-expanded', 'false');
     }
 });
 
-// Close dropdown on escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const dropdown = document.getElementById('moreWorksDropdown');
@@ -35,6 +27,7 @@ document.addEventListener('keydown', function(event) {
         if (!dropdown || !button) return;
         dropdown.classList.remove('show');
         button.classList.remove('active');
+        button.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -70,7 +63,6 @@ function updateCopyFeedback(button, copyText, ok) {
     }, 1800);
 }
 
-// Copy BibTeX to clipboard
 function copyBibTeX() {
     const bibtexElement = document.getElementById('bibtex-code');
     const button = document.querySelector('.copy-bibtex-btn');
@@ -98,7 +90,6 @@ function copyBibTeX() {
     updateCopyFeedback(button, copyText, false);
 }
 
-// Scroll to top functionality
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -106,9 +97,9 @@ function scrollToTop() {
     });
 }
 
-// Show/hide scroll to top button
 window.addEventListener('scroll', function() {
     const scrollButton = document.querySelector('.scroll-to-top');
+    if (!scrollButton) return;
     if (window.pageYOffset > 300) {
         scrollButton.classList.add('visible');
     } else {
@@ -116,48 +107,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Auto-play videos when they enter the viewport; pause when they leave.
-function setupViewportVideoAutoplay() {
-    const videos = document.querySelectorAll('.auto-play-video');
-    if (videos.length === 0) return;
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const video = entry.target;
-            if (entry.isIntersecting) {
-                video.play().catch(e => {
-                    console.log('Autoplay prevented:', e);
-                });
-            } else {
-                video.pause();
-            }
-        });
-    }, {
-        threshold: 0.35
-    });
-    
-    videos.forEach(video => {
-        observer.observe(video);
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const quickLinksButton = document.querySelector('.more-works-btn');
+    const closeButton = document.querySelector('.close-btn');
+    const scrollButton = document.querySelector('.scroll-to-top');
+    const copyButton = document.querySelector('.copy-bibtex-btn');
 
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
-
-    var options = {
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		loop: true,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-    }
-
-	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-    
-    setupViewportVideoAutoplay();
-
-})
+    if (quickLinksButton) quickLinksButton.addEventListener('click', toggleMoreWorks);
+    if (closeButton) closeButton.addEventListener('click', toggleMoreWorks);
+    if (scrollButton) scrollButton.addEventListener('click', scrollToTop);
+    if (copyButton) copyButton.addEventListener('click', copyBibTeX);
+});
