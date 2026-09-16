@@ -21,6 +21,9 @@ __pycache__/
 *.synctex.gz
 *.tex
 
+# ...but cite.bib IS meant to be published (served at /cite.bib)
+!cite.bib
+
 # Raw/private media should never be published from this repository
 private/
 raw/
