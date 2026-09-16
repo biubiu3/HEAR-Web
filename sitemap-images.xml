@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hear.irmv.top/static/images/headpic.webp</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/headpic.webp</image:loc>
+      <image:title>HEAR framework for Vision-Sound-Language-Action sound-centric robot manipulation</image:title>
+      <image:caption>HEAR reframes robot manipulation from a vision-dominant setting into a sound-causal one.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/overview.webp</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/overview.webp</image:loc>
+      <image:title>HEAR architecture overview: Historizer, Envisioner, Advancer and Realizer</image:title>
+      <image:caption>HEAR processes streaming audio, reasons over multi-sensory context, learns temporal progression, and produces smooth action chunks.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/Historizer.webp</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Historizer.webp</image:loc>
+      <image:title>Historizer: streaming causal audio memory across the Blind Execution Interval</image:title>
+      <image:caption>A streaming stateful transformer maintaining compact causal audio memory across execution gaps.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/Envisioner.webp</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Envisioner.webp</image:loc>
+      <image:title>Envisioner: hierarchical omni-modal reasoning for VLA control</image:title>
+      <image:caption>Fuses vision, language, proprioception, the current audio window and causal audio memory.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/Advancer.webp</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Advancer.webp</image:loc>
+      <image:title>Advancer: audio world model predicting near-future audio codes</image:title>
+      <image:caption>An audio world model that injects temporal grounding by predicting near-future audio codes.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/posters/moka-coffee.jpg</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/posters/moka-coffee.jpg</image:loc>
+      <image:title>HEAR real-robot demonstration: Moka Coffee</image:title>
+      <image:caption>Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/posters/answer-phone.jpg</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/posters/answer-phone.jpg</image:loc>
+      <image:title>HEAR real-robot demonstration: Answer Phone</image:title>
+      <image:caption>Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/posters/shake-bottle-empty.jpg</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/posters/shake-bottle-empty.jpg</image:loc>
+      <image:title>HEAR real-robot demonstration: Shake Bottle (Empty)</image:title>
+      <image:caption>Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/posters/shake-bottle-occupied.jpg</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/posters/shake-bottle-occupied.jpg</image:loc>
+      <image:title>HEAR real-robot demonstration: Shake Bottle (Occupied)</image:title>
+      <image:caption>Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/static/images/posters/real-alarm-clock.jpg</loc>
+    <lastmod>2026-09-16</lastmod>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/posters/real-alarm-clock.jpg</image:loc>
+      <image:title>HEAR real-robot demonstration: Real Alarm Clock</image:title>
+      <image:caption>Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press.</image:caption>
+    </image:image>
+  </url>
+</urlset>

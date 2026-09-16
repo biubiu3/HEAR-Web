@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs</title>
+  <meta name="description" content="Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.">
+  <meta name="keywords" content="action chunking, action chunk robot policy, open-loop execution, chunked VLA policy, real-time chunking RTC, asynchronous inference robot, action chunk horizon, temporal motion collapse, robot policy latency, flow matching action head, 动作分块, 动作块">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hear.irmv.top/concepts/action-chunking/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/action-chunking/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/action-chunking/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/action-chunking/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/concepts/action-chunking/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs">
+  <meta property="og:description" content="Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.">
+  <meta property="og:url" content="https://hear.irmv.top/concepts/action-chunking/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs">
+  <meta name="twitter:description" content="Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/concepts/action-chunking/#webpage",
+    "url": "https://hear.irmv.top/concepts/action-chunking/",
+    "name": "Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs",
+    "description": "Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/concepts/action-chunking/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/concepts/action-chunking/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR Project Home",
+        "item": "https://hear.irmv.top/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs",
+        "item": "https://hear.irmv.top/concepts/action-chunking/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/concepts/action-chunking/#term",
+    "name": "Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs",
+    "description": "Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR concept glossary",
+      "url": "https://hear.irmv.top/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/concepts/action-chunking/#article",
+    "headline": "Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs",
+    "description": "Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.",
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/concepts/action-chunking/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/concepts/action-chunking/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top/">&larr; Project Home</a></nav>
+        <h1 class="title is-2 page-title">Action Chunking</h1>
+        <div class="content has-text-justified page-lede"><p>Action chunking is the practice of predicting a short sequence of future actions at once — a “chunk” — and executing it open-loop, without waiting for new sensor observations. It is near-universal in modern robot policies because it hides inference latency and produces smoother motion. Its cost is a perception gap: for the duration of the chunk, the robot cannot react to anything.</p></div>
+        <h2 class="title is-4 section-heading">Why it exists</h2>
+        <div class="content has-text-justified">
+        <p>Large robot policies are expensive to evaluate. Predicting one action at a time and re-running the model before every low-level command is not feasible at control frequency. Chunking amortises a single forward pass across many control steps. It was popularised by transformer-based imitation learning and is now standard in both diffusion-policy and flow-matching action heads.</p>
+        <p>The side benefit is motion quality. Because the whole chunk is generated jointly, the resulting trajectory is internally consistent rather than a stitched sequence of independent decisions, which reduces jitter.</p>
+        </div>
+        <h2 class="title is-4 section-heading">The cost</h2>
+        <div class="content has-text-justified">
+        <p>During execution the policy is blind by construction. Observations arriving mid-chunk cannot alter the commands already being sent. For slow, visually persistent tasks this is usually fine. For tasks where the decisive evidence is a short event — a contact, a beep, a spoken interruption, a collision — it means the evidence may be missed entirely.</p>
+        <p>The HEAR paper names this the <b>Blind Execution Interval</b>. Its point is not that chunking is wrong, but that the interval has a modality-dependent cost: harmless for vision, potentially fatal for audio.</p>
+        </div>
+        <h2 class="title is-4 section-heading">The standard remedies, and their limits</h2>
+        <div class="content has-text-justified">
+        <p>Shortening the chunk reduces the gap but degrades smoothness and increases compute. Re-querying more often has the same trade-off. More recent approaches — asynchronous inference, real-time chunking, adaptive horizons, speculative execution — restructure when the model runs, and help significantly. None of them eliminates the gap, because the latency chain from sensing to actuation remains.</p>
+        <p>The complementary fix, and the one HEAR takes, is on the input side: make the observation interface remember. If incoming audio is accumulated into a causal memory rather than sampled per query, a cue that occurred mid-chunk is still available at the next decision boundary even though it is no longer audible.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Related concepts</h2>
+        <ul class="related-list">
+        <li><a href="../../concepts/blind-execution-interval/">Blind Execution Interval (BEI)</a></li>
+        <li><a href="../../concepts/robot-foundation-models/">Robot Foundation Models</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>Machine-readable entry points: <a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/zh/">中文</a></p><p class="subpage-cite">Cite as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

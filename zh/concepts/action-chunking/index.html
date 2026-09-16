@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么</title>
+  <meta name="description" content="动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。">
+  <meta name="keywords" content="动作分块, 动作块, 机器人开环执行, 分块 VLA 策略, 实时分块 RTC, 异步推理机器人, 动作块长度, 时序运动坍缩, 机器人策略延迟, 流匹配动作头">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/action-chunking/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/action-chunking/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/action-chunking/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/action-chunking/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/action-chunking/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么">
+  <meta property="og:description" content="动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/action-chunking/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么">
+  <meta name="twitter:description" content="动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/action-chunking/",
+    "name": "机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么",
+    "description": "动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么",
+        "item": "https://hear.irmv.top/zh/concepts/action-chunking/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#term",
+    "name": "机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么",
+    "description": "动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#article",
+    "headline": "机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么",
+    "description": "动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/action-chunking/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">动作分块</h1>
+        <div class="content has-text-justified page-lede"><p>动作分块是指一次预测一小段未来动作（一个“动作块”）并以开环方式执行、不等待新的传感器观测。它在现代机器人策略中近乎普遍，因为它掩盖了推理延迟并产生更平滑的运动。它的代价是一个感知空档：在动作块执行期间，机器人无法对任何事情作出反应。</p></div>
+        <h2 class="title is-4 section-heading">为什么存在</h2>
+        <div class="content has-text-justified">
+        <p>大型机器人策略的求值代价高昂。每次底层控制指令之前都重新运行模型、一次只预测一个动作，在控制频率下并不可行。分块把一次前向传播摊销到许多控制步上。它由基于 Transformer 的模仿学习推广开来，如今在扩散策略与流匹配动作头中都是标准做法。</p>
+        <p>附带的好处是运动质量。由于整个动作块是联合生成的，得到的轨迹内部一致，而不是一串独立决策的拼接，从而减少了抖动。</p>
+        </div>
+        <h2 class="title is-4 section-heading">代价</h2>
+        <div class="content has-text-justified">
+        <p>在执行期间，策略在构造上就是盲的。动作块中途到达的观测无法改动已经发出的指令。对于缓慢、视觉持续的任务，这通常无妨。而对于决定性证据是一段短事件的任务——一次接触、一声提示音、一句口头打断、一次碰撞——这意味着证据可能被完全错过。</p>
+        <p>HEAR 论文把这一现象命名为<b>盲执行间隔</b>。它的重点不是“分块是错的”，而是这个间隔的代价依模态而异：对视觉无害，对音频可能致命。</p>
+        </div>
+        <h2 class="title is-4 section-heading">常规补救及其局限</h2>
+        <div class="content has-text-justified">
+        <p>缩短动作块能减小空档，但会降低平滑度并增加算力。提高重查询频率有同样的取舍。更近的方法——异步推理、实时分块、自适应块长、推测式执行——重构的是模型何时运行，帮助很大。但它们都无法消除空档，因为从感知到执行的延迟链条依然存在。</p>
+        <p>互补的修法在输入侧，也是 HEAR 采取的路线：让观测接口记住。如果到来的音频被累积进因果记忆，而不是每次查询单独采样，那么动作块中途发生的一段线索在下一次决策边界上仍然可用，即使它已经不再在音频中。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/blind-execution-interval/">盲执行间隔（BEI）</a></li>
+        <li><a href="../../../zh/concepts/robot-foundation-models/">机器人基础模型</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

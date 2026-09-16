@@ -18,18 +18,40 @@ Then open `http://127.0.0.1:8000/`.
 
 ## Repository layout
 
-| Path | Purpose |
-| --- | --- |
-| `index.html` | English project page (canonical URL `/`) |
-| `zh/index.html` | Simplified Chinese project page (`/zh/`) |
+## Build system
+
+Most of the site is **generated**, not hand-written. `seo/facts.yaml` is the single source of truth for every number and identifier; `seo/content_en.py` and `seo/content_zh.py` hold prose only. `seo/build.py` emits the sub-pages, the machine-readable files and all sitemaps.
+
+```bash
+python3 seo/build.py      # regenerates everything below the "generated" line
+```
+
+Never edit a generated file by hand — the next build overwrites it. To change a figure, edit `facts.yaml`; to change wording, edit the relevant content module.
+
+| Path | Purpose | Source |
+| --- | --- | --- |
+| `index.html` | English project page (canonical URL `/`) | hand-written |
+| `zh/index.html` | Simplified Chinese project page (`/zh/`) | hand-written |
+| `paper/`, `zh/paper/` | Publication landing page with Scholar metadata | generated |
+| `research-context/`, `zh/…` | Where HEAR sits in the surrounding research | generated |
+| `research-landscape/`, `zh/…` | Map of the robot manipulation research landscape | generated |
+| `benchmark/`, `zh/…` | HEAR-Bench | generated |
+| `openx-sound/`, `zh/…` | OpenX-Sound | generated |
+| `concepts/<slug>/`, `zh/concepts/<slug>/` | 10 definitional pages | generated |
+| `videos/<slug>/` | One page per demonstration video | generated |
+| `seo/` | facts.yaml, content modules, build.py | — |
 | `index.md` | Markdown mirror of the English page, for LLM ingestion |
 | `zh/index.md` | Markdown mirror of the Chinese page |
-| `llms.txt` | [llms.txt](https://llmstxt.org/) index: summary, links, key terms |
-| `llms-full.txt` | Complete English + Chinese page text as plain Markdown |
+| `project.json` | Canonical facts as JSON — prefer this over scraping HTML | generated |
+| `research-entities.json` | Entity map for disambiguation | generated |
+| `citation.cff`, `codemeta.json` | Citation / software metadata | generated |
+| `feed.xml` | Atom feed of all pages | generated |
+| `llms.txt` | [llms.txt](https://llmstxt.org/) index: summary, links, key terms | hand-written |
+| `llms-full.txt` | Complete English + Chinese text of every page as Markdown | generated |
 | `robots.txt` | Per-crawler access rules, split by search / user-triggered / training role |
-| `sitemap.xml` | XML sitemap with image and video extensions |
+| `sitemap.xml` | Sitemap **index** → `sitemap-pages.xml`, `sitemap-images.xml`, `sitemap-videos.xml` | generated |
 | `cite.bib` | Standalone BibTeX file, fetchable at `/cite.bib` |
-| `<key>.txt` | IndexNow key file (see below) |
+| `<key>.txt` | IndexNow key file (see below) | — |
 | `static/` | CSS, JS, images, posters, captions and videos |
 
 ## Machine-readable entry points

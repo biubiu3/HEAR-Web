@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-16",
+  "project": {
+    "name": "HEAR",
+    "alias": [
+      "HEAR",
+      "HEAR-VSLA",
+      "HEAR framework",
+      "HEAR robot",
+      "HEAR Vision-Sound-Language-Action"
+    ],
+    "title": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+    "canonical_url": "https://hear.irmv.top/",
+    "paper_url": "https://arxiv.org/abs/2603.16086",
+    "pdf_url": "https://arxiv.org/pdf/2603.16086.pdf",
+    "code_url": "https://github.com/IRMVLab/HEAR",
+    "dataset_url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound",
+    "benchmark_url": "https://hear.irmv.top/benchmark/",
+    "status": "Accepted for publication",
+    "journal": "The International Journal of Robotics Research",
+    "bibtex_key": "nie2026visionsoundlanguageactionparadigmhearframework",
+    "bibtex_key_short": "nie2026hear"
+  },
+  "paradigm": {
+    "name": "Vision-Sound-Language-Action",
+    "abbreviation": "VSLA",
+    "extends": "Vision-Language-Action",
+    "sibling": "Vision-Tactile-Language-Action (VTLA)",
+    "modalities": [
+      "vision",
+      "streaming audio",
+      "language",
+      "proprioception",
+      "action"
+    ],
+    "definition": "A continuous control paradigm in which a robot policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops."
+  },
+  "method": {
+    "name": "HEAR",
+    "components": [
+      "Historizer",
+      "Envisioner",
+      "Advancer",
+      "Realizer"
+    ],
+    "concepts": [
+      "causal audio memory",
+      "multimodal reasoning",
+      "audio world model",
+      "temporal grounding",
+      "flow matching",
+      "action chunking"
+    ],
+    "key_formalism": {
+      "name": "Blind Execution Interval",
+      "abbreviation": "BEI",
+      "definition": "The interval in which a chunked, open-loop policy cannot incorporate new observations, so a transient acoustic cue can occur and vanish between two policy queries.",
+      "measured_bei_seconds": 2.3
+    }
+  },
+  "results": {
+    "metric": "sound-causal success rate",
+    "metric_definition": "A trial counts only if the robot completes the physical goal after the required acoustic condition has occurred.",
+    "hear_bench": {
+      "average": 0.81,
+      "tasks": 7,
+      "trials_per_task": 100,
+      "baselines": {
+        "strongest_waveform_vla": 0.61,
+        "strongest_asr_vla": 0.35,
+        "strongest_audio_native": 0.28,
+        "strongest_vision_only": 0.14
+      }
+    },
+    "real_robot": {
+      "robot": "Franka Panda",
+      "calibrated_average": 0.7,
+      "uniform_uncalibrated_average": 0.54,
+      "strongest_baseline": 0.45,
+      "tasks": [
+        "Moka Coffee",
+        "Answer Phone",
+        "Shake Bottle",
+        "Real Alarm Clock"
+      ]
+    },
+    "ablation": {
+      "no_openx_sound_pretraining": 0.69,
+      "no_historizer": 0.57,
+      "no_advancer": 0.73
+    }
+  },
+  "benchmark": {
+    "name": "HEAR-Bench",
+    "base": "RoboTwin 2.0",
+    "url": "https://hear.irmv.top/benchmark/",
+    "cue_categories": 4,
+    "tasks": [
+      "Alarm Clock",
+      "Microwave",
+      "Check Yes",
+      "Interrupt",
+      "Pour Water",
+      "Boil Water",
+      "Check Materials"
+    ]
+  },
+  "dataset": {
+    "name": "OpenX-Sound",
+    "url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound",
+    "base": "Open X-Embodiment",
+    "url_page": "https://hear.irmv.top/openx-sound/",
+    "sync_accuracy": 0.987,
+    "sync_tolerance_ms": 100,
+    "license": "https://www.apache.org/licenses/LICENSE-2.0"
+  },
+  "models": {
+    "url": "https://huggingface.co/biubiu2",
+    "checkpoints": [
+      "HEAR-Qwen3-Omni-30B-A3B-Instruct-Pruned",
+      "HEAR-Qwen3-0.6B",
+      "HEAR-mimi"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Chang Nie",
+      "affiliation": "Shanghai Jiao Tong University"
+    },
+    {
+      "name": "Tianchen Deng",
+      "affiliation": "Shanghai Jiao Tong University"
+    },
+    {
+      "name": "Guangming Wang",
+      "affiliation": "University of Cambridge"
+    },
+    {
+      "name": "Zhe Liu",
+      "affiliation": "Shanghai Jiao Tong University"
+    },
+    {
+      "name": "Hesheng Wang",
+      "affiliation": "Shanghai Jiao Tong University",
+      "email": "wanghesheng@sjtu.edu.cn"
+    }
+  ],
+  "search_context": [
+    "vision-language-action",
+    "VLA robot manipulation",
+    "sound-centric manipulation",
+    "robot audition",
+    "audio-conditioned manipulation",
+    "world models for robotics",
+    "world action model",
+    "audio world model",
+    "action chunking",
+    "asynchronous robot control",
+    "physical AI",
+    "embodied AI",
+    "embodied intelligence",
+    "robot foundation model",
+    "multisensory robotics",
+    "vision-tactile-language-action",
+    "AI agent robotics",
+    "robot manipulation benchmark",
+    "Open X-Embodiment",
+    "具身智能",
+    "物理AI",
+    "世界模型",
+    "世界动作模型",
+    "机器人听觉",
+    "声音驱动的机器人操作",
+    "视觉语言动作模型",
+    "视-声-语言-动作",
+    "机器人操作",
+    "多模态大模型"
+  ],
+  "entry_points": {
+    "project_page_en": "https://hear.irmv.top/",
+    "project_page_zh": "https://hear.irmv.top/zh/",
+    "paper_page": "https://hear.irmv.top/paper/",
+    "research_context": "https://hear.irmv.top/research-context/",
+    "research_landscape": "https://hear.irmv.top/research-landscape/",
+    "benchmark": "https://hear.irmv.top/benchmark/",
+    "dataset": "https://hear.irmv.top/openx-sound/",
+    "llms_txt": "https://hear.irmv.top/llms.txt",
+    "llms_full": "https://hear.irmv.top/llms-full.txt",
+    "citation_bib": "https://hear.irmv.top/cite.bib",
+    "sitemap": "https://hear.irmv.top/sitemap.xml"
+  }
+}

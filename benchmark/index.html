@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules</title>
+  <meta name="description" content="HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.">
+  <meta name="keywords" content="HEAR-Bench, sound-centric manipulation benchmark, RoboTwin 2.0 benchmark, sound-causal evaluation, robot manipulation benchmark, audio robot benchmark, VLA benchmark, timing-aware evaluation, contact acoustics benchmark, robot audition evaluation">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hear.irmv.top/benchmark/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/benchmark/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/benchmark/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/benchmark/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/benchmark/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules">
+  <meta property="og:description" content="HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.">
+  <meta property="og:url" content="https://hear.irmv.top/benchmark/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules">
+  <meta name="twitter:description" content="HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../static/images/logo3.png">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/benchmark/#webpage",
+    "url": "https://hear.irmv.top/benchmark/",
+    "name": "HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules",
+    "description": "HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/benchmark/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/benchmark/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR Project Home",
+        "item": "https://hear.irmv.top/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules",
+        "item": "https://hear.irmv.top/benchmark/"
+      }
+    ]
+  },
+  {
+    "@type": "Dataset",
+    "@id": "https://hear.irmv.top/benchmark/#dataset",
+    "name": "HEAR-Bench",
+    "description": "HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.",
+    "url": "https://hear.irmv.top/benchmark/",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#paper"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/benchmark/#article",
+    "headline": "HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules",
+    "description": "HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.",
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/benchmark/#webpage"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ]
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top/">&larr; Project Home</a></nav>
+        <h1 class="title is-2 page-title">HEAR-Bench: Sound-Causal Manipulation Benchmark</h1>
+        <div class="content has-text-justified page-lede"><p>HEAR-Bench is a simulation benchmark for sound-centric manipulation, built on the dual-arm RoboTwin 2.0 platform. It supplies a streaming microphone channel and enforces a <b>sound-causal success rule</b>: a trial counts as successful only if the robot completes the physical goal <i>after</i> the required acoustic condition has occurred. Reaching the goal early — which standard benchmarks would score as success — is recorded as a failure.</p></div>
+        <h2 class="title is-4 section-heading">Why a timing-aware benchmark is necessary</h2>
+        <div class="content has-text-justified">
+        <p>Standard manipulation benchmarks evaluate whether the final geometric state was reached. On a sound-gated task, that metric cannot tell the difference between a policy that waited for the cue and a policy that ignored sound entirely and moved on a visual heuristic. HEAR-Bench closes that gap by making the acoustic precondition part of the success predicate. This is the property that makes it possible to measure whether a policy is genuinely sound-causal.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Task suite</h2>
+        <div class="content has-text-justified">
+        <p>Seven simulation tasks cover four categories of decision-critical acoustic cue. Cue timings and initial visual states are randomised so that policies cannot memorise a fixed schedule, and each task is evaluated over 100 independent trials.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Four categories of cue</h2>
+        <div class="content has-text-justified">
+        <p><b>Event-triggered alarms</b> test waiting and transient capture: <i>Alarm Clock</i> requires suppressing a visually tempting early press until a ring begins, and <i>Microwave</i> requires capturing a brief completion beep that can fall entirely inside an execution gap.</p>
+        <p><b>Human speech</b> tests timing and prosody: <i>Check Yes</i> uses identical text with different intonation to defeat pure ASR, and <i>Interrupt</i> places a spoken override at a random moment to test safe mode switching mid-motion.</p>
+        <p><b>Continuous process sounds</b> test long-horizon monitoring: <i>Pour Water</i> and <i>Boil Water</i> require tracking gradual acoustic evolution while vision is weak or static.</p>
+        <p><b>Physical interaction feedback</b> tests contact acoustics: <i>Check Materials</i> uses visually similar objects so that impact timbre is the only discriminative signal.</p>
+        </div>
+        <h2 class="title is-4 section-heading">How it is used</h2>
+        <div class="content has-text-justified">
+        <p>All evaluated methods share the same observation interface and the same two-stage training recipe (pretraining on OpenX-Sound, then task-specific fine-tuning), so differences reflect architecture rather than data volume. Under this protocol HEAR reaches 81% average sound-causal success, against 61% for the strongest waveform-as-image VLA baseline, 35% for the strongest ASR baseline and 14% for the strongest vision-only backbone.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Reproducing it</h2>
+        <div class="content has-text-justified">
+        <p>The HEAR-Bench implementation is part of the code release, built on top of RoboTwin 2.0, and the task audio assets ship with it. See <a href="/openx-sound/">OpenX-Sound</a> for the pretraining half of the pipeline.</p>
+        </div>
+        <div class="table-scroll"><table class="results-glance"><caption>The seven HEAR-Bench simulation tasks, covering four categories of decision-critical acoustic cue.</caption><thead><tr><th scope="col">Cue category</th><th scope="col">Task</th><th scope="col">Primary cue</th></tr></thead><tbody><tr><td>Event-triggered alarms</td><td>Alarm Clock</td><td>alarm ringing</td></tr><tr><td>Event-triggered alarms</td><td>Microwave</td><td>completion beep</td></tr><tr><td>Human speech</td><td>Check Yes</td><td>prosody-driven speech</td></tr><tr><td>Human speech</td><td>Interrupt</td><td>spoken interruption</td></tr><tr><td>Continuous process sounds</td><td>Pour Water</td><td>pouring sound evolution</td></tr><tr><td>Continuous process sounds</td><td>Boil Water</td><td>boiling sound evolution</td></tr><tr><td>Physical interaction feedback</td><td>Check Materials</td><td>contact acoustics</td></tr></tbody></table></div><div class="table-scroll"><table class="results-glance"><caption>Average sound-causal success across the seven HEAR-Bench tasks, 100 trials each.</caption><thead><tr><th scope="col">Method</th><th scope="col">Type</th><th scope="col">Average sound-causal success</th></tr></thead><tbody><tr><td>OpenVLA</td><td>VLA</td><td>0.10</td></tr><tr><td>π0.5</td><td>VLA</td><td>0.14</td></tr><tr><td>ManiWAV</td><td>audio-native</td><td>0.26</td></tr><tr><td>Play it by Ear</td><td>audio-native</td><td>0.28</td></tr><tr><td>OpenVLA-ASR</td><td>VLA + ASR</td><td>0.29</td></tr><tr><td>π0.5-ASR</td><td>VLA + ASR</td><td>0.35</td></tr><tr><td>OpenVLA-Waveform</td><td>VLA + waveform</td><td>0.53</td></tr><tr><td>π0.5-Waveform</td><td>VLA + waveform</td><td>0.61</td></tr><tr class="result-row-highlight"><td><b>HEAR</b></td><td><b>VSLA</b></td><td><b>0.81</b></td></tr></tbody></table></div>
+        <div class="subpage-footer"><p>Machine-readable entry points: <a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/zh/">中文</a></p><p class="subpage-cite">Cite as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

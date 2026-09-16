@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>多感官机器人策略：为 VLA 模型加入触觉、力与声音</title>
+  <meta name="description" content="多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。">
+  <meta name="keywords" content="多感官机器人策略, 视触觉语言动作, VTLA, 触觉 VLA, 力感知机器人策略, 音频 VLA, 多模态机器人操作, 传感器融合机器人学习, 视触觉, 机器人传感模态">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/multisensory-robotics/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="多感官机器人策略：为 VLA 模型加入触觉、力与声音">
+  <meta property="og:description" content="多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/multisensory-robotics/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="多感官机器人策略：为 VLA 模型加入触觉、力与声音">
+  <meta name="twitter:description" content="多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/multisensory-robotics/",
+    "name": "多感官机器人策略：为 VLA 模型加入触觉、力与声音",
+    "description": "多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "多感官机器人策略：为 VLA 模型加入触觉、力与声音",
+        "item": "https://hear.irmv.top/zh/concepts/multisensory-robotics/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#term",
+    "name": "多感官机器人策略：为 VLA 模型加入触觉、力与声音",
+    "description": "多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#article",
+    "headline": "多感官机器人策略：为 VLA 模型加入触觉、力与声音",
+    "description": "多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/multisensory-robotics/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">多感官机器人策略</h1>
+        <div class="content has-text-justified page-lede"><p>多感官机器人策略为视觉-语言-动作模型扩展视觉之外的模态——通常是触觉、力或声音。动机很直接：相机无法观测接触、力或隐藏的内部状态，因此依赖这些信息的任务需要另一条通道。工程上的教训则不那么显然：每个模态都有自己的时间结构，而适合视觉的接口不会自动适合其它模态。</p></div>
+        <h2 class="title is-4 section-heading">家族成员</h2>
+        <div class="content has-text-justified">
+        <p><b>视觉-触觉-语言-动作（VTLA）。</b>为观测栈加入触觉，通常来自指尖传感器或电子皮肤。触觉数据维度高、局部、变化快，这使它对手部接触丰富的操作很有信息量，也使它难以喂给为相机帧设计的模型。</p>
+        <p><b>力与力矩。</b>腕部或关节力传感给出维度更低但非常直接的接触度量，通常作为额外的输入向量而非类图像模态加入。</p>
+        <p><b>音频——VSLA。</b>加入流式声音。与触觉和力不同，音频携带的是“并非发生在机器人末端”的事件信息：电器完成、电话响起、液体沸腾。</p>
+        </div>
+        <h2 class="title is-4 section-heading">时间结构比模态本身更重要</h2>
+        <div class="content has-text-justified">
+        <p>标准 VLA 假定观测可以低频采样，因为世界变化缓慢。对相机而言这个假定合理，对“信息以短促爆发形式到达”的模态而言则是灾难性的。</p>
+        <p>触觉与力信号密集，但与机器人自身运动强相关，所以策略大体知道何时应当期待它们。音频不同：任务相关的声学事件稀疏、异步，且常常由机器人之外的某个东西产生。它们可以在任意时刻发生，包括在开环执行的动作块期间，而且不会重复。</p>
+        </div>
+        <h2 class="title is-4 section-heading">由此得到的设计结论</h2>
+        <div class="content has-text-justified">
+        <p>增加一个模态不等于增加一个输入通道。若某模态的证据是瞬态的，接口就需要有记忆：某种累积已到达内容、并把它保存到决策能够使用为止的东西。没有这一点的额外模态，在 API 里存在，在效果上缺席。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 的位置</h2>
+        <div class="content has-text-justified">
+        <p>HEAR 是这个家族中的听觉成员。它把流式音频接口与因果记忆（Historizer）配对，配上一个把音频与视觉、语言、本体感觉融合起来的推理模块（Envisioner），并配有拒绝“在所需声音发生之前就完成的动作”的评测协议。它的设计目标是与触觉、力感知结合，而不是取代它们。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/vision-sound-language-action/">视-声-语言-动作（VSLA）</a></li>
+        <li><a href="../../../zh/concepts/robot-audition/">面向操作的机器人听觉</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

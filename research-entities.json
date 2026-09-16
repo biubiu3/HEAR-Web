@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-16",
+  "note": "Machine-readable map of the research entities this project relates to, for retrieval and entity-disambiguation. Listing an entity here means it is a related work or neighbouring direction, not that HEAR claims priority over it.",
+  "primary_entity": {
+    "name": "HEAR",
+    "type": "robot manipulation framework",
+    "url": "https://hear.irmv.top/",
+    "paper": "https://arxiv.org/abs/2603.16086"
+  },
+  "own_paradigm": [
+    {
+      "name": "Vision-Sound-Language-Action",
+      "abbreviation": "VSLA",
+      "url": "https://hear.irmv.top/concepts/vision-sound-language-action/",
+      "definition": "Policy conditioned on vision, streaming audio, language and proprioception under delayed decision loops."
+    },
+    {
+      "name": "Blind Execution Interval",
+      "abbreviation": "BEI",
+      "url": "https://hear.irmv.top/concepts/blind-execution-interval/",
+      "definition": "The perception gap created by open-loop action-chunk execution."
+    }
+  ],
+  "own_artifacts": [
+    {
+      "name": "HEAR-Bench",
+      "type": "benchmark",
+      "url": "https://hear.irmv.top/benchmark/"
+    },
+    {
+      "name": "OpenX-Sound",
+      "type": "dataset",
+      "url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound"
+    },
+    {
+      "name": "HEAR code",
+      "type": "software",
+      "url": "https://github.com/IRMVLab/HEAR"
+    }
+  ],
+  "related_directions": [
+    {
+      "name": "Vision-Language-Action (VLA)",
+      "url": "https://hear.irmv.top/concepts/vision-sound-language-action/",
+      "relation": "HEAR extends this family"
+    },
+    {
+      "name": "Vision-Tactile-Language-Action (VTLA)",
+      "url": "https://hear.irmv.top/concepts/multisensory-robotics/",
+      "relation": "sibling modality family"
+    },
+    {
+      "name": "World models / World Action Models (WAM)",
+      "url": "https://hear.irmv.top/concepts/audio-world-model/",
+      "relation": "Advancer is an audio world model"
+    },
+    {
+      "name": "Action chunking",
+      "url": "https://hear.irmv.top/concepts/action-chunking/",
+      "relation": "source of the Blind Execution Interval"
+    },
+    {
+      "name": "Robot audition",
+      "url": "https://hear.irmv.top/concepts/robot-audition/",
+      "relation": "broader field HEAR contributes to"
+    },
+    {
+      "name": "Physical AI / embodied intelligence",
+      "url": "https://hear.irmv.top/concepts/physical-ai/",
+      "relation": "application setting"
+    },
+    {
+      "name": "Robot foundation models",
+      "url": "https://hear.irmv.top/concepts/robot-foundation-models/",
+      "relation": "model class"
+    },
+    {
+      "name": "AI agent robotics",
+      "url": "https://hear.irmv.top/concepts/ai-agent-robotics/",
+      "relation": "HEAR is the low-level action component"
+    }
+  ],
+  "research_context_page": "https://hear.irmv.top/research-context/",
+  "research_landscape_page": "https://hear.irmv.top/research-landscape/"
+}

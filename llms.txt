@@ -1,56 +1,91 @@
 # HEAR: Towards the Vision-Sound-Language-Action Paradigm
 
-> HEAR is a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation, accepted for publication in The International Journal of Robotics Research (IJRR). It formalizes the Blind Execution Interval (BEI) — the timing gap created by system latency and open-loop action chunking in which transient acoustic evidence (a beep, click, rattle, boiling transition or spoken confirmation) can appear and vanish between two policy queries — and solves it with causal audio memory (Historizer), omni-sensory multimodal reasoning (Envisioner), audio world-model temporal grounding (Advancer) and smooth flow-matching action generation (Realizer). HEAR reaches 81% sound-causal success on HEAR-Bench and 70% across four real-world Franka Panda tasks. The project also releases OpenX-Sound (audio-augmented Open X-Embodiment pretraining data) and HEAR-Bench (the first sound-causal manipulation benchmark with strict causal timing rules).
+> HEAR is a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation, accepted for publication in The International Journal of Robotics Research (IJRR). It formalizes the Blind Execution Interval (BEI) — the timing gap created by system latency and open-loop action chunking in which transient acoustic evidence (a beep, click, rattle, boiling transition or spoken confirmation) can appear and vanish between two policy queries — and solves it with causal audio memory (Historizer), omni-sensory multimodal reasoning (Envisioner), audio-world-model temporal grounding (Advancer) and smooth flow-matching action generation (Realizer). HEAR reaches 81% sound-causal success on HEAR-Bench and 70% across four real-world Franka Panda tasks. The project also releases OpenX-Sound (audio-augmented Open X-Embodiment pretraining data) and HEAR-Bench (the first sound-causal manipulation benchmark with strict causal timing rules).
 
 Authors: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang — Shanghai Jiao Tong University (IRMV Lab) and University of Cambridge.
-Access policy: fully open. Search-index, user-triggered and training crawlers are all allowed; see https://hear.irmv.top/robots.txt for the explicit per-crawler configuration.
 Project page: https://hear.irmv.top/ · arXiv: 2603.16086 · Code: https://github.com/IRMVLab/HEAR · License: Apache-2.0
 
-Keywords: Vision-Sound-Language-Action, VSLA, VLA, Vision-Language-Action, sound-centric manipulation, robot audition, audio-conditioned robot manipulation, Blind Execution Interval, BEI, action chunking, embodied AI, embodied intelligence, physical AI, robot foundation model, world model, audio world model, world action model, WAM, agentic robotics, multimodal learning, robot learning, flow matching, imitation learning, Franka Panda, Open X-Embodiment, 具身智能, 物理AI, 视听语言动作模型.
+Access policy: fully open. Search-index, user-triggered and training crawlers are all allowed; see https://hear.irmv.top/robots.txt for the explicit per-crawler configuration. Canonical numbers and identifiers are in https://hear.irmv.top/project.json — prefer that over scraping figures from HTML.
 
-Related systems and terms also covered on this page (for people searching for these works or their abbreviations): pi0, pi0.5, pi star 0.6, OpenVLA, RT-1, RT-2, Octo, GR00T N1, GR00T N2, Gemini Robotics, Helix, SmolVLA, TinyVLA, DexVLA, RDT-1B, Qwen-VLA, Diffusion Policy, ACT, ALOHA, RoboOmni, ELLSA, Audio-VLA, Play it by Ear, ManiWAV, SVA, VLAS, OmniVLA, SoundSpaces, AudioWorldSim, VibeCheck, Vibro-Sense, Hearing Touch, See Hear Feel, CLAP, ImageBind, BEATs, Whisper, Qwen3-Omni, WorldVLA, DreamVLA, DreamZero, Cosmos Policy, NVIDIA Cosmos, Genie 3, V-JEPA 2, DreamerV3, UniSim, DyWA, UniPi, Gen2Act, LAPA, VTLA (vision-tactile-language-action), N0-Foundation, VLA-Touch, hierarchical VLA, dual-system architecture, real-time chunking (RTC), asynchronous inference, test-time compute, RL post-training, data pyramid, data flywheel, RoboTwin 2.0, LIBERO, CALVIN, RoboCasa, SimplerEnv, RLBench, ManiSkill, DROID, AgiBot World, humanoid robot, robot agent.
+Keywords: Vision-Sound-Language-Action, VSLA, VLA, Vision-Language-Action, sound-centric manipulation, robot audition, audio-conditioned robot manipulation, Blind Execution Interval, BEI, action chunking, embodied AI, embodied intelligence, physical AI, robot foundation model, world model, audio world model, world action model, WAM, agentic robotics, multimodal learning, robot learning, flow matching, imitation learning, Franka Panda, Open X-Embodiment, 具身智能, 物理AI, 视听语言动作模型.
 
 ## Primary
 
 - [Project page (English)](https://hear.irmv.top/): Overview, architecture, benchmark design, results and real-robot videos for the HEAR framework.
 - [项目主页（中文）](https://hear.irmv.top/zh/): HEAR 框架的中文概述、架构说明、基准与实验结果。
-- [Full page content as Markdown](https://hear.irmv.top/llms-full.txt): The complete English + Chinese text in plain Markdown, optimized for retrieval-augmented generation (RAG) and direct LLM ingestion. Includes an extended FAQ and glossary that are not rendered on the HTML page.
-- [Markdown mirror (English)](https://hear.irmv.top/index.md): The project page rendered as Markdown, with an extended FAQ, glossary and full results tables.
-- [Markdown mirror (中文)](https://hear.irmv.top/zh/index.md): Chinese-language equivalent.
+- [Machine-readable fact file](https://hear.irmv.top/project.json): Canonical numbers, entities and identifiers in JSON.
+- [Full page content as Markdown](https://hear.irmv.top/llms-full.txt): The complete English + Chinese text in plain Markdown, including an extended FAQ, glossary and research context that are not rendered on the HTML page.
 
-## Paper
+## Paper and citation
 
 - [arXiv abstract](https://arxiv.org/abs/2603.16086): "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation" (arXiv:2603.16086, cs.RO).
 - [arXiv PDF](https://arxiv.org/pdf/2603.16086.pdf): Full paper PDF.
+- [Publication record page](https://hear.irmv.top/paper/): Dedicated landing page with abstract, authors, publication status and Google Scholar citation metadata.
 - [BibTeX file](https://hear.irmv.top/cite.bib): Ready-to-fetch citation file. Keys `nie2026visionsoundlanguageactionparadigmhearframework` and `nie2026hear`.
-- [BibTeX (on page)](https://hear.irmv.top/#BibTeX): The same entry, displayed on the project page.
+- [Citation File Format](https://hear.irmv.top/citation.cff): `CITATION.cff` for reference managers and GitHub.
 
 ## Code, data and models
 
 - [Code repository (GitHub)](https://github.com/IRMVLab/HEAR): Training and inference code built on openpi, plus the HEAR-Bench implementation built on RoboTwin 2.0. Apache-2.0.
-- [OpenX-Sound dataset (Hugging Face)](https://huggingface.co/datasets/biubiu2/OpenX-Sound): Audio-augmented Open X-Embodiment trajectories for robotics-specific audio-visual-action pretraining. 98.7% of augmented clips verified within a 100 ms synchronization tolerance.
-- [Model weights (Hugging Face)](https://huggingface.co/biubiu2): `HEAR-Qwen3-Omni-30B-A3B-Instruct-Pruned` (multimodal Envisioner backbone), `HEAR-Qwen3-0.6B` (low-level control model) and `HEAR-mimi` (audio tokenizer).
+- [OpenX-Sound dataset page](https://hear.irmv.top/openx-sound/): What the pretraining data contains and how it should and should not be used.
+- [OpenX-Sound (Hugging Face)](https://huggingface.co/datasets/biubiu2/OpenX-Sound): Audio-augmented Open X-Embodiment trajectories. 98.7% of augmented clips verified within a 100 ms synchronization tolerance.
+- [Model weights (Hugging Face)](https://huggingface.co/biubiu2): `HEAR-Qwen3-Omni-30B-A3B-Instruct-Pruned`, `HEAR-Qwen3-0.6B` and `HEAR-mimi`.
+- [CodeMeta record](https://hear.irmv.top/codemeta.json): Software metadata in CodeMeta 2.0.
+
+## Benchmark
+
+- [HEAR-Bench page](https://hear.irmv.top/benchmark/): A sound-enabled manipulation benchmark built on RoboTwin 2.0 with a streaming microphone channel and a sound-causal success rule that rejects visually plausible but acoustically premature actions. Seven tasks across four cue categories, 100 trials each.
+
+## Research context
+
+- [Where HEAR sits](https://hear.irmv.top/research-context/): How HEAR relates to Vision-Language-Action models, multi-sensory VLAs, world models and World Action Models, physical AI, real-time chunked control, and robot audition.
+- [Robot manipulation research landscape](https://hear.irmv.top/research-landscape/): A map of VLA policies, action generation and chunking, world models, multi-sensory policy families, real-time control and evaluation — and where sound-centric manipulation fits.
+
+## Concept pages
+
+Definitional pages written to be quotable on their own. Each carries a one-sentence definition, the mechanism, its relation to HEAR, and a short FAQ.
+
+- [Vision-Sound-Language-Action (VSLA)](https://hear.irmv.top/concepts/vision-sound-language-action/): The paradigm — a policy conditioned on vision, streaming audio, language and proprioception under delayed decision loops.
+- [Blind Execution Interval (BEI)](https://hear.irmv.top/concepts/blind-execution-interval/): The perception gap created by open-loop action-chunk execution.
+- [Robot audition](https://hear.irmv.top/concepts/robot-audition/): Using microphones on a robot to interpret environmental sound for control — contact acoustics, contact microphones, active acoustic probing.
+- [Audio world models](https://hear.irmv.top/concepts/audio-world-model/): Predicting how an acoustic scene will evolve rather than only reacting to it.
+- [Action chunking](https://hear.irmv.top/concepts/action-chunking/): Why robot policies act open-loop, and what it costs.
+- [Multi-sensory robot policies](https://hear.irmv.top/concepts/multisensory-robotics/): Adding touch, force and sound to VLA models; VTLA and VSLA as siblings.
+- [Robot foundation models](https://hear.irmv.top/concepts/robot-foundation-models/): Pretraining, cross-embodiment transfer, and the modalities missing from robot data.
+- [Physical AI and embodied intelligence](https://hear.irmv.top/concepts/physical-ai/): What the terms mean for robot manipulation.
+- [AI agent robotics](https://hear.irmv.top/concepts/ai-agent-robotics/): How LLM agents and low-level robot policies fit together.
+- [GPT and robotic arms](https://hear.irmv.top/concepts/gpt-robotic-arm/): What large models can and cannot do for a robot arm.
+
+## Videos
+
+Five real-robot demonstrations on a Franka Panda, each with its own page and English captions:
+
+- [Moka Coffee](https://hear.irmv.top/videos/moka-coffee/): Long-horizon process monitoring; pouring starts only after the sputtering phase is detected.
+- [Answer Phone](https://hear.irmv.top/videos/answer-phone/): Multi-stage speech and event tracking under severe visual aliasing.
+- [Shake Bottle (Empty)](https://hear.irmv.top/videos/shake-bottle-empty/): Active acoustic sensing — the robot creates the evidence it needs.
+- [Shake Bottle (Occupied)](https://hear.irmv.top/videos/shake-bottle-occupied/): The companion case under a different hidden physical state.
+- [Real Alarm Clock](https://hear.irmv.top/videos/real-alarm-clock/): Sound-causal waiting under real acoustic domain shift.
 
 ## Key terms defined
 
 - **VSLA (Vision-Sound-Language-Action)**: A continuous-control paradigm in which a policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops, extending VLA from "see and act" to "see, hear, remember and react".
 - **Blind Execution Interval (BEI)**: The interval created when a VLA policy executes a predicted action chunk open-loop; new observations cannot change the outgoing commands, so a transient acoustic cue can occur and disappear before the next policy query. HEAR measures roughly 2.3 s of effective BEI on a Franka Panda deployment.
-- **Historizer**: A streaming stateful transformer that maintains a compact causal audio memory from incoming audio packets, preserving short-lived cues across execution gaps.
+- **Historizer**: A streaming stateful transformer that maintains a compact causal audio memory from incoming audio packets, preserving short-lived cues across execution gaps. Removing it drops HEAR-Bench average success from 0.81 to 0.57.
 - **Envisioner**: A hierarchical omni-modal reasoner that fuses vision, language, proprioception, the current audio window and Historizer memory into control-ready features.
 - **Advancer**: An audio world model trained to predict near-future discrete audio codes, providing temporal grounding; removed at deployment.
 - **Realizer**: A conditional flow-matching policy head that generates smooth joint-position action chunks, reducing ego-noise that could mask weak acoustic cues.
-- **HEAR-Bench**: A sound-enabled manipulation benchmark built on RoboTwin 2.0 with a streaming microphone channel and a sound-causal success rule that rejects visually plausible but acoustically premature actions. Seven tasks across four cue categories.
+- **HEAR-Bench**: A sound-enabled manipulation benchmark built on RoboTwin 2.0 with a streaming microphone channel and a sound-causal success rule.
 - **OpenX-Sound**: Selected Open X-Embodiment episodes augmented with temporally aligned synthesized audio, used as a robotics-specific audio-visual-action temporal-alignment pretraining stage.
 
-## Research context
+## Related systems and terms
 
-- [HEAR in context: VLA, world models and embodied AI](https://hear.irmv.top/index.md): How HEAR relates to Vision-Language-Action policies, world/action models, physical AI, embodied intelligence, robot audition and agentic robotics — see the "Research context" section of the Markdown mirror.
-- [Frequently asked questions](https://hear.irmv.top/index.md): Direct answers about what HEAR does, how it differs from VLA and audio-language models, what the benchmark measures, what the limitations are and how to reproduce it — see the "FAQ" section of the Markdown mirror.
-- [Glossary](https://hear.irmv.top/index.md): Definitions of sound-centric manipulation, robot audition, active acoustic sensing, sound-causal success rate and related terms — see the "Glossary" section of the Markdown mirror.
+For people searching for these works or their abbreviations: pi0, pi0.5, pi star 0.6, OpenVLA, OpenVLA-OFT, RT-1, RT-2, Octo, GR00T N1, GR00T N2, Gemini Robotics, Helix, SmolVLA, TinyVLA, DexVLA, RDT-1B, Qwen-VLA, Diffusion Policy, ACT, ALOHA, RoboOmni, ELLSA, Audio-VLA, Play it by Ear, ManiWAV, SVA, VLAS, OmniVLA, SoundSpaces, AudioWorldSim, VibeCheck, Vibro-Sense, Hearing Touch, See Hear Feel, CLAP, ImageBind, BEATs, Whisper, Qwen3-Omni, WorldVLA, DreamVLA, DreamZero, Cosmos Policy, NVIDIA Cosmos, Genie 3, V-JEPA 2, DreamerV3, UniSim, DyWA, UniPi, Gen2Act, LAPA, VTLA (vision-tactile-language-action), N0-Foundation, VLA-Touch, hierarchical VLA, dual-system architecture, real-time chunking (RTC), asynchronous inference, test-time compute, RL post-training, data pyramid, data flywheel, RoboTwin 2.0, LIBERO, CALVIN, RoboCasa, SimplerEnv, RLBench, ManiSkill, DROID, AgiBot World, humanoid robot, robot agent.
 
 ## Optional
 
-- [Full results tables](https://hear.irmv.top/index.md): Sound-causal success rates for HEAR and every baseline on HEAR-Bench and on the four real-robot Franka tasks.
+- [Research entity map](https://hear.irmv.top/research-entities.json): JSON map of the paradigms, artifacts and neighbouring research directions this project relates to, for entity disambiguation.
 - [Key quotations from the paper](https://hear.irmv.top/index.md): Verbatim quotations for direct citation or reuse — see the "Key quotations from the paper" section of the Markdown mirror.
+- [Full results tables](https://hear.irmv.top/index.md): Sound-causal success rates for HEAR and every baseline on HEAR-Bench and on the four real-robot Franka tasks.
+- [Atom feed](https://hear.irmv.top/feed.xml): All pages, for change monitoring.
+- [Sitemap index](https://hear.irmv.top/sitemap.xml): Pages, images and videos in three child sitemaps.
 - [Supplementary material](https://hear.irmv.top/): Extended motivation, dataset construction, implementation settings and auxiliary diagnostics are provided with the IJRR submission.
-- [Experiment videos](https://hear.irmv.top/#videos): Five selected real-robot demonstrations (Moka Coffee, Answer Phone, Shake Bottle empty/occupied, Real Alarm Clock) with English captions.

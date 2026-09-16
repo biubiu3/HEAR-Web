@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use HEAR, OpenX-Sound, or HEAR-Bench, please cite the HEAR paper."
+title: "HEAR: Vision-Sound-Language-Action for Sound-Centric Manipulation"
+type: software
+authors:
+  - family-names: Chang
+    given-names: Nie
+    affiliation: "Shanghai Jiao Tong University"
+  - family-names: Tianchen
+    given-names: Deng
+    affiliation: "Shanghai Jiao Tong University"
+  - family-names: Guangming
+    given-names: Wang
+    affiliation: "University of Cambridge"
+  - family-names: Zhe
+    given-names: Liu
+    affiliation: "Shanghai Jiao Tong University"
+  - family-names: Hesheng
+    given-names: Wang
+    affiliation: "Shanghai Jiao Tong University"
+url: "https://hear.irmv.top/"
+repository-code: "https://github.com/IRMVLab/HEAR"
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation"
+  authors:
+    - family-names: Chang
+      given-names: Nie
+    - family-names: Tianchen
+      given-names: Deng
+    - family-names: Guangming
+      given-names: Wang
+    - family-names: Zhe
+      given-names: Liu
+    - family-names: Hesheng
+      given-names: Wang
+  journal: "The International Journal of Robotics Research"
+  year: 2026

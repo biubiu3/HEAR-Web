@@ -1,0 +1,158 @@
+/* Styles for the generated sub-pages (paper, concepts, benchmark, videos). */
+
+.breadcrumb-nav {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.breadcrumb-nav a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  font-size: clamp(1.6rem, 3vw, 2.1rem) !important;
+  line-height: 1.22 !important;
+  margin-bottom: 1.25rem !important;
+  letter-spacing: -0.02em;
+  max-width: 60rem;
+}
+
+.content .page-lede {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  padding: 1.2rem 1.4rem;
+  background: var(--background-accent);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+}
+
+.section-heading {
+  margin-top: 2.25rem !important;
+  margin-bottom: 0.9rem !important;
+  font-weight: 700 !important;
+}
+
+.related-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.related-list li {
+  margin-bottom: 0.4rem;
+}
+
+.related-list a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.results-glance {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--background-primary);
+}
+
+.results-glance caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-bottom: 0.5rem;
+}
+
+.results-glance th,
+.results-glance td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+
+.results-glance thead th {
+  background: var(--background-accent);
+  font-weight: 700;
+}
+
+.results-glance .result-row-highlight {
+  background: #eff6ff;
+}
+
+.faq-list {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 0.95rem 1.2rem;
+  margin-bottom: 0.75rem;
+  background: var(--background-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.content .faq-question {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.subpage-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.subpage-footer a {
+  color: var(--primary-color);
+}
+
+.subpage-cite {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content .page-lede {
+    font-size: 1rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .results-glance {
+    font-size: 0.82rem;
+  }
+
+  .results-glance th,
+  .results-glance td {
+    padding: 0.4rem 0.5rem;
+    white-space: nowrap;
+  }
+}

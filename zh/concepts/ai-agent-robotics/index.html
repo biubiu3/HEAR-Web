@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智能体机器人：大模型智能体与机器人策略如何配合</title>
+  <meta name="description" content="智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。">
+  <meta name="keywords" content="智能体机器人, 机器人智能体, 具身智能体, AI智能体, 大模型机器人智能体, 机器人技能即工具, 分层机器人策略, 物理智能体, agent robot, agentic robotics">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/ai-agent-robotics/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/ai-agent-robotics/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/ai-agent-robotics/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/ai-agent-robotics/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/ai-agent-robotics/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="智能体机器人：大模型智能体与机器人策略如何配合">
+  <meta property="og:description" content="智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/ai-agent-robotics/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="智能体机器人：大模型智能体与机器人策略如何配合">
+  <meta name="twitter:description" content="智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/",
+    "name": "智能体机器人：大模型智能体与机器人策略如何配合",
+    "description": "智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "智能体机器人：大模型智能体与机器人策略如何配合",
+        "item": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#term",
+    "name": "智能体机器人：大模型智能体与机器人策略如何配合",
+    "description": "智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#article",
+    "headline": "智能体机器人：大模型智能体与机器人策略如何配合",
+    "description": "智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/ai-agent-robotics/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">智能体机器人</h1>
+        <div class="content has-text-justified page-lede"><p>智能体机器人是把推理智能体——通常是一个负责规划、调用工具、跟踪状态的大模型——与实际驱动机器人的低层策略结合起来。已经成型的模式是分层的：智能体决定<i>做什么</i>，机器人策略处理<i>怎么做</i>；因为语言模型无法产生关节力矩，而操作策略无法规划数分钟长的任务。</p></div>
+        <h2 class="title is-4 section-heading">为什么必须分层</h2>
+        <div class="content has-text-justified">
+        <p>两层的需求不相容。规划智能体受益于长上下文、缓慢的深思以及工具和记忆的访问；操作策略必须在数十赫兹的控制回路中运行，负担不起这种深思。试图让一个模型两者兼顾，得到的东西要么太慢无法控制，要么太浅无法规划。</p>
+        <p>分层的答案也符合领域的专业化方式：高层工作在语言与推理，低层工作在模仿学习与动作生成。</p>
+        </div>
+        <h2 class="title is-4 section-heading">技能即工具</h2>
+        <div class="content has-text-justified">
+        <p>一种有生产价值的框架是：机器人策略<i>就是</i>一种工具。智能体把操作技能与搜索、代码执行等能力一起注册，并按意图调用它们。这让机器人能力可组合、可检查，也让智能体的规划能够与策略的灵巧性分开评估。已知的弱点是交接——判断一个技能何时完成，以及失败时怎么办。</p>
+        </div>
+        <h2 class="title is-4 section-heading">智能体层看不到的东西</h2>
+        <div class="content has-text-justified">
+        <p>高层智能体通过其工具所报告的内容观察世界。如果低层策略的感官接口丢弃了什么，智能体的世界模型里也就缺了它。一个无法分辨“过程是真的结束了”还是“看起来像是结束了”的机器人，无法准确报告进展，而基于该报告规划的智能体会规划错误。</p>
+        <p>这就是低层接口成为智能体层面问题的地方。在执行空档中丢失的瞬态证据不只是控制问题，它是智能体世界模型里缺失的信息。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 的位置</h2>
+        <div class="content has-text-justified">
+        <p>HEAR 是低层动作组件：一个把流式感知转换为关节指令、并在实时约束下运行的策略。它对智能体栈的贡献，是确保世界状态中的声学部分不会在两次决策之间被悄悄丢弃。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/physical-ai/">物理AI 与具身智能</a></li>
+        <li><a href="../../../zh/research-context/">技术定位</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

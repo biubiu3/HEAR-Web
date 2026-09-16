@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models</title>
+  <meta name="description" content="Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.">
+  <meta name="keywords" content="multisensory robot policy, VTLA, vision tactile language action, tactile VLA, force-aware robot policy, audio VLA, multimodal robot manipulation, sensor fusion robot learning, visuotactile, robot sensing modalities, 多感官机器人, 视触觉, 多模态机器人">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/multisensory-robotics/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/concepts/multisensory-robotics/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models">
+  <meta property="og:description" content="Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.">
+  <meta property="og:url" content="https://hear.irmv.top/concepts/multisensory-robotics/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models">
+  <meta name="twitter:description" content="Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#webpage",
+    "url": "https://hear.irmv.top/concepts/multisensory-robotics/",
+    "name": "Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models",
+    "description": "Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR Project Home",
+        "item": "https://hear.irmv.top/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models",
+        "item": "https://hear.irmv.top/concepts/multisensory-robotics/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#term",
+    "name": "Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models",
+    "description": "Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR concept glossary",
+      "url": "https://hear.irmv.top/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#article",
+    "headline": "Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models",
+    "description": "Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.",
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/concepts/multisensory-robotics/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top/">&larr; Project Home</a></nav>
+        <h1 class="title is-2 page-title">Multi-Sensory Robot Policies</h1>
+        <div class="content has-text-justified page-lede"><p>Multi-sensory robot policies extend a vision-language-action model with modalities beyond vision — typically touch, force or sound. The motivation is straightforward: cameras cannot observe contact, force or hidden internal state, so tasks that depend on them need another channel. The engineering lesson is less obvious: each modality has its own temporal structure, and an interface that suits vision does not automatically suit the others.</p></div>
+        <h2 class="title is-4 section-heading">The families</h2>
+        <div class="content has-text-justified">
+        <p><b>Vision-tactile-language-action (VTLA).</b> Adds tactile sensing, usually from fingertip sensors or a tactile skin, to the observation stack. Tactile data is high-dimensional, local and fast-changing, which makes it informative for contact-rich manipulation and awkward to feed to a model built for camera frames.</p>
+        <p><b>Force and torque.</b> Wrist or joint force sensing gives a lower-dimensional but very direct measure of contact. Often added as an additional input vector rather than an image-like modality.</p>
+        <p><b>Audio — VSLA.</b> Adds streaming sound. Unlike touch and force, audio carries information about events that are not happening at the robot's own end-effector: an appliance finishing, a phone ringing, a liquid reaching a boil.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Why the temporal structure matters more than the modality</h2>
+        <div class="content has-text-justified">
+        <p>The standard VLA assumption is that observations can be sampled at low frequency because the world changes slowly. That assumption is reasonable for cameras and disastrous for modalities whose information arrives in short bursts.</p>
+        <p>Tactile and force signals are dense but strongly correlated with the robot's own motion, so a policy generally knows when to expect them. Audio is different: task-relevant acoustic events are sparse, asynchronous, and often generated by something other than the robot. They can occur at any moment, including during an open-loop execution chunk, and they do not repeat.</p>
+        </div>
+        <h2 class="title is-4 section-heading">The design consequence</h2>
+        <div class="content has-text-justified">
+        <p>Adding a modality is not the same as adding an input channel. A modality whose evidence is transient requires the interface to have memory: something that accumulates what arrived and keeps it available until a decision can use it. Without that, the additional modality is present in the API and absent in effect.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Where HEAR fits</h2>
+        <div class="content has-text-justified">
+        <p>HEAR is the auditory member of this family. It pairs a streaming audio interface with causal memory (the Historizer), a reasoning module that fuses it with vision, language and proprioception (the Envisioner), and an evaluation protocol that rejects actions completed before the required sound occurred. It is designed to be combined with, not to replace, tactile and force sensing.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Related concepts</h2>
+        <ul class="related-list">
+        <li><a href="../../concepts/vision-sound-language-action/">Vision-Sound-Language-Action (VSLA)</a></li>
+        <li><a href="../../concepts/robot-audition/">Robot Audition for Manipulation</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>Machine-readable entry points: <a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/zh/">中文</a></p><p class="subpage-cite">Cite as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

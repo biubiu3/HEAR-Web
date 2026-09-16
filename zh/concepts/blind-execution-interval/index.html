@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>盲执行间隔：动作分块机器人策略中的感知空档</title>
+  <meta name="description" content="盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。">
+  <meta name="keywords" content="盲执行间隔, BEI, 动作分块延迟, 机器人策略延迟, 异步机器人推理, 陈旧观测, VLA 动作块延迟, 实时机器人策略, 开环执行, 机器人感知空档">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/blind-execution-interval/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/blind-execution-interval/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/blind-execution-interval/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/blind-execution-interval/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/blind-execution-interval/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="盲执行间隔：动作分块机器人策略中的感知空档">
+  <meta property="og:description" content="盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/blind-execution-interval/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="盲执行间隔：动作分块机器人策略中的感知空档">
+  <meta name="twitter:description" content="盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/blind-execution-interval/",
+    "name": "盲执行间隔：动作分块机器人策略中的感知空档",
+    "description": "盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "盲执行间隔：动作分块机器人策略中的感知空档",
+        "item": "https://hear.irmv.top/zh/concepts/blind-execution-interval/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#term",
+    "name": "盲执行间隔：动作分块机器人策略中的感知空档",
+    "description": "盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#article",
+    "headline": "盲执行间隔：动作分块机器人策略中的感知空档",
+    "description": "盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/blind-execution-interval/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">盲执行间隔（BEI）</h1>
+        <div class="content has-text-justified page-lede"><p>盲执行间隔（Blind Execution Interval, BEI）是机器人策略预测一个动作块并以开环方式执行时形成的间隔。由于新的传感器观测无法改变已经发给机器人的指令序列，一个瞬态事件——一声提示音、一次咔哒、一阵晃动、一次碰撞——可能完全在这个间隔内发生并结束，从未影响任何决策。</p></div>
+        <h2 class="title is-4 section-heading">间隔从何而来</h2>
+        <div class="content has-text-justified">
+        <p>现代机器人策略规模很大，无法以控制频率运行。标准解法是动作分块：预测一小段未来动作，然后不等新传感器更新就执行，以此掩盖推理延迟并保持运动平滑。这个间隔不是某个具体实现的 bug，而是架构的结构性后果。</p>
+        <p>在作者的 Franka Panda 部署上，实际执行的单个动作块时长约 2.1 秒，有效 BEI 约 2.3 秒——也就是说，大约有四分之一的时间里，机器人正在基于一个它已无法更新的观测行动。</p>
+        </div>
+        <h2 class="title is-4 section-heading">为什么视觉能容忍而音频不能</h2>
+        <div class="content has-text-justified">
+        <p>视觉与听觉信息在时间上的分布方式恰好相反。物体是持续的：一秒前开着的抽屉现在仍然开着，所以陈旧的图像是退化而非空白。声学事件不持续。一次完成提示音持续不到一秒；一旦过去，任何后续的观测窗口都不包含它。因此无记忆的音频接口收到的不是“这条线索的陈旧版本”，而是什么都没有。</p>
+        </div>
+        <h2 class="title is-4 section-heading">为什么提高查询频率不是解法</h2>
+        <div class="content has-text-justified">
+        <p>把 BEI 当作延迟问题、靠更频繁地查询来攻击它，是很自然的想法。这有帮助，但无法闭合空档：感知、预处理、推理、通信与执行延迟始终存在，而激进的重规划会引入不连续与机器人自噪声——当机器人正在努力聆听时，这恰恰适得其反。论文的结论是瓶颈在于<i>证据保持</i>：一段短促的声学事件必须在它发生后的第一个决策边界上仍然可用。</p>
+        </div>
+        <h2 class="title is-4 section-heading">同一家族中的相关问题</h2>
+        <div class="content has-text-justified">
+        <p>关于异步推理、实时分块、自适应动作块长度与推测式执行的工作，从调度一侧处理同一个空档——改变<i>策略何时运行</i>。BEI 提出了互补的问题：在它不运行的时候丢失了哪些证据。两者都是真问题，修好其中一个并不会修好另一个。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 如何应对</h2>
+        <div class="content has-text-justified">
+        <p>HEAR 的 Historizer 是一个流式有状态 Transformer，跨越执行空档维护紧凑的因果音频记忆，使一段已经从音频流中消失的线索仍然能够影响下一次决策。它是消融实验中最重要的组件：移除后 HEAR-Bench 平均成功率从 0.81 降至 0.57。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/action-chunking/">动作分块</a></li>
+        <li><a href="../../../zh/concepts/vision-sound-language-action/">视-声-语言-动作（VSLA）</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

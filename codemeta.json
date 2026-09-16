@@ -1,0 +1,79 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "HEAR: Vision-Sound-Language-Action for Sound-Centric Manipulation",
+  "description": "Reference implementation of HEAR, a Vision-Sound-Language-Action framework for sound-centric robot manipulation, together with the HEAR-Bench benchmark.",
+  "codeRepository": "https://github.com/IRMVLab/HEAR",
+  "url": "https://hear.irmv.top/",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-09-16",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Nie",
+      "familyName": "Chang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Shanghai Jiao Tong University"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Deng",
+      "familyName": "Tianchen",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Shanghai Jiao Tong University"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Wang",
+      "familyName": "Guangming",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Cambridge"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Liu",
+      "familyName": "Zhe",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Shanghai Jiao Tong University"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Wang",
+      "familyName": "Hesheng",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Shanghai Jiao Tong University"
+      }
+    }
+  ],
+  "referencePublication": {
+    "@type": "ScholarlyArticle",
+    "name": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+    "url": "https://arxiv.org/abs/2603.16086",
+    "sameAs": "https://arxiv.org/abs/2603.16086"
+  },
+  "keywords": [
+    "robot manipulation",
+    "Vision-Sound-Language-Action",
+    "VSLA",
+    "sound-centric manipulation",
+    "robot audition",
+    "audio world model",
+    "action chunking",
+    "embodied AI",
+    "physical AI"
+  ],
+  "developmentStatus": "active"
+}

@@ -1,24 +1,17 @@
-# HEAR — Full page content (English + 中文)
-#
-# Source: https://hear.irmv.top/
-# The complete text of the HEAR project page in both English and Simplified
-# Chinese, as plain Markdown, for direct ingestion by LLMs, retrieval-
-# augmented generation pipelines and AI agents.
-#
-# Index:      https://hear.irmv.top/llms.txt
-# English:    https://hear.irmv.top/index.md
-# Chinese:    https://hear.irmv.top/zh/index.md
-# Citation:   https://hear.irmv.top/cite.bib
-# Sitemap:    https://hear.irmv.top/sitemap.xml
-# Paper:      https://arxiv.org/abs/2603.16086
-# Code:       https://github.com/IRMVLab/HEAR
-# Dataset:    https://huggingface.co/datasets/biubiu2/OpenX-Sound
-#
-# License: page content CC BY-SA 4.0; code and datasets Apache-2.0.
-#
-# ===========================================================================
-# PART 1 / 2 — ENGLISH
-# ===========================================================================
+# HEAR — Full project content (English + 中文)
+
+> The complete text of the HEAR project site in plain Markdown, for direct ingestion by
+> LLMs, retrieval-augmented generation pipelines and AI agents. Includes an extended FAQ,
+> glossary, research context and a related-work index.
+
+Source: https://hear.irmv.top/ · Paper: https://arxiv.org/abs/2603.16086 · Code: https://github.com/IRMVLab/HEAR
+Canonical facts: https://hear.irmv.top/project.json · Index: https://hear.irmv.top/llms.txt
+
+License: page content CC BY-SA 4.0; code and datasets Apache-2.0.
+
+===========================================================================
+PART 0 — HOMEPAGE (ENGLISH)
+===========================================================================
 
 # Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation
 
@@ -285,9 +278,10 @@ Vision-Sound-Language-Action, VSLA, VLA, Vision-Language-Action, sound-centric m
 This page is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Code and datasets are Apache-2.0.
 Machine-readable entry points: [llms.txt](https://hear.irmv.top/llms.txt) · [llms-full.txt](https://hear.irmv.top/llms-full.txt) · [sitemap.xml](https://hear.irmv.top/sitemap.xml) · [robots.txt](https://hear.irmv.top/robots.txt)
 
-# ===========================================================================
-# PART 2 / 2 — 简体中文 (Simplified Chinese)
-# ===========================================================================
+
+===========================================================================
+PART 0b — HOMEPAGE (中文)
+===========================================================================
 
 # 迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架
 
@@ -549,3 +543,1182 @@ RoboOmni（全方位多模态上下文中的主动操作）、ELLSA（听说看�
 
 本页内容采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。代码与数据集采用 Apache-2.0。
 机器可读入口：[llms.txt](https://hear.irmv.top/llms.txt) · [llms-full.txt](https://hear.irmv.top/llms-full.txt) · [sitemap.xml](https://hear.irmv.top/sitemap.xml) · [robots.txt](https://hear.irmv.top/robots.txt)
+
+
+===========================================================================
+GENERATED PAGES — ENGLISH
+===========================================================================
+
+
+---
+
+# Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation
+
+> This is the publication record for the HEAR paper: a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation, accepted for publication in The International Journal of Robotics Research (IJRR). The paper formalizes the Blind Execution Interval (BEI) — the timing gap created by system latency and open-loop action chunking in which a transient acoustic cue can appear and vanish between two policy queries — and introduces the four-module HEAR architecture that preserves acoustic evidence across that gap.
+
+Source: https://hear.irmv.top/paper/ · Language: en
+
+## Authors and affiliation
+
+Chang Nie, Tianchen Deng, Zhe Liu and Hesheng Wang are with the School of Automation and Intelligent Sensing at Shanghai Jiao Tong University and the Shanghai Key Laboratory of Navigation and Location Based Services, China. Guangming Wang is with the Department of Engineering at the University of Cambridge, UK. The corresponding author is Hesheng Wang.
+
+## Publication status
+
+The article is accepted for publication in The International Journal of Robotics Research (ISSN 0278-3649), published by SAGE Publications. The archival DOI has not yet been assigned. The preprint is permanently available on arXiv as arXiv:2603.16086 (cs.RO), first posted 17 March 2026.
+
+## Abstract
+
+Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state. Embodied agents should similarly benefit from auditory awareness during manipulation, yet existing Vision-Language-Action (VLA) policies typically rely on persistent visual observations, while audio-aware variants often treat audio as speech, waveform renderings, or fixed pre-execution context. Such interfaces can miss transient sounds, such as beeps, clicks, rattles, or collision cues, especially under system latency and open-loop action chunking.
+
+We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update. To address this challenge, we introduce Vision-Sound-Language-Action (VSLA), a continuous control paradigm conditioned on vision, streaming audio, language, and proprioception under delayed decision loops. We further present HEAR, a VSLA framework that preserves causal auditory context across execution gaps, performs multimodal reasoning, models near-future audio dynamics during training, and generates smooth action chunks for closed-loop manipulation.
+
+To support learning and evaluation, we introduce OpenX-Sound for robotics-specific audio-visual-action pretraining and HEAR-Bench, a benchmark for sound-centric manipulation with strict causal timing constraints. On HEAR-Bench, HEAR achieves an 81% success rate, outperforming waveform, ASR, and compact audio-native baselines, and reaches 70% sound-causal success across four real-world Franka tasks. These results show that robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding.
+
+## How to cite
+
+A ready-to-fetch BibTeX file is served at /cite.bib. The long key is {bibtex_key} and the short key is {bibtex_key_short}. A plain-text citation is: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+## Companion artifacts
+
+The paper is released together with four artifacts: the code release (Apache-2.0), the OpenX-Sound pretraining dataset, three pretrained checkpoints, and the HEAR-Bench benchmark built on RoboTwin 2.0. See the dataset page and the benchmark page.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Research Context: Where HEAR Sits
+
+> HEAR is a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation. It extends the Vision-Language-Action (VLA) family by adding streaming audio as a first-class observation, and it connects to world-model research through its Advancer component, which is formulated as an audio world model. This page states plainly where the work stands in each of the neighbouring research directions.
+
+Source: https://hear.irmv.top/research-context/ · Language: en
+
+## Vision-Language-Action (VLA)
+
+VLA models map images, language and robot state to continuous actions and are the dominant architecture for general-purpose manipulation. HEAR is a VLA-family policy: it keeps the same observation-interface shape, adds a streaming audio channel, and studies what happens to that interface when decisions are delayed and actions are executed in open-loop chunks. HEAR is evaluated against OpenVLA and π0.5 backbones, each equipped with three audio interfaces (raw 1D waveform, waveform-as-image adapter, and ASR transcript) so that the comparison isolates the interface rather than the backbone.
+
+## Multi-sensory VLAs
+
+A clear recent trend is extending the modality set of VLA policies. Vision-tactile-language-action (VTLA) models add touch to the observation stack; force-aware and contact-rich policies do the same for force. VSLA is the same move for hearing: sound becomes a continuously streaming observation rather than a pre-execution instruction or an after-the-fact check. VSLA and VTLA are siblings, not competitors — a robot could carry both.
+
+## World models and World Action Models (WAM)
+
+World-model-based policies learn how a scene evolves, not only how to react to it. HEAR's Advancer is formulated as an audio world model: it predicts near-future discrete audio codes from latent representations, so the latent state encodes acoustic progression rather than only current loudness. This is what keeps the policy stable through long, visually quasi-static waiting phases. Because the Advancer is a training-time objective that is removed at deployment, HEAR couples predictive state modelling with action generation without adding inference cost.
+
+## Physical AI and embodied intelligence
+
+HEAR targets embodied agents acting in the physical world — the setting usually described as physical AI or embodied intelligence. Its subject is the agent's sensory interface: a robot that must know when contact occurred, when a process changed state, or when an external event demands a response. Auditory perception complements vision as a practical sensing modality for physical interaction, because many state changes are expressed most directly through sound.
+
+## Real-time, asynchronous and chunked control
+
+A large body of recent work attacks the latency and staleness of action-chunked policies: asynchronous inference, real-time chunking, adaptive chunk lengths, speculative execution. HEAR studies the same execution gap from the other side. The question is not when the policy runs, but which evidence is lost while it is not running. The Blind Execution Interval is a sensory problem, not only a compute problem — re-querying faster shortens the gap but cannot eliminate it, because sensing, preprocessing, inference, communication and actuation latency all remain.
+
+## Robot audition and contact acoustics
+
+Sound has a long history in robotics, largely separate from the VLA wave: material estimation from impact acoustics, grasp-stability assessment from contact sound, contact microphones as a cheap proxy for tactile sensing, and active acoustic probing in which the robot deliberately generates a sound to interrogate an object. HEAR builds on that literature and asks a question those systems do not: how to keep a fleeting acoustic event alive until a slow, chunked policy can act on it.
+
+## Frequently asked questions
+
+**Is HEAR a VLA model?**
+
+HEAR is a VLA-family policy with an extended observation interface. It keeps the vision-language-action mapping and adds streaming audio and proprioception, which is why the paper names the resulting setting Vision-Sound-Language-Action (VSLA) rather than claiming to replace VLA.
+
+**Is HEAR a world model?**
+
+HEAR contains a world-model component but is not itself a pure world model. The Advancer predicts near-future audio codes during training, which couples predictive state modelling to action generation. It is removed at deployment, so the shipped policy is a reactive VLA-style controller whose latent space encodes acoustic dynamics.
+
+**How is HEAR different from audio-language models?**
+
+Audio-language models reason about audio offline. HEAR is a closed-loop controller under delayed, chunked execution, and its evaluation rejects actions that reach the goal before the required sound has occurred.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Robot Manipulation Research Landscape
+
+> Robot manipulation research currently organises around a few large ideas: Vision-Language-Action (VLA) policies that map perception and language directly to continuous actions; world models that predict how a scene will evolve; multi-sensory extensions that add touch, force or sound to the observation stack; and a family of techniques for making large policies run under real-time constraints. This page is a map of those directions and of the slice HEAR works in.
+
+Source: https://hear.irmv.top/research-landscape/ · Language: en
+
+## 1. Vision-Language-Action policies
+
+The dominant architecture for general-purpose manipulation. A large pretrained multimodal backbone is conditioned on camera images, a language instruction and proprioception, and predicts actions directly. The field's shared engineering problem is that these models are expensive, so they cannot run at control frequency — which leads directly to the next two sections.
+
+## 2. Action generation and chunking
+
+To hide inference latency and keep motion smooth, policies predict a short sequence of future actions (“a chunk”) and execute it open-loop. Diffusion policy and flow matching are the two dominant generative recipes for producing those chunks, with flow matching now the more common default because it needs fewer integration steps. Chunking solves the smoothness problem and creates a perception problem: during the chunk, new sensor readings cannot change the commands already being sent.
+
+## 3. World models and World Action Models
+
+World-model-based approaches learn the dynamics of a scene, often by predicting future observations in pixel space, latent space or token space. When the same model also emits actions, the resulting system is increasingly called a World Action Model (WAM): it targets the joint distribution of future state and action rather than the reactive mapping from current observation to action. The practical appeal is generalisation; the practical difficulty is that predicted futures must be physically consistent, and errors compound over long horizons.
+
+## 4. Multi-sensory policy families
+
+Vision alone cannot observe contact, force or hidden internal state. A growing family of policies adds modalities: vision-tactile-language-action (VTLA) for touch, force-aware policies for contact-rich tasks, and — the branch HEAR works in — audio. Sound is unusual among these modalities because it is temporally sparse: it carries little information during quiet periods and concentrates it into very short events.
+
+## 5. Real-time and asynchronous control
+
+Work on asynchronous inference, real-time chunking, adaptive chunk horizons and speculative execution all targets the same issue: a chunked policy's decisions are stale by construction. These methods change when the policy runs. HEAR addresses the complementary question of what sensory evidence is destroyed in the meantime, and shows that for transient acoustic events the answer is “all of it” unless the interface is changed.
+
+## 6. Data, benchmarks and evaluation
+
+Progress in this field tracks the availability of large cross-embodiment datasets and of benchmarks that measure the right thing. Standard manipulation benchmarks evaluate final geometric success, which cannot distinguish a policy that listened from one that happened to move correctly. Sound-centric manipulation needs timing-aware success rules: HEAR-Bench marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred.
+
+## Where sound-centric manipulation fits
+
+Sound-centric manipulation is a narrow but well-defined slice: tasks whose correctness depends on when a sound occurred. It matters because audition is the modality that reports events rather than states — contact, completion, transitions, hidden contents — and because those events are exactly what a chunked, delayed policy tends to miss.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Vision-Sound-Language-Action (VSLA)
+
+> Vision-Sound-Language-Action (VSLA) is a continuous control paradigm in which a robot policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops. It extends Vision-Language-Action (VLA) from “see and act” to “see, hear, remember and react” by treating raw audio as a first-class, continuously streaming observation rather than a pre-execution prompt.
+
+Source: https://hear.irmv.top/concepts/vision-sound-language-action/ · Language: en
+
+## Why the “S” needs its own paradigm
+
+Adding audio to a VLA policy is not symmetric with adding another camera. Visual state persists: a cup stays on the table across many control cycles, so a slightly stale image is still useful. Acoustic evidence is the opposite — it is concentrated into short, non-repeatable events. A click, a rattle, a completion beep or a boiling transition may last a few hundred milliseconds and never recur. If the policy samples that modality the way it samples images, the evidence is simply gone.
+
+VSLA names the setting in which that asymmetry is taken seriously: streaming audio is part of the observation interface, and the interface must preserve what it hears until a decision can use it.
+
+## The timing problem VSLA formalizes
+
+Large robot policies cannot run at control frequency, so they predict an action chunk and execute it open-loop. During that interval new observations cannot change the outgoing commands. The paper calls this the Blind Execution Interval (BEI). For vision it is tolerable; for a short sound it can be fatal. Re-querying faster shortens the gap but cannot remove it, because sensing, preprocessing, inference, communication and actuation latency all remain. The bottleneck is therefore evidence preservation, not instantaneous preemption.
+
+## Sibling paradigms
+
+VSLA belongs to the same family as vision-tactile-language-action (VTLA) models, which add touch to the observation stack. Both extend the modality set of a VLA policy without abandoning its structure. A robot could in principle carry both.
+
+## Where HEAR fits
+
+HEAR is the instantiation of VSLA presented in the IJRR paper. Its four components map onto the paradigm's requirements: the Historizer provides causal persistence across the BEI, the Envisioner performs multi-sensory reasoning, the Advancer supplies temporal grounding as an audio world model, and the Realizer generates smooth action chunks.
+
+## Frequently asked questions
+
+**What does VSLA stand for?**
+
+Vision-Sound-Language-Action. It is the auditory sibling of Vision-Language-Action (VLA) and Vision-Tactile-Language-Action (VTLA).
+
+**Is VSLA just VLA with audio?**
+
+No. The difference is temporal, not modal. VLA policies assume task-relevant evidence is visually persistent and can be sampled at low frequency. VSLA treats streaming audio as an observation that must survive delayed, chunked execution — which requires memory and timing mechanisms that a plain extra input channel does not provide.
+
+**Who introduced VSLA?**
+
+The paradigm is formalized in the HEAR paper by Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, accepted for publication in The International Journal of Robotics Research (2026), arXiv:2603.16086.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Blind Execution Interval (BEI)
+
+> The Blind Execution Interval (BEI) is the interval created when a robot policy predicts an action chunk and executes it open-loop. Because new sensor observations cannot alter the command sequence already being sent to the robot, a transient event — a beep, a click, a rattle, a collision — can occur and finish entirely inside that interval and never influence a decision.
+
+Source: https://hear.irmv.top/concepts/blind-execution-interval/ · Language: en
+
+## Where the interval comes from
+
+Modern robot policies are large and cannot run at control frequency. The standard solution is action chunking: predict a short sequence of future actions, then execute it without waiting for new sensor updates, which hides inference latency and keeps motion smooth. The interval is not a bug in any particular implementation; it is a structural consequence of the architecture.
+
+On the authors' Franka Panda deployment the executed action-chunk interval is about 2.1 seconds and the effective BEI is about 2.3 seconds — so a quarter of the time, roughly, the robot is acting on an observation it can no longer update.
+
+## Why vision tolerates it and audio does not
+
+Visual and auditory information are distributed over time in opposite ways. Objects persist: a drawer that was open is still open a second later, so a stale image is degraded but not empty. Acoustic events do not persist. A completion beep lasts a fraction of a second; once it has passed, no later observation window contains it. A memoryless audio interface therefore does not receive a stale version of the cue — it receives nothing.
+
+## Why faster re-querying is not the fix
+
+It is tempting to treat the BEI as a latency problem and attack it by querying more often. That helps but cannot close the gap: sensing, preprocessing, inference, communication and actuation latency all remain, and aggressive replanning introduces discontinuities and robot ego-noise — which is counterproductive when the robot is trying to listen. The paper's conclusion is that the bottleneck is evidence preservation: a short acoustic event must remain available at the first decision boundary after it occurs.
+
+## Related problems in the same family
+
+Work on asynchronous inference, real-time chunking, adaptive chunk horizons and speculative execution addresses the same gap from the scheduling side — changing when the policy runs. The BEI frames the complementary question of which evidence is lost while it does not run. Both are real, and fixing one does not fix the other.
+
+## How HEAR addresses it
+
+HEAR's Historizer is a streaming stateful transformer that maintains a compact causal audio memory across execution gaps, so a cue that has already vanished from the audio stream still conditions the next decision. It is the single most important component in ablation: removing it drops HEAR-Bench average success from 0.81 to 0.57.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Robot Audition for Manipulation
+
+> Robot audition is the robotics counterpart of computational auditory scene analysis: using microphones mounted on a robot to interpret environmental sound — including non-speech events — for control and interaction. In manipulation, audition is valuable because it reports events rather than states: contact, completion, hidden contents and process transitions are all more directly audible than visible.
+
+Source: https://hear.irmv.top/concepts/robot-audition/ · Language: en
+
+## What sound tells a manipulator that vision cannot
+
+Many state changes in manipulation are expressed most directly through sound. A click reveals contact. A rattle exposes hidden contents. A beep marks completion. A sputtering process signals that an unseen transition has occurred. A traditional Moka pot, for instance, has no electronic sensor and no discrete visual indicator of completion — the only reliable signal that extraction is finished is the change in the sound of the pot.
+
+This makes audition a low-cost proxy for information that would otherwise require tactile sensing, force sensing or instrumentation of the object.
+
+## The main branches
+
+Passive contact acoustics. Listening to the sound produced by contact between tool and object. Timbre carries information about material, grasp quality and object state — earlier work used this to estimate material properties from impact and to assess grasp gentleness.
+
+Contact microphones. Piezoelectric sensors mounted in the gripper or finger provide a much higher signal-to-noise ratio than ambient microphones and behave as a cheap tactile substitute. Prior work has used them for slip detection, contact localisation and material classification.
+
+Active acoustic sensing. Rather than waiting for a sound, the robot deliberately generates one — shaking a container, tapping a surface — and reads the response. This turns an unobservable hidden state into an observable one. HEAR's Shake Bottle task is an instance.
+
+Speech and prosody. Commands and confirmations carry intent not only in their words but in their intonation, which transcription discards.
+
+## Why audition has lagged behind vision
+
+Three reasons. First, hardware: most robots have no microphone, and the large cross-embodiment datasets that powered VLA progress contain no synchronised audio. Second, interfaces: the common way to feed sound to a policy is to transcribe it with ASR, which discards every non-speech cue, or to render the waveform as an image, which flattens a temporal signal into a static snapshot. Third, timing: the events that matter are short and non-repeatable, which interacts badly with the low-frequency, chunked execution of large policies.
+
+## Where HEAR fits
+
+HEAR takes the third problem as its subject. It does not propose a new acoustic sensor; it proposes an interface that can hold a fleeting auditory event long enough for a slow policy to act on it, and a benchmark that checks whether the resulting behaviour is genuinely sound-causal rather than visually plausible.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Audio World Models
+
+> An audio world model is a model that predicts how an acoustic scene will evolve, rather than only classifying or reacting to its present state. In HEAR, the Advancer component is formulated as an audio world model: it predicts near-future discrete audio codes from latent representations, which injects explicit temporal grounding into a robot policy.
+
+Source: https://hear.irmv.top/concepts/audio-world-model/ · Language: en
+
+## From reacting to anticipating
+
+A purely reactive policy learns a mapping from current observation to action. A world model learns the dynamics instead: given the present, what comes next? For robotics this matters because many tasks have visually identical states that imply different correct behaviours, and the only thing distinguishing them is which direction the process is moving.
+
+Cooking is the clearest case. A pot of water being heated looks similar at many moments, but the correct action depends entirely on how far the process has progressed. A model that can only see “water, pot, heat” cannot distinguish “nearly boiling” from “barely warm”. A model that predicts the next few seconds of sound can.
+
+## Why audio specifically
+
+Audio is an unusually good carrier for this kind of progress signal. Continuous processes — boiling, pouring, grinding, sputtering — have characteristic acoustic signatures that evolve in a structured way, and the evolution is audible before it is visually obvious. Acoustic signals also have high temporal resolution relative to camera frames, so the rate of change is directly observable.
+
+## How HEAR uses one
+
+The Advancer predicts near-future discrete audio codes during training. This forces the policy's latent representation to encode not just what is audible now but how it is changing, which is what keeps the policy stable during long waiting phases where vision is quasi-static — a failure mode related to temporal motion collapse in chunked policies.
+
+Crucially, the Advancer is a training-time objective and is removed at deployment. The temporal structure it teaches stays in the latent space, so inference cost is unchanged. Ablating it costs 0.81 to 0.73 on HEAR-Bench.
+
+## Where it sits in the world-model landscape
+
+Most world-model work for robotics predicts future images or future latent states. Predicting in the audio modality is less common, and it complements rather than replaces visual world modelling: vision reports what the scene looks like, audio reports what is happening to it.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Action Chunking
+
+> Action chunking is the practice of predicting a short sequence of future actions at once — a “chunk” — and executing it open-loop, without waiting for new sensor observations. It is near-universal in modern robot policies because it hides inference latency and produces smoother motion. Its cost is a perception gap: for the duration of the chunk, the robot cannot react to anything.
+
+Source: https://hear.irmv.top/concepts/action-chunking/ · Language: en
+
+## Why it exists
+
+Large robot policies are expensive to evaluate. Predicting one action at a time and re-running the model before every low-level command is not feasible at control frequency. Chunking amortises a single forward pass across many control steps. It was popularised by transformer-based imitation learning and is now standard in both diffusion-policy and flow-matching action heads.
+
+The side benefit is motion quality. Because the whole chunk is generated jointly, the resulting trajectory is internally consistent rather than a stitched sequence of independent decisions, which reduces jitter.
+
+## The cost
+
+During execution the policy is blind by construction. Observations arriving mid-chunk cannot alter the commands already being sent. For slow, visually persistent tasks this is usually fine. For tasks where the decisive evidence is a short event — a contact, a beep, a spoken interruption, a collision — it means the evidence may be missed entirely.
+
+The HEAR paper names this the Blind Execution Interval. Its point is not that chunking is wrong, but that the interval has a modality-dependent cost: harmless for vision, potentially fatal for audio.
+
+## The standard remedies, and their limits
+
+Shortening the chunk reduces the gap but degrades smoothness and increases compute. Re-querying more often has the same trade-off. More recent approaches — asynchronous inference, real-time chunking, adaptive horizons, speculative execution — restructure when the model runs, and help significantly. None of them eliminates the gap, because the latency chain from sensing to actuation remains.
+
+The complementary fix, and the one HEAR takes, is on the input side: make the observation interface remember. If incoming audio is accumulated into a causal memory rather than sampled per query, a cue that occurred mid-chunk is still available at the next decision boundary even though it is no longer audible.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Physical AI and Embodied Intelligence
+
+> Physical AI and embodied intelligence are the terms now used for AI systems that perceive and act in the physical world through sensors and actuators, rather than producing text or images. For robot manipulation, the interesting content behind the labels is a set of concrete engineering problems: how a policy's sensory interface should be shaped, how it behaves when decisions are delayed, and where the training data comes from.
+
+Source: https://hear.irmv.top/concepts/physical-ai/ · Language: en
+
+## The label and the substance
+
+Physical AI is the industry framing; embodied intelligence is the more academic one. Both point at the same shift: a language model predicts the next token, whereas a physical agent must predict the consequences of its own actions on a world that pushes back. That difference is not cosmetic — it changes what a model needs to represent. Mass, friction, inertia and contact are not in the training distribution of text.
+
+## What is genuinely hard
+
+Data. Internet text and video are abundant and third-person. A robot needs first-person data: “what does the world become after I do this?” That data is expensive to collect, and the largest cross-embodiment datasets still contain no synchronised audio, force or touch.
+
+Sensory interfaces. Most work assumes vision is sufficient. It is not: contact, force and hidden internal state are invisible to cameras, and the modalities that do report them each have their own temporal structure that a policy must be built to handle.
+
+Timing. Physical agents run under latency, and their most capable policies run slowly. Anything that must be noticed between two decisions — which includes every short event — falls into the gap.
+
+Evaluation. Reaching a goal is not the same as behaving correctly. A policy that ignores an auditory precondition and moves on a visual heuristic can look successful on a geometric metric while being wrong in the way that matters.
+
+## Where HEAR fits
+
+HEAR is a physical-AI system in the narrow sense that it is a closed-loop controller for a real robot arm, and in a more specific sense that it works on the sensory-interface problem. Its claim is that for agents acting under delayed, chunked control, preserving transient evidence is a requirement rather than an optional refinement — and that audition is the modality where its absence is most visible.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# AI Agent Robotics
+
+> AI agent robotics is the combination of a reasoning agent — typically an LLM that plans, calls tools and tracks state — with the low-level policies that actually move a robot. The pattern that has emerged is hierarchical: the agent decides what to do and the robot policy handles how, because a language model cannot produce joint torques and a manipulation policy cannot reason about a multi-minute task.
+
+Source: https://hear.irmv.top/concepts/ai-agent-robotics/ · Language: en
+
+## Why the split exists
+
+The two layers have incompatible requirements. A planning agent benefits from a long context, slow deliberation and access to tools and memory. A manipulation policy must run in a control loop at tens of hertz and cannot afford that deliberation. Trying to make one model do both produces something that is either too slow to control or too shallow to plan.
+
+The layered answer also matches how the fields have specialised: high-level work in language and reasoning, low-level work in imitation learning and action generation.
+
+## Skills as tools
+
+A productive framing is that a robot policy is a tool: the agent registers manipulation skills alongside search, code execution and other capabilities, and invokes them by intent. This makes robot capability composable and inspectable, and lets the agent's planning be evaluated separately from the policy's dexterity. Its known weakness is the handoff — deciding when a skill has finished and what to do when one fails.
+
+## What the agent layer cannot see
+
+A high-level agent observes the world through whatever its tools report. If the low-level policy's sensory interface discards something, the agent's world model is missing it too. A robot that cannot tell when a process actually finished — as opposed to appearing to be finished — cannot report progress accurately, and an agent planning on that report will plan wrongly.
+
+This is where the low-level interface becomes an agent-level concern. Transient evidence that is lost inside an execution gap is not just a control problem; it is missing information in the agent's model of the world.
+
+## Where HEAR fits
+
+HEAR is a low-level action component: a policy that converts streaming perception into joint commands under real-time constraints. Its contribution to the agentic stack is ensuring that the acoustic portion of the world state is not silently dropped between decisions.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# GPT and Large Models for Robotic Arms
+
+> “GPT robotic arm” describes a robot arm controlled by a large pretrained model. That happens at two levels: a language model can plan and sequence a task in words, and a vision-language-action (VLA) model — a multimodal backbone fine-tuned to emit actions — can drive the arm directly. Both work. Neither automatically solves the problem of acting correctly on brief physical events.
+
+Source: https://hear.irmv.top/concepts/gpt-robotic-arm/ · Language: en
+
+## Level one: planning
+
+A language model can decompose “make coffee” into steps, choose tools, and recover from some failures, because that reasoning is largely symbolic. It has no access to joint angles and does not need them. This level is well established and mostly a software-integration problem.
+
+## Level two: direct action
+
+A VLA model takes images, an instruction and proprioception as input and outputs continuous actions. It works because the backbone's pretraining has already produced representations in which visual scenes and language are aligned, and a comparatively small amount of robot data suffices to attach an action head. This is where most current capability lives, and where the interesting failure modes are.
+
+## The timing problem large models bring with them
+
+A model that can plan beautifully is still far too slow to run at control frequency. The standard workaround — predict a chunk of actions and execute it open-loop — means the arm is following instructions that cannot be revised for a second or more. Anything the robot needs to notice inside that window is invisible to it.
+
+For visual tasks this is usually tolerable, because what the camera saw a second ago is mostly still true. For events it is not: a click, a beep, a rattle or a spoken interruption can begin and end inside the window and leave no trace in any later observation.
+
+## What is needed beyond a bigger model
+
+Scale does not fix this, because the problem is not representational capacity but interface design. What helps is a sensory interface that accumulates rather than samples: a causal memory of what was heard, maintained across the execution gap, so that the next decision can act on an event that is no longer audible. The HEAR framework is one implementation of that idea, together with an evaluation protocol that refuses to score a visually plausible but acoustically premature action as a success.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Robot Foundation Models
+
+> A robot foundation model is a large model pretrained on data from many robots and tasks, then fine-tuned — or prompted — for a specific one. The pattern is borrowed from language and vision, and it works for the same reason: broad pretraining produces representations that transfer, so downstream learning needs far less data.
+
+Source: https://hear.irmv.top/concepts/robot-foundation-models/ · Language: en
+
+## The pretraining recipe
+
+A large multimodal backbone, usually a vision-language model, is adapted to emit actions. Training proceeds in stages: broad multimodal pretraining, then robot-specific pretraining on a cross-embodiment corpus, then task-specific fine-tuning. The first stage provides general perception and language grounding; the second provides the coupling between perception and physical action that no amount of internet data supplies.
+
+Cross-embodiment corpora — Open X-Embodiment and its successors — are what make the second stage possible. They aggregate trajectories from many robot platforms and tasks under a shared format.
+
+## What the corpora do not contain
+
+Vision, language, proprioception and actions. Not force. Not touch. Not audio. This is not an oversight so much as a hardware problem: collecting synchronised microphone, tactile or force data at the scale of a cross-embodiment corpus would require standardisation across every contributing laboratory.
+
+The consequence is that foundation models inherit a vision-centric world view, and every additional modality has to solve its own data problem before it can be trained on. HEAR's OpenX-Sound is one such solution for audio: rather than standardising hardware, it augments existing episodes with temporally aligned synthesised audio, and is explicit that this is a bootstrapping stage rather than a substitute for real recordings.
+
+## Real-time constraints
+
+Foundation models are large, robot control is fast, and the gap is bridged by action chunking. That makes the Blind Execution Interval a property of the whole class, not of any one model: any policy big enough to need chunking also has an interval in which it cannot react.
+
+## Where HEAR fits
+
+HEAR is a foundation-model-style policy whose pretraining stage adds the audio modality. Its contribution to the class is showing that the interface, not just the backbone, determines whether transient sensory events survive long enough to matter.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Multi-Sensory Robot Policies
+
+> Multi-sensory robot policies extend a vision-language-action model with modalities beyond vision — typically touch, force or sound. The motivation is straightforward: cameras cannot observe contact, force or hidden internal state, so tasks that depend on them need another channel. The engineering lesson is less obvious: each modality has its own temporal structure, and an interface that suits vision does not automatically suit the others.
+
+Source: https://hear.irmv.top/concepts/multisensory-robotics/ · Language: en
+
+## The families
+
+Vision-tactile-language-action (VTLA). Adds tactile sensing, usually from fingertip sensors or a tactile skin, to the observation stack. Tactile data is high-dimensional, local and fast-changing, which makes it informative for contact-rich manipulation and awkward to feed to a model built for camera frames.
+
+Force and torque. Wrist or joint force sensing gives a lower-dimensional but very direct measure of contact. Often added as an additional input vector rather than an image-like modality.
+
+Audio — VSLA. Adds streaming sound. Unlike touch and force, audio carries information about events that are not happening at the robot's own end-effector: an appliance finishing, a phone ringing, a liquid reaching a boil.
+
+## Why the temporal structure matters more than the modality
+
+The standard VLA assumption is that observations can be sampled at low frequency because the world changes slowly. That assumption is reasonable for cameras and disastrous for modalities whose information arrives in short bursts.
+
+Tactile and force signals are dense but strongly correlated with the robot's own motion, so a policy generally knows when to expect them. Audio is different: task-relevant acoustic events are sparse, asynchronous, and often generated by something other than the robot. They can occur at any moment, including during an open-loop execution chunk, and they do not repeat.
+
+## The design consequence
+
+Adding a modality is not the same as adding an input channel. A modality whose evidence is transient requires the interface to have memory: something that accumulates what arrived and keeps it available until a decision can use it. Without that, the additional modality is present in the API and absent in effect.
+
+## Where HEAR fits
+
+HEAR is the auditory member of this family. It pairs a streaming audio interface with causal memory (the Historizer), a reasoning module that fuses it with vision, language and proprioception (the Envisioner), and an evaluation protocol that rejects actions completed before the required sound occurred. It is designed to be combined with, not to replace, tactile and force sensing.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# HEAR-Bench: Sound-Causal Manipulation Benchmark
+
+> HEAR-Bench is a simulation benchmark for sound-centric manipulation, built on the dual-arm RoboTwin 2.0 platform. It supplies a streaming microphone channel and enforces a sound-causal success rule: a trial counts as successful only if the robot completes the physical goal after the required acoustic condition has occurred. Reaching the goal early — which standard benchmarks would score as success — is recorded as a failure.
+
+Source: https://hear.irmv.top/benchmark/ · Language: en
+
+## Why a timing-aware benchmark is necessary
+
+Standard manipulation benchmarks evaluate whether the final geometric state was reached. On a sound-gated task, that metric cannot tell the difference between a policy that waited for the cue and a policy that ignored sound entirely and moved on a visual heuristic. HEAR-Bench closes that gap by making the acoustic precondition part of the success predicate. This is the property that makes it possible to measure whether a policy is genuinely sound-causal.
+
+## Task suite
+
+Seven simulation tasks cover four categories of decision-critical acoustic cue. Cue timings and initial visual states are randomised so that policies cannot memorise a fixed schedule, and each task is evaluated over 100 independent trials.
+
+## Four categories of cue
+
+Event-triggered alarms test waiting and transient capture: Alarm Clock requires suppressing a visually tempting early press until a ring begins, and Microwave requires capturing a brief completion beep that can fall entirely inside an execution gap.
+
+Human speech tests timing and prosody: Check Yes uses identical text with different intonation to defeat pure ASR, and Interrupt places a spoken override at a random moment to test safe mode switching mid-motion.
+
+Continuous process sounds test long-horizon monitoring: Pour Water and Boil Water require tracking gradual acoustic evolution while vision is weak or static.
+
+Physical interaction feedback tests contact acoustics: Check Materials uses visually similar objects so that impact timbre is the only discriminative signal.
+
+## How it is used
+
+All evaluated methods share the same observation interface and the same two-stage training recipe (pretraining on OpenX-Sound, then task-specific fine-tuning), so differences reflect architecture rather than data volume. Under this protocol HEAR reaches 81% average sound-causal success, against 61% for the strongest waveform-as-image VLA baseline, 35% for the strongest ASR baseline and 14% for the strongest vision-only backbone.
+
+## Reproducing it
+
+The HEAR-Bench implementation is part of the code release, built on top of RoboTwin 2.0, and the task audio assets ship with it. See OpenX-Sound for the pretraining half of the pipeline.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# OpenX-Sound: Audio-Augmented Robot Trajectories
+
+> OpenX-Sound is a pretraining dataset for Vision-Sound-Language-Action learning. Selected Open X-Embodiment episodes retain their original multi-view RGB video, language instructions, proprioception and expert actions, and are augmented with temporally aligned audio tracks. It exists because the large cross-embodiment datasets that enabled VLA progress contain no synchronised microphone recordings, and collecting robot audio at comparable scale would require hardware standardisation no laboratory has achieved.
+
+Source: https://hear.irmv.top/openx-sound/ · Language: en
+
+## What is in it
+
+Every episode preserves the original multi-view RGB, the language instruction, the proprioceptive state and the expert action sequence, with an added audio track aligned to the video. 98.7% of augmented clips were verified within a 100 ms synchronisation tolerance. Episodes with semantically inconsistent audio, implausible event timing or obvious synchronisation errors were corrected or removed during review.
+
+## How it should and should not be used
+
+The authors are explicit about the scope. Because the base omni-modal backbone already has broad multimodal pretraining on general audio-video data, OpenX-Sound is used as a robotics-specific audio-visual-action temporal-alignment stage — not as generic multimodal pretraining, and not as a replacement for native robot audio. Skipping this stage entirely costs 0.81 to 0.69 on HEAR-Bench, which the paper reads as evidence that the gain is about robotic audio-visual-action coupling rather than scale.
+
+The acknowledged limitation is the synthetic-to-real gap: video-to-audio generation can omit subtle contact cues, shift event timing, or produce sounds without a physical source. For a task as timing-sensitive as sound-causal manipulation, that caps what purely offline pretraining can achieve, which is why fine-tuning on real recordings remains necessary.
+
+## License and access
+
+The dataset is released on Hugging Face. Base trajectories derive from Open X-Embodiment; consult that project's licensing for the underlying episodes.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Moka Coffee
+
+> Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring. A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.
+
+Source: https://hear.irmv.top/videos/moka-coffee/ · Language: en
+
+## Why this task
+
+A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.
+
+## What it tests
+
+Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring.
+
+## Context
+
+Part of the real-robot evaluation of the HEAR framework, in which the primary metric is the sound-causal success rate: a trial counts as successful only if the robot completes the physical goal after the relevant acoustic condition has occurred. Reaching the goal early is recorded as a failure. All tasks were run on a Franka Panda with a single ambient workspace microphone and two RGB views.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Answer Phone
+
+> Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing. The robot revisits nearly identical visual states at different semantic stages of the task.
+
+Source: https://hear.irmv.top/videos/answer-phone/ · Language: en
+
+## Why this task
+
+The robot revisits nearly identical visual states at different semantic stages of the task.
+
+## What it tests
+
+Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing.
+
+## Context
+
+Part of the real-robot evaluation of the HEAR framework, in which the primary metric is the sound-causal success rate: a trial counts as successful only if the robot completes the physical goal after the relevant acoustic condition has occurred. Reaching the goal early is recorded as a failure. All tasks were run on a Franka Panda with a single ambient workspace microphone and two RGB views.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Shake Bottle (Empty)
+
+> Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound. The hidden state cannot be recovered passively; the robot must first create the evidence itself.
+
+Source: https://hear.irmv.top/videos/shake-bottle-empty/ · Language: en
+
+## Why this task
+
+The hidden state cannot be recovered passively; the robot must first create the evidence itself.
+
+## What it tests
+
+Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound.
+
+## Context
+
+Part of the real-robot evaluation of the HEAR framework, in which the primary metric is the sound-causal success rate: a trial counts as successful only if the robot completes the physical goal after the relevant acoustic condition has occurred. Reaching the goal early is recorded as a failure. All tasks were run on a Franka Panda with a single ambient workspace microphone and two RGB views.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Shake Bottle (Occupied)
+
+> Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials. The companion case showing the same active sensing behaviour under a different hidden physical state.
+
+Source: https://hear.irmv.top/videos/shake-bottle-occupied/ · Language: en
+
+## Why this task
+
+The companion case showing the same active sensing behaviour under a different hidden physical state.
+
+## What it tests
+
+Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials.
+
+## Context
+
+Part of the real-robot evaluation of the HEAR framework, in which the primary metric is the sound-causal success rate: a trial counts as successful only if the robot completes the physical goal after the relevant acoustic condition has occurred. Reaching the goal early is recorded as a failure. All tasks were run on a Franka Panda with a single ambient workspace microphone and two RGB views.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# Real Alarm Clock
+
+> Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press. The simulation alarm setting transferred into the physical world, where reverberation and background chatter distort the cue.
+
+Source: https://hear.irmv.top/videos/real-alarm-clock/ · Language: en
+
+## Why this task
+
+The simulation alarm setting transferred into the physical world, where reverberation and background chatter distort the cue.
+
+## What it tests
+
+Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press.
+
+## Context
+
+Part of the real-robot evaluation of the HEAR framework, in which the primary metric is the sound-causal success rate: a trial counts as successful only if the robot completes the physical goal after the relevant acoustic condition has occurred. Reaching the goal early is recorded as a failure. All tasks were run on a Franka Panda with a single ambient workspace microphone and two RGB views.
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+===========================================================================
+GENERATED PAGES — 中文
+===========================================================================
+
+
+---
+
+# 迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架
+
+> 本页是 HEAR 论文的正式著录页。论文提出面向声音中心机器人操作的视-声-语言-动作（VSLA）框架，已被《The International Journal of Robotics Research》(IJRR) 录用。论文形式化了盲执行间隔（BEI）——由系统延迟与开环动作分块造成的时序空档，一段瞬态声学线索可能在两次策略推理之间发生并消失——并给出四模块的 HEAR 架构来解决它。
+
+Source: https://hear.irmv.top/zh/paper/ · Language: zh-Hans
+
+## 作者与单位
+
+Chang Nie（聂畅）、Tianchen Deng（邓天辰）、Zhe Liu（刘哲）、Hesheng Wang（王贺升）来自上海交通大学自动化与感知学院、上海市导航与定位服务重点实验室；Guangming Wang（王光明）来自英国剑桥大学工程系。通讯作者为王贺升。
+
+## 发表状态
+
+论文已被《The International Journal of Robotics Research》（ISSN 0278-3649，SAGE Publications 出版）录用，正式 DOI 尚未分配。预印本永久发布于 arXiv：arXiv:2603.16086（cs.RO），2026 年 3 月 17 日首次发布。
+
+## 摘要
+
+人类与动物把声音当作与物理世界交互的关键线索——声学事件可以揭示接触、完成、隐藏内容或过程状态。具身智能体同样应当从操作过程中的听觉感知中获益，但现有的视觉-语言-动作（VLA）策略通常依赖持续可见的视觉观测，而音频相关变体往往把音频当作语音、波形图像或固定的执行前上下文。这类接口会遗漏瞬态声音，例如提示音、咔哒声、晃动声或碰撞线索，在系统延迟与开环动作分块下尤其如此。
+
+我们把这一时序失效形式化为盲执行间隔（BEI）：关键声学证据可能在动作块开始之后出现，却在下一次策略更新之前消失。为解决这一问题，我们提出视-声-语言-动作（VSLA）——一种在延迟决策回路下以视觉、流式音频、语言与本体感觉为条件的连续控制范式。作为实例，我们提出 HEAR 框架：它跨越执行空档保持因果听觉上下文，进行多模态推理，在训练时建模近未来音频动态，并生成平滑的动作块。
+
+为支撑学习与评测，我们构建了面向机器人音频-视觉-动作预训练的 OpenX-Sound，以及带严格因果时序约束的声音中心操作基准 HEAR-Bench。在 HEAR-Bench 上 HEAR 取得 81% 的成功率，优于波形、ASR 与紧凑型音频原生基线；在四项真实 Franka 任务上取得 70% 的声音因果成功率。结果表明，稳健的声音中心操作不仅需要原生音频输入，还需要因果听觉保持与显式时间对齐。
+
+## 如何引用
+
+可直接抓取的 BibTeX 文件位于 /cite.bib。长键为 {bibtex_key}，短键为 {bibtex_key_short}。纯文本引用格式：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+## 配套产出
+
+论文同时发布四项产出：代码（Apache-2.0）、OpenX-Sound 预训练数据集、三个预训练权重，以及构建在 RoboTwin 2.0 之上的 HEAR-Bench 基准。详见数据集页面与基准页面。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 技术定位：HEAR 处在什么位置
+
+> HEAR 是一个面向声音中心机器人操作的视-声-语言-动作（VSLA）框架。它通过把流式音频加入观测接口来扩展视觉-语言-动作（VLA）家族，并通过被形式化为音频世界模型的 Advancer 模块与世界模型研究相连。本页说明它与各个相邻研究方向的关系。
+
+Source: https://hear.irmv.top/zh/research-context/ · Language: zh-Hans
+
+## 视觉-语言-动作模型（VLA）
+
+VLA 模型把图像、语言与机器人状态映射为连续动作，是通用操作任务的主流架构。HEAR 属于 VLA 家族：保持相同的观测接口形态，增加一路流式音频，并研究当决策被延迟、动作以开环动作块执行时这一接口会发生什么。论文以 OpenVLA 与 π0.5 为骨干、各配三种音频接口（一维原始波形、波形转图像适配器、ASR 转写）进行对比，使比较隔离出接口本身而非骨干能力。
+
+## 多感官 VLA
+
+近期一个清晰的趋势是扩展 VLA 策略的模态集合。视觉-触觉-语言-动作（VTLA）模型为观测栈加入触觉；力感知与富接触策略加入力。VSLA 是同一思路在听觉上的对应物：声音成为持续流式输入的观测，而不是执行前的指令或事后的检查。VSLA 与 VTLA 是兄弟关系而非竞争关系，机器人可以同时具备两者。
+
+## 世界模型与世界动作模型（WAM）
+
+基于世界模型的策略学习场景如何演变，而不只是如何反应。HEAR 的 Advancer 被形式化为音频世界模型：从隐表示预测近未来的离散音频编码，使隐状态编码的是声学的演进过程而不只是当前响度。这正是策略能在长时间视觉准静态等待中保持稳定的原因。由于 Advancer 是训练期目标、部署时会被移除，HEAR 在不增加推理开销的前提下把预测状态建模与动作生成耦合起来。
+
+## 物理AI 与具身智能
+
+HEAR 面向在物理世界中行动的具身智能体，也就是通常所说的物理AI 或具身智能。它关注的是智能体的感官接口：机器人必须知道接触何时发生、过程何时改变状态、外部事件何时要求它作出反应。许多状态变化最直接的表达方式是声音，因此听觉感知是物理交互中视觉的实用补充。
+
+## 实时、异步与分块控制
+
+近期大量工作在研究动作分块策略的延迟与陈旧性：异步推理、实时分块、自适应动作块长度、推测式执行。HEAR 从另一侧切入同一个执行空档。问题不是“策略何时运行”，而是在它不运行的时候丢失了哪些证据。盲执行间隔是一个感知问题，不只是算力问题——提高查询频率可以缩短空档，但无法消除它，因为感知、预处理、推理、通信与执行延迟始终存在。
+
+## 机器人听觉与接触声学
+
+声音在机器人领域有很长的研究历史，且与 VLA 浪潮相对独立：通过撞击声学估计材质、通过接触声评估抓取稳定性、把接触麦克风当作低成本触觉替代、以及主动声学探测（机器人主动产生声音以探查物体）。HEAR 建立在这些工作之上，但提出了它们没有回答的问题：如何让一段稍纵即逝的声学事件存活到慢速、分块的策略能够对它作出反应为止。
+
+## 常见问题
+
+**HEAR 是 VLA 模型吗？**
+
+HEAR 是 VLA 家族中扩展了观测接口的策略。它保留视觉-语言-动作的映射，增加了流式音频与本体感觉，因此论文把由此得到的设定命名为视-声-语言-动作（VSLA），而不是声称取代 VLA。
+
+**HEAR 是世界模型吗？**
+
+HEAR 包含世界模型组件，但本身不是纯粹的世界模型。Advancer 在训练时预测近未来音频编码，把预测状态建模与动作生成耦合起来；它在部署时被移除，因此实际发布的策略是一个反应式控制器，只是其隐空间编码了声学动态。
+
+**HEAR 与音频语言模型有什么不同？**
+
+音频语言模型离线地理解音频。HEAR 是延迟、分块执行下的闭环控制器，其评测会拒绝那些在所需声音发生之前就完成目标的动作。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 机器人操作研究版图
+
+> 当前的机器人操作研究围绕几个大方向组织：把感知与语言直接映射为连续动作的视觉-语言-动作（VLA）策略；预测场景如何演变的世界模型；为观测栈加入触觉、力或声音的多感官扩展；以及让大型策略在实时约束下运行的一系列技术。本页是这些方向的版图，以及 HEAR 所处的那一个切片。
+
+Source: https://hear.irmv.top/zh/research-landscape/ · Language: zh-Hans
+
+## 一、视觉-语言-动作策略
+
+通用操作任务的主流架构。大型预训练多模态骨干以相机图像、语言指令与本体感觉为条件，直接预测动作。这个领域共同的工程问题是：这些模型代价高昂，无法以控制频率运行——这直接导致下面两节的内容。
+
+## 二、动作生成与动作分块
+
+为了掩盖推理延迟并保持运动平滑，策略一次预测一小段未来动作（“动作块”）并以开环方式执行。扩散策略与流匹配是生成动作块的两种主流方案，其中流匹配因所需积分步数更少而成为更常见的默认选择。动作分块解决了平滑性问题，同时制造了一个感知问题：在动作块执行期间，新的传感器读数无法改变已发出的指令。
+
+## 三、世界模型与世界动作模型
+
+基于世界模型的方法学习场景的动态，通常通过在像素空间、隐空间或词元空间预测未来观测来实现。当同一个模型也输出动作时，得到的系统越来越多地被称为世界动作模型（WAM）：它瞄准的是未来状态与动作的联合分布，而不是从当前观测到动作的反应式映射。其实际吸引力是泛化；实际困难是预测的未来必须物理自洽，而且误差会在长时程上累积。
+
+## 四、多感官策略家族
+
+仅靠视觉无法观测接触、力或隐藏的内部状态。一个正在成长的策略家族为此增加模态：面向触觉的视觉-触觉-语言-动作（VTLA）、面向富接触任务的力感知策略，以及 HEAR 所处的音频分支。声音在这些模态中很特殊，因为它在时间上是稀疏的：安静期几乎不携带任务信息，而把信息集中在极短的事件里。
+
+## 五、实时与异步控制
+
+异步推理、实时分块、自适应动作块长度与推测式执行等工作针对的都是同一个问题：分块策略的决策天生是陈旧的。这些方法改变的是策略何时运行。HEAR 处理的是互补的问题——在它不运行的时候，哪些感官证据被销毁了——并表明对于瞬态声学事件，除非改变接口，否则答案是“全部”。
+
+## 六、数据、基准与评测
+
+这个领域的进展与大规模跨本体数据集、以及能测对东西的基准同步。标准操作基准评测最终的几何成功，无法区分“聆听过的策略”与“碰巧动作正确的策略”。声音中心操作需要时序敏感的成败规则：HEAR-Bench 会把“在所需声学线索发生前就到达目标”的试验记为失败。
+
+## 声音中心操作的位置
+
+声音中心操作是一个狭窄但定义清晰的切片：正确性取决于声音在何时发生的任务。它重要是因为听觉是报告“事件”而非“状态”的模态——接触、完成、转变、隐藏内容——而这些事件恰恰是分块、延迟的策略最容易遗漏的东西。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 视-声-语言-动作（VSLA）
+
+> 视-声-语言-动作（Vision-Sound-Language-Action, VSLA）是一种连续控制范式：机器人在延迟决策回路下，以视觉、流式音频、语言与本体感觉为条件。它把视觉-语言-动作（VLA）从「看见并行动」扩展为「看见、听见、记住并反应」——把原始音频当作第一等的、持续流式输入的观测，而不是执行前的一次性提示。
+
+Source: https://hear.irmv.top/zh/concepts/vision-sound-language-action/ · Language: zh-Hans
+
+## 为什么“声”需要自己的范式
+
+给 VLA 策略加音频，与加一路相机并不对称。视觉状态是持续的：杯子一直在桌上，跨越许多控制周期，因此稍微陈旧的图像仍然有用。声学证据恰恰相反——它集中在短暂、不可重复的事件里。一声咔哒、一阵晃动、一次完成提示音或沸腾转变可能只持续几百毫秒且永不再现。如果策略像采样图像那样采样这个模态，证据就直接消失了。
+
+VSLA 命名的是认真对待这种不对称性的设定：流式音频是观测接口的一部分，而接口必须把它听到的内容保存到决策能够使用为止。
+
+## VSLA 形式化的时序问题
+
+大型机器人策略无法以控制频率运行，因此它们预测一个动作块并以开环方式执行。在这一区间内，新的观测无法改变已发出的指令。论文称之为盲执行间隔（BEI）。对视觉而言这是可以容忍的；对一段短促的声音而言它可能是致命的。提高查询频率可以缩短空档，但无法消除它，因为感知、预处理、推理、通信与执行延迟始终存在。因此瓶颈是证据保持，而不是瞬时抢占。
+
+## 兄弟范式
+
+VSLA 与视觉-触觉-语言-动作（VTLA）模型属于同一家族，后者为观测栈加入触觉。两者都扩展了 VLA 策略的模态集合而没有抛弃其结构。原则上机器人可以同时具备两者。
+
+## HEAR 的位置
+
+HEAR 是 IJRR 论文中给出的 VSLA 实例。它的四个组件对应范式的各项要求：Historizer 提供跨越 BEI 的因果保持，Envisioner 进行多感官推理，Advancer 以音频世界模型的形式提供时间对齐，Realizer 生成平滑的动作块。
+
+## 常见问题
+
+**VSLA 是什么的缩写？**
+
+Vision-Sound-Language-Action（视-声-语言-动作）。它是视觉-语言-动作（VLA）与视觉-触觉-语言-动作（VTLA）在听觉上的兄弟。
+
+**VSLA 只是“VLA 加音频”吗？**
+
+不是。区别在时间而不在模态。VLA 策略假定任务相关证据在视觉上持续存在、可以低频采样；VSLA 把流式音频当作必须在延迟、分块执行中存活下来的观测——这需要记忆与时序机制，而单纯增加一个输入通道并不提供这些。
+
+**VSLA 是谁提出的？**
+
+该范式在 HEAR 论文中形式化，作者为 Chang Nie、Tianchen Deng、Guangming Wang、Zhe Liu、Hesheng Wang，已被《The International Journal of Robotics Research》录用（2026），arXiv:2603.16086。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 盲执行间隔（BEI）
+
+> 盲执行间隔（Blind Execution Interval, BEI）是机器人策略预测一个动作块并以开环方式执行时形成的间隔。由于新的传感器观测无法改变已经发给机器人的指令序列，一个瞬态事件——一声提示音、一次咔哒、一阵晃动、一次碰撞——可能完全在这个间隔内发生并结束，从未影响任何决策。
+
+Source: https://hear.irmv.top/zh/concepts/blind-execution-interval/ · Language: zh-Hans
+
+## 间隔从何而来
+
+现代机器人策略规模很大，无法以控制频率运行。标准解法是动作分块：预测一小段未来动作，然后不等新传感器更新就执行，以此掩盖推理延迟并保持运动平滑。这个间隔不是某个具体实现的 bug，而是架构的结构性后果。
+
+在作者的 Franka Panda 部署上，实际执行的单个动作块时长约 2.1 秒，有效 BEI 约 2.3 秒——也就是说，大约有四分之一的时间里，机器人正在基于一个它已无法更新的观测行动。
+
+## 为什么视觉能容忍而音频不能
+
+视觉与听觉信息在时间上的分布方式恰好相反。物体是持续的：一秒前开着的抽屉现在仍然开着，所以陈旧的图像是退化而非空白。声学事件不持续。一次完成提示音持续不到一秒；一旦过去，任何后续的观测窗口都不包含它。因此无记忆的音频接口收到的不是“这条线索的陈旧版本”，而是什么都没有。
+
+## 为什么提高查询频率不是解法
+
+把 BEI 当作延迟问题、靠更频繁地查询来攻击它，是很自然的想法。这有帮助，但无法闭合空档：感知、预处理、推理、通信与执行延迟始终存在，而激进的重规划会引入不连续与机器人自噪声——当机器人正在努力聆听时，这恰恰适得其反。论文的结论是瓶颈在于证据保持：一段短促的声学事件必须在它发生后的第一个决策边界上仍然可用。
+
+## 同一家族中的相关问题
+
+关于异步推理、实时分块、自适应动作块长度与推测式执行的工作，从调度一侧处理同一个空档——改变策略何时运行。BEI 提出了互补的问题：在它不运行的时候丢失了哪些证据。两者都是真问题，修好其中一个并不会修好另一个。
+
+## HEAR 如何应对
+
+HEAR 的 Historizer 是一个流式有状态 Transformer，跨越执行空档维护紧凑的因果音频记忆，使一段已经从音频流中消失的线索仍然能够影响下一次决策。它是消融实验中最重要的组件：移除后 HEAR-Bench 平均成功率从 0.81 降至 0.57。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 面向操作的机器人听觉
+
+> 机器人听觉是计算听觉场景分析的机器人对应物：利用搭载在机器人上的麦克风解释环境声音——包括非语音事件——以用于控制与交互。在操作领域，听觉之所以有价值，是因为它报告的是事件而不是状态：接触、完成、隐藏内容与过程转变，都是听比看更直接。
+
+Source: https://hear.irmv.top/zh/concepts/robot-audition/ · Language: zh-Hans
+
+## 声音能告诉操作器什么视觉不能
+
+操作中的许多状态变化最直接的表达方式是声音。一声咔哒揭示接触；一阵晃动暴露内部内容；一次提示音标记完成；一段喷溅声说明发生了看不见的转变。以传统摩卡壶为例，它既没有电子传感器，也没有离散的视觉完成指示——唯一可靠的“萃取完成”信号就是壶的声音发生了变化。
+
+这使得听觉成为获取那些本来需要触觉、力觉或对物体做仪器化改造才能得到的信息的低成本替代途径。
+
+## 主要分支
+
+被动接触声学。聆听工具与物体接触产生的声音。音色携带材质、抓取质量与物体状态的信息——早期工作曾据此从撞击声估计材质属性、评估抓取是否轻柔。
+
+接触麦克风。安装在夹爪或手指中的压电传感器比环境麦克风信噪比高得多，可作为廉价的触觉替代。已有工作用它做滑动检测、接触定位与材质分类。
+
+主动声学感知。与其等待声音出现，机器人主动制造声音——摇晃容器、敲击表面——并读取响应。这把不可观测的隐藏状态变成可观测的。HEAR 的 Shake Bottle 任务即是一例。
+
+语音与韵律。指令与确认所携带的意图不仅在词里，也在语调里，而转写会丢弃后者。
+
+## 为什么听觉落后于视觉
+
+三个原因。第一是硬件：多数机器人没有麦克风，而推动 VLA 进展的大规模跨本体数据集不含同步音频。第二是接口：把声音喂给策略的常见做法要么是用 ASR 转写（丢弃所有非语音线索），要么是把波形渲染成图像（把时间信号压扁成静态快照）。第三是时序：真正重要的事件短促且不可重复，这与大型策略低频、分块的执行方式相互冲突。
+
+## HEAR 的位置
+
+HEAR 把第三个问题作为主题。它不提出新的声学传感器，而是提出一种接口，能够把稍纵即逝的听觉事件保存到足够慢的策略对它作出反应为止；并提出一个基准，检验由此产生的行为是否真正声音因果，而不是视觉上看似合理。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 音频世界模型
+
+> 音频世界模型是预测声学场景将如何演变的模型，而不只是对当前状态进行分类或反应。在 HEAR 中，Advancer 组件被形式化为音频世界模型：它从隐表示预测近未来的离散音频编码，从而为机器人策略注入显式的时间对齐信息。
+
+Source: https://hear.irmv.top/zh/concepts/audio-world-model/ · Language: zh-Hans
+
+## 从反应到预期
+
+纯反应式策略学习的是从当前观测到动作的映射。世界模型学习的是动态：给定现在，接下来会发生什么？对机器人而言这很重要，因为许多任务存在视觉上完全相同、正确行为却不同的状态，唯一的区分依据是过程正在朝哪个方向发展。
+
+煮东西是最清楚的例子。一锅正在加热的水在许多时刻看起来都很像，但正确的动作完全取决于过程推进到了哪一步。只能看到“水、锅、热”的模型无法区分“快开了”和“刚温”；能预测未来几秒声音的模型可以。
+
+## 为什么是音频
+
+音频是承载这类进展信号格外好的载体。连续过程——沸腾、倾倒、研磨、喷溅——具有特征性的声学签名，并且以结构化的方式演变，而这种演变在视觉上明显之前就已经可以听见。相对于相机帧率，声学信号还具有更高的时间分辨率，因此变化速率是直接可观测的。
+
+## HEAR 如何使用它
+
+Advancer 在训练时预测近未来的离散音频编码。这迫使策略的隐表示不仅编码“现在能听到什么”，还编码“它正在如何变化”——这正是让策略在视觉准静态的长时间等待中保持稳定的原因，而这是一个与分块策略中时序运动坍缩相关的失效模式。
+
+关键在于，Advancer 是训练期目标，部署时会被移除。它教会的时间结构保留在隐空间中，因此推理开销不变。消融掉它会使 HEAR-Bench 从 0.81 降到 0.73。
+
+## 在世界模型版图中的位置
+
+机器人的多数世界模型工作预测的是未来图像或未来隐状态。在音频模态中做预测较为少见，它与视觉世界模型互补而非替代：视觉报告场景看起来如何，音频报告它正在发生什么。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 动作分块
+
+> 动作分块是指一次预测一小段未来动作（一个“动作块”）并以开环方式执行、不等待新的传感器观测。它在现代机器人策略中近乎普遍，因为它掩盖了推理延迟并产生更平滑的运动。它的代价是一个感知空档：在动作块执行期间，机器人无法对任何事情作出反应。
+
+Source: https://hear.irmv.top/zh/concepts/action-chunking/ · Language: zh-Hans
+
+## 为什么存在
+
+大型机器人策略的求值代价高昂。每次底层控制指令之前都重新运行模型、一次只预测一个动作，在控制频率下并不可行。分块把一次前向传播摊销到许多控制步上。它由基于 Transformer 的模仿学习推广开来，如今在扩散策略与流匹配动作头中都是标准做法。
+
+附带的好处是运动质量。由于整个动作块是联合生成的，得到的轨迹内部一致，而不是一串独立决策的拼接，从而减少了抖动。
+
+## 代价
+
+在执行期间，策略在构造上就是盲的。动作块中途到达的观测无法改动已经发出的指令。对于缓慢、视觉持续的任务，这通常无妨。而对于决定性证据是一段短事件的任务——一次接触、一声提示音、一句口头打断、一次碰撞——这意味着证据可能被完全错过。
+
+HEAR 论文把这一现象命名为盲执行间隔。它的重点不是“分块是错的”，而是这个间隔的代价依模态而异：对视觉无害，对音频可能致命。
+
+## 常规补救及其局限
+
+缩短动作块能减小空档，但会降低平滑度并增加算力。提高重查询频率有同样的取舍。更近的方法——异步推理、实时分块、自适应块长、推测式执行——重构的是模型何时运行，帮助很大。但它们都无法消除空档，因为从感知到执行的延迟链条依然存在。
+
+互补的修法在输入侧，也是 HEAR 采取的路线：让观测接口记住。如果到来的音频被累积进因果记忆，而不是每次查询单独采样，那么动作块中途发生的一段线索在下一次决策边界上仍然可用，即使它已经不再在音频中。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 物理AI 与具身智能
+
+> 物理AI 与具身智能是当下用来指代“通过传感器与执行器在物理世界中感知和行动、而非生成文本或图像的 AI 系统”的术语。对机器人操作而言，这些标签背后真正有内容的是若干具体的工程问题：策略的感官接口应当如何设计、当决策被延迟时它会如何表现，以及训练数据从哪里来。
+
+Source: https://hear.irmv.top/zh/concepts/physical-ai/ · Language: zh-Hans
+
+## 标签与实质
+
+物理AI 是产业界的说法，具身智能是更偏学术的说法。两者指向同一个转变：语言模型预测下一个词元，而物理智能体必须预测自己行动在会“顶回来”的世界里造成的后果。这一差别不是修辞——它改变了模型需要表示的东西。质量、摩擦、惯性与接触，都不在文本的训练分布里。
+
+## 真正困难的地方
+
+数据。互联网文本与视频丰富且是第三人称视角的。机器人需要第一人称数据：“我做了这件事之后，世界会变成什么样？“这类数据采集昂贵，而且最大的跨本体数据集里仍然不含同步的音频、力或触觉。
+
+感官接口。多数工作假定视觉已足够。但并非如此：接触、力与隐藏的内部状态对相机不可见，而能够报告它们的模态各自有独特的时间结构，策略必须被构建成能处理它。
+
+时序。物理智能体在延迟下运行，而它们最有能力的策略运行得很慢。任何必须在两次决策之间被注意到的东西——包括每一个短暂事件——都会掉进这个空档。
+
+评测。到达目标不等于行为正确。一个忽略听觉前提、靠视觉启发式移动的策略，在几何指标上可以看起来成功，而在真正重要的意义上却是错的。
+
+## HEAR 的位置
+
+HEAR 在最窄的意义上是物理AI 系统——它是真实机械臂的闭环控制器；在更具体的意义上，它处理的是感官接口问题。它的主张是：对在延迟、分块控制下行动的智能体而言，保持瞬态证据是一项要求，而不是可选的改进；而听觉是这一缺失最明显的模态。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 智能体机器人
+
+> 智能体机器人是把推理智能体——通常是一个负责规划、调用工具、跟踪状态的大模型——与实际驱动机器人的低层策略结合起来。已经成型的模式是分层的：智能体决定做什么，机器人策略处理怎么做；因为语言模型无法产生关节力矩，而操作策略无法规划数分钟长的任务。
+
+Source: https://hear.irmv.top/zh/concepts/ai-agent-robotics/ · Language: zh-Hans
+
+## 为什么必须分层
+
+两层的需求不相容。规划智能体受益于长上下文、缓慢的深思以及工具和记忆的访问；操作策略必须在数十赫兹的控制回路中运行，负担不起这种深思。试图让一个模型两者兼顾，得到的东西要么太慢无法控制，要么太浅无法规划。
+
+分层的答案也符合领域的专业化方式：高层工作在语言与推理，低层工作在模仿学习与动作生成。
+
+## 技能即工具
+
+一种有生产价值的框架是：机器人策略就是一种工具。智能体把操作技能与搜索、代码执行等能力一起注册，并按意图调用它们。这让机器人能力可组合、可检查，也让智能体的规划能够与策略的灵巧性分开评估。已知的弱点是交接——判断一个技能何时完成，以及失败时怎么办。
+
+## 智能体层看不到的东西
+
+高层智能体通过其工具所报告的内容观察世界。如果低层策略的感官接口丢弃了什么，智能体的世界模型里也就缺了它。一个无法分辨“过程是真的结束了”还是“看起来像是结束了”的机器人，无法准确报告进展，而基于该报告规划的智能体会规划错误。
+
+这就是低层接口成为智能体层面问题的地方。在执行空档中丢失的瞬态证据不只是控制问题，它是智能体世界模型里缺失的信息。
+
+## HEAR 的位置
+
+HEAR 是低层动作组件：一个把流式感知转换为关节指令、并在实时约束下运行的策略。它对智能体栈的贡献，是确保世界状态中的声学部分不会在两次决策之间被悄悄丢弃。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# GPT 与机械臂
+
+> “GPT 机械臂”指的是由大型预训练模型控制的机械臂。这件事发生在两个层面：语言模型可以用文字规划与编排任务，而视觉-语言-动作（VLA）模型——被微调为输出动作的多模态骨干——可以直接驱动机械臂。两者都可行。但两者都不会自动解决“对短暂物理事件作出正确反应”的问题。
+
+Source: https://hear.irmv.top/zh/concepts/gpt-robotic-arm/ · Language: zh-Hans
+
+## 层面一：规划
+
+语言模型可以把“煮咖啡”分解为步骤、选择工具、并从某些失败中恢复，因为这类推理基本上是符号化的。它接触不到关节角，也不需要。这一层面已经相当成熟，主要是软件集成问题。
+
+## 层面二：直接动作
+
+VLA 模型以图像、指令与本体感觉为输入，输出连续动作。它之所以可行，是因为骨干的预训练已经产生了视觉场景与语言对齐的表示，而相对少量的机器人数据就足以接上动作头。当前的能力主要集中在这里，有意思的失效模式也在这里。
+
+## 大模型自带的问题
+
+一个模型可以规划得很漂亮，但它仍然远远慢于控制频率。标准的变通做法——预测一个动作块并以开环方式执行——意味着机械臂正在执行一秒或更久之内无法修正的指令。机器人需要在这个窗口内注意到的任何东西，它都看不见。
+
+对视觉任务而言这通常可以容忍，因为相机一秒前看到的东西大体仍然成立。对事件而言则不然：一声咔哒、一次提示音、一阵晃动或一句口头打断，都可能在窗口内开始并结束，且不在任何后续观测中留下痕迹。
+
+## 除了更大的模型还需要什么
+
+规模无法解决这个问题，因为问题不在表示能力，而在接口设计。有帮助的是“累积而非采样”的感官接口：一份跨越执行空档维护的、关于“听到过什么”的因果记忆，使下一次决策能够对已经听不见的事件作出反应。HEAR 框架是这一思路的一种实现，并配有拒绝把“视觉上合理但声学上过早”的动作判为成功的评测协议。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 机器人基础模型
+
+> 机器人基础模型是在来自许多机器人与任务的数据上预训练、再针对特定任务微调（或以提示方式使用）的大型模型。这一模式借用自语言与视觉领域，其奏效原因相同：广泛的预训练产生可迁移的表示，因此下游学习所需的数据少得多。
+
+Source: https://hear.irmv.top/zh/concepts/robot-foundation-models/ · Language: zh-Hans
+
+## 预训练配方
+
+一个大型多模态骨干（通常是视觉-语言模型）被适配为输出动作。训练分阶段进行：先做广泛的多模态预训练，再在跨本体语料上做机器人特有的预训练，最后做任务特定微调。第一阶段提供通用感知与语言grounding；第二阶段提供感知与物理动作之间的耦合，而这是任何规模的互联网数据都无法提供的。
+
+跨本体语料——Open X-Embodiment 及其后续——是第二阶段得以可能的原因。它们把来自许多机器人平台与任务的轨迹聚合到统一格式下。
+
+## 语料里没有什么
+
+视觉、语言、本体感觉与动作。没有力。没有触觉。没有音频。与其说是疏忽，不如说是硬件问题：要在跨本体语料的规模上采集同步的麦克风、触觉或力数据，需要每一个贡献实验室在硬件上完成标准化。
+
+后果是基础模型继承了以视觉为中心的世界观，而每增加一个模态都必须先解决自己的数据问题才能被训练。HEAR 的 OpenX-Sound 就是音频方面的一种解法：它不去标准化硬件，而是为已有片段增强时间对齐的合成音频，并明确说明这是自举阶段而非真实录音的替代品。
+
+## 实时约束
+
+基础模型很大，机器人控制很快，二者之间的鸿沟靠动作分块来弥合。这使得盲执行间隔成为整个模型类别的性质，而不是某个模型的问题：任何大到需要分块的策略，也都有一个无法反应的间隔。
+
+## HEAR 的位置
+
+HEAR 是一个基础模型式的策略，其预训练阶段增加了音频模态。它对这一类别别的贡献是表明：决定瞬态感官事件能否存活到产生影响的，是接口而不只是骨干。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# 多感官机器人策略
+
+> 多感官机器人策略为视觉-语言-动作模型扩展视觉之外的模态——通常是触觉、力或声音。动机很直接：相机无法观测接触、力或隐藏的内部状态，因此依赖这些信息的任务需要另一条通道。工程上的教训则不那么显然：每个模态都有自己的时间结构，而适合视觉的接口不会自动适合其它模态。
+
+Source: https://hear.irmv.top/zh/concepts/multisensory-robotics/ · Language: zh-Hans
+
+## 家族成员
+
+视觉-触觉-语言-动作（VTLA）。为观测栈加入触觉，通常来自指尖传感器或电子皮肤。触觉数据维度高、局部、变化快，这使它对手部接触丰富的操作很有信息量，也使它难以喂给为相机帧设计的模型。
+
+力与力矩。腕部或关节力传感给出维度更低但非常直接的接触度量，通常作为额外的输入向量而非类图像模态加入。
+
+音频——VSLA。加入流式声音。与触觉和力不同，音频携带的是“并非发生在机器人末端”的事件信息：电器完成、电话响起、液体沸腾。
+
+## 时间结构比模态本身更重要
+
+标准 VLA 假定观测可以低频采样，因为世界变化缓慢。对相机而言这个假定合理，对“信息以短促爆发形式到达”的模态而言则是灾难性的。
+
+触觉与力信号密集，但与机器人自身运动强相关，所以策略大体知道何时应当期待它们。音频不同：任务相关的声学事件稀疏、异步，且常常由机器人之外的某个东西产生。它们可以在任意时刻发生，包括在开环执行的动作块期间，而且不会重复。
+
+## 由此得到的设计结论
+
+增加一个模态不等于增加一个输入通道。若某模态的证据是瞬态的，接口就需要有记忆：某种累积已到达内容、并把它保存到决策能够使用为止的东西。没有这一点的额外模态，在 API 里存在，在效果上缺席。
+
+## HEAR 的位置
+
+HEAR 是这个家族中的听觉成员。它把流式音频接口与因果记忆（Historizer）配对，配上一个把音频与视觉、语言、本体感觉融合起来的推理模块（Envisioner），并配有拒绝“在所需声音发生之前就完成的动作”的评测协议。它的设计目标是与触觉、力感知结合，而不是取代它们。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# HEAR-Bench：声音因果操作基准
+
+> HEAR-Bench 是一个面向声音中心操作的仿真基准，构建在双臂 RoboTwin 2.0 平台之上。它提供流式麦克风通道，并强制执行声音因果成功规则：只有当机器人在所需声学条件发生之后完成物理目标时，该次试验才计为成功。提前到达目标——标准基准会判为成功——在这里记为失败。
+
+Source: https://hear.irmv.top/zh/benchmark/ · Language: zh-Hans
+
+## 为什么需要时序敏感的基准
+
+标准操作基准评测最终几何状态是否达成。在声音门控任务上，这一指标无法区分“等待了线索的策略”与“完全忽略声音、靠视觉启发式移动的策略”。HEAR-Bench 通过把声学前提并入成功判据来填补这个缺口。正是这一性质使得“测量策略是否真正声音因果”成为可能。
+
+## 任务套件
+
+七项仿真任务覆盖四类决定成败的声学线索。线索时序与初始视觉状态均随机化，使策略无法记忆固定的时间表；每项任务评测 100 次独立试验。
+
+## 四类线索
+
+事件触发提示音测试等待与瞬态捕捉：Alarm Clock 要求抑制“看起来诱人”的提前按下，直到铃声响起；Microwave 要求捕捉可能在执行空档内完全发生的短暂完成提示音。
+
+人类语音测试时序与韵律：Check Yes 使用相同文本但不同语调，以击败纯 ASR；Interrupt 在随机时刻插入口头打断，测试运动中的安全模式切换。
+
+连续过程声音测试长时序监控：Pour Water 与 Boil Water 要求在视觉薄弱或静止时跟踪渐进的声学演变。
+
+物理交互反馈测试接触声学：Check Materials 使用视觉相似的物体，使撞击音色成为唯一的判别信号。
+
+## 如何使用
+
+所有被评测的方法共享相同的观测接口与相同的两阶段训练配方（先在 OpenX-Sound 上预训练，再做任务特定微调），因此差异反映的是架构而非数据量。在这一协议下，HEAR 取得 81% 的平均声音因果成功率，而最强波形图像 VLA 基线为 61%、最强 ASR 基线为 35%、最强纯视觉骨干为 14%。
+
+## 复现
+
+HEAR-Bench 的实现包含在代码发布中，构建在 RoboTwin 2.0 之上，任务音频资源随代码一同提供。流程的另一半见 OpenX-Sound。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.
+
+---
+
+# OpenX-Sound：音频增强的机器人轨迹
+
+> OpenX-Sound 是面向视-声-语言-动作学习的预训练数据集。选定的 Open X-Embodiment 片段保留原有的多视角 RGB 视频、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。它之所以存在，是因为当初推动 VLA 进展的大规模跨本体数据集中不含同步麦克风录音，而在可比规模上采集机器人音频需要硬件标准化，目前没有任何实验室做到。
+
+Source: https://hear.irmv.top/zh/openx-sound/ · Language: zh-Hans
+
+## 包含什么
+
+每个片段保留原有的多视角 RGB、语言指令、本体感觉状态与专家动作序列，并增加与视频对齐的音轨。98.7% 的增强片段经校验满足 100 毫秒同步容差。审核过程中，语义不一致、事件时序不合理或存在明显同步错误的片段被修正或移除。
+
+## 应当如何使用、不应当如何使用
+
+作者对适用范围有明确说明。由于基础全方位骨干已具备广泛的通用音频-视频多模态预训练，OpenX-Sound 被用作机器人特有的音频-视觉-动作时间对齐阶段——不是通用多模态预训练，也不是原生机器人音频的替代品。完全跳过这一阶段会使 HEAR-Bench 从 0.81 降到 0.69，作者将其解读为“收益来自机器人音频-视觉-动作耦合”而非规模。
+
+已声明的局限是合成到真实的差距：视频转音频生成可能遗漏细微的接触线索、改变事件时序，或产生没有物理来源的声音。对于像声音因果操作这样时序敏感的任务，这限制了纯离线预训练能达到的上限，因此在真实录音上微调仍然必要。
+
+## 许可与获取
+
+数据集发布于 Hugging Face。基础轨迹来自 Open X-Embodiment，底层片段的许可请参阅该项目。
+
+---
+
+Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.

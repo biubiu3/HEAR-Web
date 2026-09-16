@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://hear.irmv.top/videos/moka-coffee/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/moka-coffee.jpg</video:thumbnail_loc>
+      <video:title>Moka Coffee — HEAR real-robot demonstration</video:title>
+      <video:description>Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring. A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/moka_pot_all_web.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/videos/answer-phone/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/answer-phone.jpg</video:thumbnail_loc>
+      <video:title>Answer Phone — HEAR real-robot demonstration</video:title>
+      <video:description>Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing. The robot revisits nearly identical visual states at different semantic stages of the task.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/telephone_all.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/videos/shake-bottle-empty/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/shake-bottle-empty.jpg</video:thumbnail_loc>
+      <video:title>Shake Bottle (Empty) — HEAR real-robot demonstration</video:title>
+      <video:description>Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound. The hidden state cannot be recovered passively; the robot must first create the evidence itself.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/empty_all.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/videos/shake-bottle-occupied/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/shake-bottle-occupied.jpg</video:thumbnail_loc>
+      <video:title>Shake Bottle (Occupied) — HEAR real-robot demonstration</video:title>
+      <video:description>Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials. The companion case showing the same active sensing behaviour under a different hidden physical state.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/occupied_all.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/videos/real-alarm-clock/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/real-alarm-clock.jpg</video:thumbnail_loc>
+      <video:title>Real Alarm Clock — HEAR real-robot demonstration</video:title>
+      <video:description>Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press. The simulation alarm setting transferred into the physical world, where reverberation and background chatter distort the cue.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/alarm_all.mp4</video:content_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+</urlset>

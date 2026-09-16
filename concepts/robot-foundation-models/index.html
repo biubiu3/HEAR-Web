@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data</title>
+  <meta name="description" content="Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.">
+  <meta name="keywords" content="robot foundation model, robot pretraining, cross-embodiment, Open X-Embodiment, robot policy pretraining, VLA backbone, robot manipulation foundation model, embodied foundation model, robot data scaling, robot generalist policy, 机器人基础模型, 具身基础模型, 跨本体">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/concepts/robot-foundation-models/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data">
+  <meta property="og:description" content="Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.">
+  <meta property="og:url" content="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data">
+  <meta name="twitter:description" content="Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#webpage",
+    "url": "https://hear.irmv.top/concepts/robot-foundation-models/",
+    "name": "Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data",
+    "description": "Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR Project Home",
+        "item": "https://hear.irmv.top/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data",
+        "item": "https://hear.irmv.top/concepts/robot-foundation-models/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#term",
+    "name": "Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data",
+    "description": "Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR concept glossary",
+      "url": "https://hear.irmv.top/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#article",
+    "headline": "Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data",
+    "description": "Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.",
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/concepts/robot-foundation-models/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top/">&larr; Project Home</a></nav>
+        <h1 class="title is-2 page-title">Robot Foundation Models</h1>
+        <div class="content has-text-justified page-lede"><p>A robot foundation model is a large model pretrained on data from many robots and tasks, then fine-tuned — or prompted — for a specific one. The pattern is borrowed from language and vision, and it works for the same reason: broad pretraining produces representations that transfer, so downstream learning needs far less data.</p></div>
+        <h2 class="title is-4 section-heading">The pretraining recipe</h2>
+        <div class="content has-text-justified">
+        <p>A large multimodal backbone, usually a vision-language model, is adapted to emit actions. Training proceeds in stages: broad multimodal pretraining, then robot-specific pretraining on a cross-embodiment corpus, then task-specific fine-tuning. The first stage provides general perception and language grounding; the second provides the coupling between perception and physical action that no amount of internet data supplies.</p>
+        <p>Cross-embodiment corpora — Open X-Embodiment and its successors — are what make the second stage possible. They aggregate trajectories from many robot platforms and tasks under a shared format.</p>
+        </div>
+        <h2 class="title is-4 section-heading">What the corpora do not contain</h2>
+        <div class="content has-text-justified">
+        <p>Vision, language, proprioception and actions. Not force. Not touch. Not audio. This is not an oversight so much as a hardware problem: collecting synchronised microphone, tactile or force data at the scale of a cross-embodiment corpus would require standardisation across every contributing laboratory.</p>
+        <p>The consequence is that foundation models inherit a vision-centric world view, and every additional modality has to solve its own data problem before it can be trained on. HEAR's OpenX-Sound is one such solution for audio: rather than standardising hardware, it augments existing episodes with temporally aligned synthesised audio, and is explicit that this is a bootstrapping stage rather than a substitute for real recordings.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Real-time constraints</h2>
+        <div class="content has-text-justified">
+        <p>Foundation models are large, robot control is fast, and the gap is bridged by action chunking. That makes the Blind Execution Interval a property of the whole class, not of any one model: any policy big enough to need chunking also has an interval in which it cannot react.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Where HEAR fits</h2>
+        <div class="content has-text-justified">
+        <p>HEAR is a foundation-model-style policy whose pretraining stage adds the audio modality. Its contribution to the class is showing that the interface, not just the backbone, determines whether transient sensory events survive long enough to matter.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Related concepts</h2>
+        <ul class="related-list">
+        <li><a href="../../concepts/action-chunking/">Action Chunking</a></li>
+        <li><a href="../../concepts/gpt-robotic-arm/">GPT and Large Models for Robotic Arms</a></li>
+        <li><a href="../../openx-sound/">OpenX-Sound</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>Machine-readable entry points: <a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/zh/">中文</a></p><p class="subpage-cite">Cite as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>面向操作的机器人听觉：从声音识别到声音因果控制</title>
+  <meta name="description" content="机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。">
+  <meta name="keywords" content="机器人听觉, 具身听觉, 音频机器人操作, 声学感知机器人, 机器人声音感知, 听觉机器人学, 接触声学, 接触麦克风, 主动声学感知, 振动声学操作, 撞击声材质估计">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/robot-audition/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/robot-audition/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/robot-audition/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/robot-audition/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/robot-audition/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="面向操作的机器人听觉：从声音识别到声音因果控制">
+  <meta property="og:description" content="机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/robot-audition/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="面向操作的机器人听觉：从声音识别到声音因果控制">
+  <meta name="twitter:description" content="机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/robot-audition/",
+    "name": "面向操作的机器人听觉：从声音识别到声音因果控制",
+    "description": "机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "面向操作的机器人听觉：从声音识别到声音因果控制",
+        "item": "https://hear.irmv.top/zh/concepts/robot-audition/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#term",
+    "name": "面向操作的机器人听觉：从声音识别到声音因果控制",
+    "description": "机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#article",
+    "headline": "面向操作的机器人听觉：从声音识别到声音因果控制",
+    "description": "机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-audition/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">面向操作的机器人听觉</h1>
+        <div class="content has-text-justified page-lede"><p>机器人听觉是计算听觉场景分析的机器人对应物：利用搭载在机器人上的麦克风解释环境声音——包括非语音事件——以用于控制与交互。在操作领域，听觉之所以有价值，是因为它报告的是<i>事件</i>而不是状态：接触、完成、隐藏内容与过程转变，都是听比看更直接。</p></div>
+        <h2 class="title is-4 section-heading">声音能告诉操作器什么视觉不能</h2>
+        <div class="content has-text-justified">
+        <p>操作中的许多状态变化最直接的表达方式是声音。一声咔哒揭示接触；一阵晃动暴露内部内容；一次提示音标记完成；一段喷溅声说明发生了看不见的转变。以传统摩卡壶为例，它既没有电子传感器，也没有离散的视觉完成指示——唯一可靠的“萃取完成”信号就是壶的声音发生了变化。</p>
+        <p>这使得听觉成为获取那些本来需要触觉、力觉或对物体做仪器化改造才能得到的信息的低成本替代途径。</p>
+        </div>
+        <h2 class="title is-4 section-heading">主要分支</h2>
+        <div class="content has-text-justified">
+        <p><b>被动接触声学。</b>聆听工具与物体接触产生的声音。音色携带材质、抓取质量与物体状态的信息——早期工作曾据此从撞击声估计材质属性、评估抓取是否轻柔。</p>
+        <p><b>接触麦克风。</b>安装在夹爪或手指中的压电传感器比环境麦克风信噪比高得多，可作为廉价的触觉替代。已有工作用它做滑动检测、接触定位与材质分类。</p>
+        <p><b>主动声学感知。</b>与其等待声音出现，机器人主动制造声音——摇晃容器、敲击表面——并读取响应。这把不可观测的隐藏状态变成可观测的。HEAR 的 Shake Bottle 任务即是一例。</p>
+        <p><b>语音与韵律。</b>指令与确认所携带的意图不仅在词里，也在语调里，而转写会丢弃后者。</p>
+        </div>
+        <h2 class="title is-4 section-heading">为什么听觉落后于视觉</h2>
+        <div class="content has-text-justified">
+        <p>三个原因。第一是硬件：多数机器人没有麦克风，而推动 VLA 进展的大规模跨本体数据集不含同步音频。第二是接口：把声音喂给策略的常见做法要么是用 ASR 转写（丢弃所有非语音线索），要么是把波形渲染成图像（把时间信号压扁成静态快照）。第三是时序：真正重要的事件短促且不可重复，这与大型策略低频、分块的执行方式相互冲突。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 的位置</h2>
+        <div class="content has-text-justified">
+        <p>HEAR 把第三个问题作为主题。它不提出新的声学传感器，而是提出一种接口，能够把稍纵即逝的听觉事件保存到足够慢的策略对它作出反应为止；并提出一个基准，检验由此产生的行为是否真正声音因果，而不是视觉上看似合理。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/vision-sound-language-action/">视-声-语言-动作（VSLA）</a></li>
+        <li><a href="../../../zh/concepts/audio-world-model/">音频世界模型</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

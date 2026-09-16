@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEAR-Bench：带因果时序规则的声音中心操作基准</title>
+  <meta name="description" content="HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。">
+  <meta name="keywords" content="HEAR-Bench, 声音中心操作基准, RoboTwin 2.0 基准, 声音因果评测, 机器人操作基准, 音频机器人基准, VLA 基准, 时序敏感评测, 接触声学基准, 机器人听觉评测, 具身智能评测">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/benchmark/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/benchmark/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/benchmark/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/benchmark/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/benchmark/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="HEAR-Bench：带因果时序规则的声音中心操作基准">
+  <meta property="og:description" content="HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/benchmark/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HEAR-Bench：带因果时序规则的声音中心操作基准">
+  <meta name="twitter:description" content="HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/benchmark/#webpage",
+    "url": "https://hear.irmv.top/zh/benchmark/",
+    "name": "HEAR-Bench：带因果时序规则的声音中心操作基准",
+    "description": "HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/benchmark/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/benchmark/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HEAR-Bench：带因果时序规则的声音中心操作基准",
+        "item": "https://hear.irmv.top/zh/benchmark/"
+      }
+    ]
+  },
+  {
+    "@type": "Dataset",
+    "@id": "https://hear.irmv.top/zh/benchmark/#dataset",
+    "name": "HEAR-Bench",
+    "description": "HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。",
+    "url": "https://hear.irmv.top/zh/benchmark/",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#paper"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/benchmark/#article",
+    "headline": "HEAR-Bench：带因果时序规则的声音中心操作基准",
+    "description": "HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/benchmark/#webpage"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ]
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">HEAR-Bench：声音因果操作基准</h1>
+        <div class="content has-text-justified page-lede"><p>HEAR-Bench 是一个面向声音中心操作的仿真基准，构建在双臂 RoboTwin 2.0 平台之上。它提供流式麦克风通道，并强制执行<b>声音因果成功规则</b>：只有当机器人在所需声学条件发生<i>之后</i>完成物理目标时，该次试验才计为成功。提前到达目标——标准基准会判为成功——在这里记为失败。</p></div>
+        <h2 class="title is-4 section-heading">为什么需要时序敏感的基准</h2>
+        <div class="content has-text-justified">
+        <p>标准操作基准评测最终几何状态是否达成。在声音门控任务上，这一指标无法区分“等待了线索的策略”与“完全忽略声音、靠视觉启发式移动的策略”。HEAR-Bench 通过把声学前提并入成功判据来填补这个缺口。正是这一性质使得“测量策略是否真正声音因果”成为可能。</p>
+        </div>
+        <h2 class="title is-4 section-heading">任务套件</h2>
+        <div class="content has-text-justified">
+        <p>七项仿真任务覆盖四类决定成败的声学线索。线索时序与初始视觉状态均随机化，使策略无法记忆固定的时间表；每项任务评测 100 次独立试验。</p>
+        </div>
+        <h2 class="title is-4 section-heading">四类线索</h2>
+        <div class="content has-text-justified">
+        <p><b>事件触发提示音</b>测试等待与瞬态捕捉：<i>Alarm Clock</i> 要求抑制“看起来诱人”的提前按下，直到铃声响起；<i>Microwave</i> 要求捕捉可能在执行空档内完全发生的短暂完成提示音。</p>
+        <p><b>人类语音</b>测试时序与韵律：<i>Check Yes</i> 使用相同文本但不同语调，以击败纯 ASR；<i>Interrupt</i> 在随机时刻插入口头打断，测试运动中的安全模式切换。</p>
+        <p><b>连续过程声音</b>测试长时序监控：<i>Pour Water</i> 与 <i>Boil Water</i> 要求在视觉薄弱或静止时跟踪渐进的声学演变。</p>
+        <p><b>物理交互反馈</b>测试接触声学：<i>Check Materials</i> 使用视觉相似的物体，使撞击音色成为唯一的判别信号。</p>
+        </div>
+        <h2 class="title is-4 section-heading">如何使用</h2>
+        <div class="content has-text-justified">
+        <p>所有被评测的方法共享相同的观测接口与相同的两阶段训练配方（先在 OpenX-Sound 上预训练，再做任务特定微调），因此差异反映的是架构而非数据量。在这一协议下，HEAR 取得 81% 的平均声音因果成功率，而最强波形图像 VLA 基线为 61%、最强 ASR 基线为 35%、最强纯视觉骨干为 14%。</p>
+        </div>
+        <h2 class="title is-4 section-heading">复现</h2>
+        <div class="content has-text-justified">
+        <p>HEAR-Bench 的实现包含在代码发布中，构建在 RoboTwin 2.0 之上，任务音频资源随代码一同提供。流程的另一半见 <a href=\“/zh/openx-sound/\”>OpenX-Sound</a>。</p>
+        </div>
+        <div class="table-scroll"><table class="results-glance"><caption>HEAR-Bench 的七项仿真任务，覆盖四类决定成败的声学线索。</caption><thead><tr><th scope="col">线索类别</th><th scope="col">任务</th><th scope="col">主要线索</th></tr></thead><tbody><tr><td>Event-triggered alarms</td><td>Alarm Clock</td><td>alarm ringing</td></tr><tr><td>Event-triggered alarms</td><td>Microwave</td><td>completion beep</td></tr><tr><td>Human speech</td><td>Check Yes</td><td>prosody-driven speech</td></tr><tr><td>Human speech</td><td>Interrupt</td><td>spoken interruption</td></tr><tr><td>Continuous process sounds</td><td>Pour Water</td><td>pouring sound evolution</td></tr><tr><td>Continuous process sounds</td><td>Boil Water</td><td>boiling sound evolution</td></tr><tr><td>Physical interaction feedback</td><td>Check Materials</td><td>contact acoustics</td></tr></tbody></table></div><div class="table-scroll"><table class="results-glance"><caption>HEAR-Bench 七项任务的平均声音因果成功率，每项 100 次试验。</caption><thead><tr><th scope="col">方法</th><th scope="col">类型</th><th scope="col">平均声音因果成功率</th></tr></thead><tbody><tr><td>OpenVLA</td><td>VLA</td><td>0.10</td></tr><tr><td>π0.5</td><td>VLA</td><td>0.14</td></tr><tr><td>ManiWAV</td><td>audio-native</td><td>0.26</td></tr><tr><td>Play it by Ear</td><td>audio-native</td><td>0.28</td></tr><tr><td>OpenVLA-ASR</td><td>VLA + ASR</td><td>0.29</td></tr><tr><td>π0.5-ASR</td><td>VLA + ASR</td><td>0.35</td></tr><tr><td>OpenVLA-Waveform</td><td>VLA + waveform</td><td>0.53</td></tr><tr><td>π0.5-Waveform</td><td>VLA + waveform</td><td>0.61</td></tr><tr class="result-row-highlight"><td><b>HEAR</b></td><td><b>VSLA</b></td><td><b>0.81</b></td></tr></tbody></table></div>
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

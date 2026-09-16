@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio World Models: Predicting How a Scene Will Sound</title>
+  <meta name="description" content="An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR&#x27;s Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.">
+  <meta name="keywords" content="audio world model, world model robotics, world action model WAM, future audio prediction, temporal grounding robot, latent dynamics model, audio token prediction, predictive audio dynamics, robot world model, 音频世界模型, 世界模型, 世界动作模型">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hear.irmv.top/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/audio-world-model/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/concepts/audio-world-model/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="Audio World Models: Predicting How a Scene Will Sound">
+  <meta property="og:description" content="An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR&#x27;s Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.">
+  <meta property="og:url" content="https://hear.irmv.top/concepts/audio-world-model/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Audio World Models: Predicting How a Scene Will Sound">
+  <meta name="twitter:description" content="An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR&#x27;s Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/concepts/audio-world-model/#webpage",
+    "url": "https://hear.irmv.top/concepts/audio-world-model/",
+    "name": "Audio World Models: Predicting How a Scene Will Sound",
+    "description": "An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR's Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/concepts/audio-world-model/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/concepts/audio-world-model/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR Project Home",
+        "item": "https://hear.irmv.top/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Audio World Models: Predicting How a Scene Will Sound",
+        "item": "https://hear.irmv.top/concepts/audio-world-model/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/concepts/audio-world-model/#term",
+    "name": "Audio World Models: Predicting How a Scene Will Sound",
+    "description": "An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR's Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR concept glossary",
+      "url": "https://hear.irmv.top/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/concepts/audio-world-model/#article",
+    "headline": "Audio World Models: Predicting How a Scene Will Sound",
+    "description": "An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR's Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.",
+    "inLanguage": "en",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/concepts/audio-world-model/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/concepts/audio-world-model/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top/">&larr; Project Home</a></nav>
+        <h1 class="title is-2 page-title">Audio World Models</h1>
+        <div class="content has-text-justified page-lede"><p>An audio world model is a model that predicts how an acoustic scene will evolve, rather than only classifying or reacting to its present state. In HEAR, the Advancer component is formulated as an audio world model: it predicts near-future discrete audio codes from latent representations, which injects explicit temporal grounding into a robot policy.</p></div>
+        <h2 class="title is-4 section-heading">From reacting to anticipating</h2>
+        <div class="content has-text-justified">
+        <p>A purely reactive policy learns a mapping from current observation to action. A world model learns the dynamics instead: given the present, what comes next? For robotics this matters because many tasks have visually identical states that imply different correct behaviours, and the only thing distinguishing them is which direction the process is moving.</p>
+        <p>Cooking is the clearest case. A pot of water being heated looks similar at many moments, but the correct action depends entirely on how far the process has progressed. A model that can only see “water, pot, heat” cannot distinguish “nearly boiling” from “barely warm”. A model that predicts the next few seconds of sound can.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Why audio specifically</h2>
+        <div class="content has-text-justified">
+        <p>Audio is an unusually good carrier for this kind of progress signal. Continuous processes — boiling, pouring, grinding, sputtering — have characteristic acoustic signatures that evolve in a structured way, and the evolution is audible before it is visually obvious. Acoustic signals also have high temporal resolution relative to camera frames, so the rate of change is directly observable.</p>
+        </div>
+        <h2 class="title is-4 section-heading">How HEAR uses one</h2>
+        <div class="content has-text-justified">
+        <p>The Advancer predicts near-future discrete audio codes during training. This forces the policy's latent representation to encode not just what is audible now but how it is changing, which is what keeps the policy stable during long waiting phases where vision is quasi-static — a failure mode related to temporal motion collapse in chunked policies.</p>
+        <p>Crucially, the Advancer is a <b>training-time objective and is removed at deployment</b>. The temporal structure it teaches stays in the latent space, so inference cost is unchanged. Ablating it costs 0.81 to 0.73 on HEAR-Bench.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Where it sits in the world-model landscape</h2>
+        <div class="content has-text-justified">
+        <p>Most world-model work for robotics predicts future images or future latent states. Predicting in the audio modality is less common, and it complements rather than replaces visual world modelling: vision reports what the scene looks like, audio reports what is happening to it.</p>
+        </div>
+        <h2 class="title is-4 section-heading">Related concepts</h2>
+        <ul class="related-list">
+        <li><a href="../../concepts/robot-audition/">Robot Audition for Manipulation</a></li>
+        <li><a href="../../research-context/">Research context</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>Machine-readable entry points: <a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/zh/">中文</a></p><p class="subpage-cite">Cite as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

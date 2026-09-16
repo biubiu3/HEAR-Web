@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>音频世界模型：预测场景将如何发声</title>
+  <meta name="description" content="音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。">
+  <meta name="keywords" content="音频世界模型, 世界模型机器人, 世界动作模型 WAM, 未来音频预测, 机器人时间对齐, 隐动态模型, 音频词元预测, 预测性音频动态, 机器人世界模型">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/audio-world-model/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/audio-world-model/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/audio-world-model/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="音频世界模型：预测场景将如何发声">
+  <meta property="og:description" content="音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/audio-world-model/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="音频世界模型：预测场景将如何发声">
+  <meta name="twitter:description" content="音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/audio-world-model/",
+    "name": "音频世界模型：预测场景将如何发声",
+    "description": "音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "音频世界模型：预测场景将如何发声",
+        "item": "https://hear.irmv.top/zh/concepts/audio-world-model/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#term",
+    "name": "音频世界模型：预测场景将如何发声",
+    "description": "音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#article",
+    "headline": "音频世界模型：预测场景将如何发声",
+    "description": "音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/audio-world-model/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">音频世界模型</h1>
+        <div class="content has-text-justified page-lede"><p>音频世界模型是预测声学场景将如何演变的模型，而不只是对当前状态进行分类或反应。在 HEAR 中，Advancer 组件被形式化为音频世界模型：它从隐表示预测近未来的离散音频编码，从而为机器人策略注入显式的时间对齐信息。</p></div>
+        <h2 class="title is-4 section-heading">从反应到预期</h2>
+        <div class="content has-text-justified">
+        <p>纯反应式策略学习的是从当前观测到动作的映射。世界模型学习的是动态：给定现在，接下来会发生什么？对机器人而言这很重要，因为许多任务存在视觉上完全相同、正确行为却不同的状态，唯一的区分依据是过程正在朝哪个方向发展。</p>
+        <p>煮东西是最清楚的例子。一锅正在加热的水在许多时刻看起来都很像，但正确的动作完全取决于过程推进到了哪一步。只能看到“水、锅、热”的模型无法区分“快开了”和“刚温”；能预测未来几秒声音的模型可以。</p>
+        </div>
+        <h2 class="title is-4 section-heading">为什么是音频</h2>
+        <div class="content has-text-justified">
+        <p>音频是承载这类进展信号格外好的载体。连续过程——沸腾、倾倒、研磨、喷溅——具有特征性的声学签名，并且以结构化的方式演变，而这种演变在视觉上明显之前就已经可以听见。相对于相机帧率，声学信号还具有更高的时间分辨率，因此变化速率是直接可观测的。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 如何使用它</h2>
+        <div class="content has-text-justified">
+        <p>Advancer 在训练时预测近未来的离散音频编码。这迫使策略的隐表示不仅编码“现在能听到什么”，还编码“它正在如何变化”——这正是让策略在视觉准静态的长时间等待中保持稳定的原因，而这是一个与分块策略中时序运动坍缩相关的失效模式。</p>
+        <p>关键在于，Advancer 是<b>训练期目标，部署时会被移除</b>。它教会的时间结构保留在隐空间中，因此推理开销不变。消融掉它会使 HEAR-Bench 从 0.81 降到 0.73。</p>
+        </div>
+        <h2 class="title is-4 section-heading">在世界模型版图中的位置</h2>
+        <div class="content has-text-justified">
+        <p>机器人的多数世界模型工作预测的是未来图像或未来隐状态。在音频模态中做预测较为少见，它与视觉世界模型互补而非替代：视觉报告场景看起来如何，音频报告它正在发生什么。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/robot-audition/">面向操作的机器人听觉</a></li>
+        <li><a href="../../../zh/research-context/">技术定位</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

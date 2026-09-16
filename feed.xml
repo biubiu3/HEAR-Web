@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HEAR — Vision-Sound-Language-Action</title>
+  <link href="https://hear.irmv.top/"/>
+  <id>https://hear.irmv.top/</id>
+  <updated>2026-09-16T00:00:00Z</updated>
+  <author><name>Chang Nie</name></author>
+  <entry>
+    <title>HEAR project page</title>
+    <link href="https://hear.irmv.top/"/>
+    <id>https://hear.irmv.top/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation</summary>
+  </entry>
+  <entry>
+    <title>HEAR (IJRR 2026) — Paper, Abstract and Citation | Vision-Sound-Language-Action</title>
+    <link href="https://hear.irmv.top/paper/"/>
+    <id>https://hear.irmv.top/paper/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>The HEAR paper: &quot;Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation&quot;, accepted at The International Journal of Robotics Research. Abstract, authors, BibTeX and links to code, dataset and benchmark.</summary>
+  </entry>
+  <entry>
+    <title>Research Context: Where HEAR Sits in VLA, World Models and Embodied AI</title>
+    <link href="https://hear.irmv.top/research-context/"/>
+    <id>https://hear.irmv.top/research-context/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>How the HEAR sound-centric manipulation framework relates to Vision-Language-Action models, world models and World Action Models (WAM), physical AI, embodied intelligence, agentic robotics, robot audition and action-chunking research.</summary>
+  </entry>
+  <entry>
+    <title>Robot Manipulation Research Landscape: VLA, World Models, Multi-Sensory Policies</title>
+    <link href="https://hear.irmv.top/research-landscape/"/>
+    <id>https://hear.irmv.top/research-landscape/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>A map of the current robot manipulation research landscape — Vision-Language-Action models, world models and World Action Models, multi-sensory policy families, action chunking and real-time control — and where sound-centric manipulation and HEAR fit.</summary>
+  </entry>
+  <entry>
+    <title>Vision-Sound-Language-Action (VSLA): Extending VLA Robots with Continuous Hearing</title>
+    <link href="https://hear.irmv.top/concepts/vision-sound-language-action/"/>
+    <id>https://hear.irmv.top/concepts/vision-sound-language-action/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Vision-Sound-Language-Action (VSLA) is a robot control paradigm conditioned on vision, streaming audio, language and proprioception under delayed decision loops. It extends VLA from &#x27;see and act&#x27; to &#x27;see, hear, remember and react&#x27;.</summary>
+  </entry>
+  <entry>
+    <title>Blind Execution Interval: The Perception Gap in Action-Chunked Robot Policies</title>
+    <link href="https://hear.irmv.top/concepts/blind-execution-interval/"/>
+    <id>https://hear.irmv.top/concepts/blind-execution-interval/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>The Blind Execution Interval (BEI) is the gap created when a VLA policy executes an action chunk open-loop: new observations cannot change the outgoing commands, so a transient acoustic cue can occur and vanish before the next policy query.</summary>
+  </entry>
+  <entry>
+    <title>Robot Audition for Manipulation: From Sound Recognition to Sound-Causal Control</title>
+    <link href="https://hear.irmv.top/concepts/robot-audition/"/>
+    <id>https://hear.irmv.top/concepts/robot-audition/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Robot audition is the use of microphones on a robot to interpret environmental sound for control and interaction. In manipulation it spans material estimation from impact, grasp-stability assessment, contact microphones as a tactile proxy, and active acoustic probing.</summary>
+  </entry>
+  <entry>
+    <title>Audio World Models: Predicting How a Scene Will Sound</title>
+    <link href="https://hear.irmv.top/concepts/audio-world-model/"/>
+    <id>https://hear.irmv.top/concepts/audio-world-model/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>An audio world model predicts how an acoustic scene will evolve rather than only reacting to its current state. HEAR&#x27;s Advancer is an audio world model used as a training-time objective for temporal grounding in a robot policy.</summary>
+  </entry>
+  <entry>
+    <title>Action Chunking in Robot Policies: Why Policies Act Open-Loop, and What It Costs</title>
+    <link href="https://hear.irmv.top/concepts/action-chunking/"/>
+    <id>https://hear.irmv.top/concepts/action-chunking/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Action chunking means predicting a short sequence of future actions and executing them open-loop. It hides inference latency and keeps motion smooth, but creates a perception gap in which new observations cannot affect the robot.</summary>
+  </entry>
+  <entry>
+    <title>Physical AI and Embodied Intelligence: What the Terms Mean for Robot Manipulation</title>
+    <link href="https://hear.irmv.top/concepts/physical-ai/"/>
+    <id>https://hear.irmv.top/concepts/physical-ai/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Physical AI and embodied intelligence describe AI systems that act in the physical world through sensors and actuators. For robot manipulation, the open problems are sensory interfaces, timing under delayed control, and data.</summary>
+  </entry>
+  <entry>
+    <title>AI Agent Robotics: How LLM Agents and Robot Policies Fit Together</title>
+    <link href="https://hear.irmv.top/concepts/ai-agent-robotics/"/>
+    <id>https://hear.irmv.top/concepts/ai-agent-robotics/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>AI agent robotics combines high-level reasoning agents with low-level robot policies. The emerging pattern is hierarchical: an LLM agent plans and selects skills, while a vision-language-action policy executes them in real time.</summary>
+  </entry>
+  <entry>
+    <title>GPT and Large Models for Robotic Arms: What They Can and Cannot Do</title>
+    <link href="https://hear.irmv.top/concepts/gpt-robotic-arm/"/>
+    <id>https://hear.irmv.top/concepts/gpt-robotic-arm/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Large language and multimodal models can drive robotic arms at the planning level and, through vision-language-action training, at the action level. What they cannot do without extra machinery is notice short-lived events under delayed control.</summary>
+  </entry>
+  <entry>
+    <title>Robot Foundation Models: Pretraining, Cross-Embodiment Transfer and Data</title>
+    <link href="https://hear.irmv.top/concepts/robot-foundation-models/"/>
+    <id>https://hear.irmv.top/concepts/robot-foundation-models/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Robot foundation models are large models pretrained on broad robot data and fine-tuned per task. The main open problems are cross-embodiment transfer, action chunking under real-time constraints, and the shortage of sensory data beyond vision.</summary>
+  </entry>
+  <entry>
+    <title>Multi-Sensory Robot Policies: Adding Touch, Force and Sound to VLA Models</title>
+    <link href="https://hear.irmv.top/concepts/multisensory-robotics/"/>
+    <id>https://hear.irmv.top/concepts/multisensory-robotics/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Multi-sensory robot policies extend vision-language-action models with additional modalities. The vision-tactile-language-action (VTLA) family adds touch; VSLA adds streaming audio. Each modality has its own temporal structure, and the interface must match it.</summary>
+  </entry>
+  <entry>
+    <title>HEAR-Bench: A Sound-Centric Manipulation Benchmark with Causal Timing Rules</title>
+    <link href="https://hear.irmv.top/benchmark/"/>
+    <id>https://hear.irmv.top/benchmark/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>HEAR-Bench is a sound-enabled robot manipulation benchmark built on RoboTwin 2.0. It streams task-relevant audio and marks a trial as failed if the robot reaches the goal before the required acoustic cue has occurred. Seven tasks across four cue categories, 100 trials each.</summary>
+  </entry>
+  <entry>
+    <title>OpenX-Sound: Audio-Augmented Open X-Embodiment for VSLA Pretraining</title>
+    <link href="https://hear.irmv.top/openx-sound/"/>
+    <id>https://hear.irmv.top/openx-sound/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>OpenX-Sound is an audio-augmented robot pretraining dataset. Selected Open X-Embodiment episodes keep their original multi-view RGB, language, proprioception and expert actions, and gain a temporally aligned audio track. 98.7% of augmented clips verified within a 100 ms sync tolerance.</summary>
+  </entry>
+  <entry>
+    <title>HEAR 论文（IJRR 2026）— 摘要、作者与引用 | 视-声-语言-动作</title>
+    <link href="https://hear.irmv.top/zh/paper/"/>
+    <id>https://hear.irmv.top/zh/paper/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>《迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架》论文页面，已被 The International Journal of Robotics Research (IJRR) 录用。含摘要、作者、BibTeX、代码与数据集链接。</summary>
+  </entry>
+  <entry>
+    <title>技术定位：HEAR 在 VLA、世界模型与具身智能中的位置</title>
+    <link href="https://hear.irmv.top/zh/research-context/"/>
+    <id>https://hear.irmv.top/zh/research-context/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>HEAR 声音中心操作框架与视觉-语言-动作模型、世界模型与世界动作模型（WAM）、物理AI、具身智能、智能体机器人、机器人听觉及动作分块研究之间的关系。</summary>
+  </entry>
+  <entry>
+    <title>机器人操作研究版图：VLA、世界模型与多感官策略</title>
+    <link href="https://hear.irmv.top/zh/research-landscape/"/>
+    <id>https://hear.irmv.top/zh/research-landscape/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>当前机器人操作研究的版图——视觉-语言-动作模型、世界模型与世界动作模型、多感官策略家族、动作分块与实时控制——以及声音中心操作与 HEAR 所处的切片。</summary>
+  </entry>
+  <entry>
+    <title>视-声-语言-动作（VSLA）：为 VLA 机器人加上持续听觉</title>
+    <link href="https://hear.irmv.top/zh/concepts/vision-sound-language-action/"/>
+    <id>https://hear.irmv.top/zh/concepts/vision-sound-language-action/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>视-声-语言-动作（VSLA）是一种在延迟决策回路下以视觉、流式音频、语言与本体感觉为条件的机器人控制范式。它把 VLA 从「看见并行动」扩展为「看见、听见、记住并反应」。</summary>
+  </entry>
+  <entry>
+    <title>盲执行间隔：动作分块机器人策略中的感知空档</title>
+    <link href="https://hear.irmv.top/zh/concepts/blind-execution-interval/"/>
+    <id>https://hear.irmv.top/zh/concepts/blind-execution-interval/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>盲执行间隔（BEI）是 VLA 策略以开环方式执行动作块时形成的空档：新观测无法改变已发出的指令，因此一段瞬态声学线索可能在下一次策略推理之前发生并消失。</summary>
+  </entry>
+  <entry>
+    <title>面向操作的机器人听觉：从声音识别到声音因果控制</title>
+    <link href="https://hear.irmv.top/zh/concepts/robot-audition/"/>
+    <id>https://hear.irmv.top/zh/concepts/robot-audition/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>机器人听觉是利用机器人搭载的麦克风解释环境声音以用于控制与交互。在操作领域，它涵盖通过撞击声估计材质、通过接触声评估抓取稳定性、把接触麦克风当作触觉替代，以及主动声学探测。</summary>
+  </entry>
+  <entry>
+    <title>音频世界模型：预测场景将如何发声</title>
+    <link href="https://hear.irmv.top/zh/concepts/audio-world-model/"/>
+    <id>https://hear.irmv.top/zh/concepts/audio-world-model/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>音频世界模型预测声学场景将如何演变，而非仅对当前状态作出反应。HEAR 的 Advancer 即为用作策略时间对齐训练期目标的音频世界模型。</summary>
+  </entry>
+  <entry>
+    <title>机器人策略中的动作分块：为什么策略以开环方式行动，代价是什么</title>
+    <link href="https://hear.irmv.top/zh/concepts/action-chunking/"/>
+    <id>https://hear.irmv.top/zh/concepts/action-chunking/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>动作分块指一次预测一小段未来动作并以开环方式执行。它掩盖了推理延迟并保持运动平滑，但制造了一个感知空档：在此期间机器人无法对任何新信息作出反应。</summary>
+  </entry>
+  <entry>
+    <title>物理AI 与具身智能：对机器人操作而言这些词意味着什么</title>
+    <link href="https://hear.irmv.top/zh/concepts/physical-ai/"/>
+    <id>https://hear.irmv.top/zh/concepts/physical-ai/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>物理AI 与具身智能指通过传感器与执行器在物理世界中行动的 AI 系统。对机器人操作而言，真正的开放问题是感官接口、延迟控制下的时序，以及数据来源。</summary>
+  </entry>
+  <entry>
+    <title>智能体机器人：大模型智能体与机器人策略如何配合</title>
+    <link href="https://hear.irmv.top/zh/concepts/ai-agent-robotics/"/>
+    <id>https://hear.irmv.top/zh/concepts/ai-agent-robotics/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>智能体机器人把高层推理智能体与低层机器人策略结合起来。正在成型的模式是分层的：由大模型智能体规划与选择技能，由视觉-语言-动作策略实时执行。</summary>
+  </entry>
+  <entry>
+    <title>GPT 与机械臂：大模型能做什么、不能做什么</title>
+    <link href="https://hear.irmv.top/zh/concepts/gpt-robotic-arm/"/>
+    <id>https://hear.irmv.top/zh/concepts/gpt-robotic-arm/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。</summary>
+  </entry>
+  <entry>
+    <title>机器人基础模型：预训练、跨本体迁移与数据</title>
+    <link href="https://hear.irmv.top/zh/concepts/robot-foundation-models/"/>
+    <id>https://hear.irmv.top/zh/concepts/robot-foundation-models/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。</summary>
+  </entry>
+  <entry>
+    <title>多感官机器人策略：为 VLA 模型加入触觉、力与声音</title>
+    <link href="https://hear.irmv.top/zh/concepts/multisensory-robotics/"/>
+    <id>https://hear.irmv.top/zh/concepts/multisensory-robotics/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>多感官机器人策略为视觉-语言-动作模型扩展额外模态。视觉-触觉-语言-动作（VTLA）家族加入触觉；VSLA 加入流式音频。每个模态都有自己的时间结构，接口必须与之匹配。</summary>
+  </entry>
+  <entry>
+    <title>HEAR-Bench：带因果时序规则的声音中心操作基准</title>
+    <link href="https://hear.irmv.top/zh/benchmark/"/>
+    <id>https://hear.irmv.top/zh/benchmark/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>HEAR-Bench 是构建在 RoboTwin 2.0 上的声音使能机器人操作基准。它流式播放任务相关音频，并规定：若机器人在所需声学线索发生之前到达目标，该次试验记为失败。七项任务覆盖四类线索，每项 100 次试验。</summary>
+  </entry>
+  <entry>
+    <title>OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment</title>
+    <link href="https://hear.irmv.top/zh/openx-sound/"/>
+    <id>https://hear.irmv.top/zh/openx-sound/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。</summary>
+  </entry>
+  <entry>
+    <title>Moka Coffee — HEAR real-robot demonstration</title>
+    <link href="https://hear.irmv.top/videos/moka-coffee/"/>
+    <id>https://hear.irmv.top/videos/moka-coffee/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring. A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound.</summary>
+  </entry>
+  <entry>
+    <title>Answer Phone — HEAR real-robot demonstration</title>
+    <link href="https://hear.irmv.top/videos/answer-phone/"/>
+    <id>https://hear.irmv.top/videos/answer-phone/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing. The robot revisits nearly identical visual states at different semantic stages of the task.</summary>
+  </entry>
+  <entry>
+    <title>Shake Bottle (Empty) — HEAR real-robot demonstration</title>
+    <link href="https://hear.irmv.top/videos/shake-bottle-empty/"/>
+    <id>https://hear.irmv.top/videos/shake-bottle-empty/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound. The hidden state cannot be recovered passively; the robot must first create the evidence itself.</summary>
+  </entry>
+  <entry>
+    <title>Shake Bottle (Occupied) — HEAR real-robot demonstration</title>
+    <link href="https://hear.irmv.top/videos/shake-bottle-occupied/"/>
+    <id>https://hear.irmv.top/videos/shake-bottle-occupied/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials. The companion case showing the same active sensing behaviour under a different hidden physical state.</summary>
+  </entry>
+  <entry>
+    <title>Real Alarm Clock — HEAR real-robot demonstration</title>
+    <link href="https://hear.irmv.top/videos/real-alarm-clock/"/>
+    <id>https://hear.irmv.top/videos/real-alarm-clock/</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press. The simulation alarm setting transferred into the physical world, where reverberation and background chatter distort the cue.</summary>
+  </entry>
+  <entry>
+    <title>HEAR full page content (EN + ZH)</title>
+    <link href="https://hear.irmv.top/llms-full.txt"/>
+    <id>https://hear.irmv.top/llms-full.txt</id>
+    <updated>2026-09-16T00:00:00Z</updated>
+    <summary>Complete project text as Markdown.</summary>
+  </entry>
+</feed>

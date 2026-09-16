@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>机器人基础模型：预训练、跨本体迁移与数据</title>
+  <meta name="description" content="机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。">
+  <meta name="keywords" content="机器人基础模型, 具身基础模型, 机器人预训练, 跨本体, Open X-Embodiment, 机器人策略预训练, VLA 骨干, 机器人操作基础模型, 机器人数据规模化, 通用机器人策略">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/robot-foundation-models/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/robot-foundation-models/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/robot-foundation-models/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="机器人基础模型：预训练、跨本体迁移与数据">
+  <meta property="og:description" content="机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/robot-foundation-models/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="机器人基础模型：预训练、跨本体迁移与数据">
+  <meta name="twitter:description" content="机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/robot-foundation-models/",
+    "name": "机器人基础模型：预训练、跨本体迁移与数据",
+    "description": "机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "机器人基础模型：预训练、跨本体迁移与数据",
+        "item": "https://hear.irmv.top/zh/concepts/robot-foundation-models/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#term",
+    "name": "机器人基础模型：预训练、跨本体迁移与数据",
+    "description": "机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#article",
+    "headline": "机器人基础模型：预训练、跨本体迁移与数据",
+    "description": "机器人基础模型是在广泛的机器人数据上预训练、再按任务微调的大型模型。主要开放问题是跨本体迁移、实时约束下的动作分块，以及视觉之外感官数据的匮乏。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/robot-foundation-models/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">机器人基础模型</h1>
+        <div class="content has-text-justified page-lede"><p>机器人基础模型是在来自许多机器人与任务的数据上预训练、再针对特定任务微调（或以提示方式使用）的大型模型。这一模式借用自语言与视觉领域，其奏效原因相同：广泛的预训练产生可迁移的表示，因此下游学习所需的数据少得多。</p></div>
+        <h2 class="title is-4 section-heading">预训练配方</h2>
+        <div class="content has-text-justified">
+        <p>一个大型多模态骨干（通常是视觉-语言模型）被适配为输出动作。训练分阶段进行：先做广泛的多模态预训练，再在跨本体语料上做机器人特有的预训练，最后做任务特定微调。第一阶段提供通用感知与语言grounding；第二阶段提供感知与物理动作之间的耦合，而这是任何规模的互联网数据都无法提供的。</p>
+        <p>跨本体语料——Open X-Embodiment 及其后续——是第二阶段得以可能的原因。它们把来自许多机器人平台与任务的轨迹聚合到统一格式下。</p>
+        </div>
+        <h2 class="title is-4 section-heading">语料里没有什么</h2>
+        <div class="content has-text-justified">
+        <p>视觉、语言、本体感觉与动作。没有力。没有触觉。没有音频。与其说是疏忽，不如说是硬件问题：要在跨本体语料的规模上采集同步的麦克风、触觉或力数据，需要每一个贡献实验室在硬件上完成标准化。</p>
+        <p>后果是基础模型继承了以视觉为中心的世界观，而每增加一个模态都必须先解决自己的数据问题才能被训练。HEAR 的 OpenX-Sound 就是音频方面的一种解法：它不去标准化硬件，而是为已有片段增强时间对齐的合成音频，并明确说明这是自举阶段而非真实录音的替代品。</p>
+        </div>
+        <h2 class="title is-4 section-heading">实时约束</h2>
+        <div class="content has-text-justified">
+        <p>基础模型很大，机器人控制很快，二者之间的鸿沟靠动作分块来弥合。这使得盲执行间隔成为整个模型类别的性质，而不是某个模型的问题：任何大到需要分块的策略，也都有一个无法反应的间隔。</p>
+        </div>
+        <h2 class="title is-4 section-heading">HEAR 的位置</h2>
+        <div class="content has-text-justified">
+        <p>HEAR 是一个基础模型式的策略，其预训练阶段增加了音频模态。它对这一类别别的贡献是表明：决定瞬态感官事件能否存活到产生影响的，是接口而不只是骨干。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/action-chunking/">动作分块</a></li>
+        <li><a href="../../../zh/concepts/gpt-robotic-arm/">GPT 与机械臂</a></li>
+        <li><a href="../../../zh/openx-sound/">OpenX-Sound</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

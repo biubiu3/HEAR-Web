@@ -766,3 +766,14 @@ a:focus {
     box-shadow: none !important;
   }
 }
+
+/* Footer sitemap rows: low visual weight, present for discovery and crawlers. */
+.footer-sitemap {
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+.footer-sitemap a {
+  color: var(--text-secondary);
+}

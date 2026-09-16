@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPT 与机械臂：大模型能做什么、不能做什么</title>
+  <meta name="description" content="大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。">
+  <meta name="keywords" content="GPT 机械臂, 大模型机械臂, 机械臂大模型, 大模型机器人控制, VLA 模型, 视觉语言动作模型, 机器人基础模型, AI 机械臂, 大语言模型机器人">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/concepts/gpt-robotic-arm/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/concepts/gpt-robotic-arm/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/concepts/gpt-robotic-arm/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/concepts/gpt-robotic-arm/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/concepts/gpt-robotic-arm/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="GPT 与机械臂：大模型能做什么、不能做什么">
+  <meta property="og:description" content="大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/concepts/gpt-robotic-arm/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPT 与机械臂：大模型能做什么、不能做什么">
+  <meta name="twitter:description" content="大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#webpage",
+    "url": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/",
+    "name": "GPT 与机械臂：大模型能做什么、不能做什么",
+    "description": "大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GPT 与机械臂：大模型能做什么、不能做什么",
+        "item": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/"
+      }
+    ]
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#term",
+    "name": "GPT 与机械臂：大模型能做什么、不能做什么",
+    "description": "大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "HEAR 术语表",
+      "url": "https://hear.irmv.top/zh/"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#article",
+    "headline": "GPT 与机械臂：大模型能做什么、不能做什么",
+    "description": "大型语言与多模态模型可以在规划层驱动机械臂，也可以通过视觉-语言-动作训练在动作层直接驱动。它们无法在没有额外机制的情况下，注意到延迟控制下的短暂事件。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#webpage"
+    },
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "about": {
+      "@id": "https://hear.irmv.top/zh/concepts/gpt-robotic-arm/#term"
+    }
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">GPT 与机械臂</h1>
+        <div class="content has-text-justified page-lede"><p>“GPT 机械臂”指的是由大型预训练模型控制的机械臂。这件事发生在两个层面：语言模型可以用文字规划与编排任务，而视觉-语言-动作（VLA）模型——被微调为输出动作的多模态骨干——可以直接驱动机械臂。两者都可行。但两者都不会自动解决“对短暂物理事件作出正确反应”的问题。</p></div>
+        <h2 class="title is-4 section-heading">层面一：规划</h2>
+        <div class="content has-text-justified">
+        <p>语言模型可以把“煮咖啡”分解为步骤、选择工具、并从某些失败中恢复，因为这类推理基本上是符号化的。它接触不到关节角，也不需要。这一层面已经相当成熟，主要是软件集成问题。</p>
+        </div>
+        <h2 class="title is-4 section-heading">层面二：直接动作</h2>
+        <div class="content has-text-justified">
+        <p>VLA 模型以图像、指令与本体感觉为输入，输出连续动作。它之所以可行，是因为骨干的预训练已经产生了视觉场景与语言对齐的表示，而相对少量的机器人数据就足以接上动作头。当前的能力主要集中在这里，有意思的失效模式也在这里。</p>
+        </div>
+        <h2 class="title is-4 section-heading">大模型自带的问题</h2>
+        <div class="content has-text-justified">
+        <p>一个模型可以规划得很漂亮，但它仍然远远慢于控制频率。标准的变通做法——预测一个动作块并以开环方式执行——意味着机械臂正在执行一秒或更久之内无法修正的指令。机器人需要在这个窗口内注意到的任何东西，它都看不见。</p>
+        <p>对视觉任务而言这通常可以容忍，因为相机一秒前看到的东西大体仍然成立。对事件而言则不然：一声咔哒、一次提示音、一阵晃动或一句口头打断，都可能在窗口内开始并结束，且不在任何后续观测中留下痕迹。</p>
+        </div>
+        <h2 class="title is-4 section-heading">除了更大的模型还需要什么</h2>
+        <div class="content has-text-justified">
+        <p>规模无法解决这个问题，因为问题不在表示能力，而在接口设计。有帮助的是“累积而非采样”的感官接口：一份跨越执行空档维护的、关于“听到过什么”的因果记忆，使下一次决策能够对已经听不见的事件作出反应。HEAR 框架是这一思路的一种实现，并配有拒绝把“视觉上合理但声学上过早”的动作判为成功的评测协议。</p>
+        </div>
+        <h2 class="title is-4 section-heading">相关概念</h2>
+        <ul class="related-list">
+        <li><a href="../../../zh/concepts/robot-foundation-models/">机器人基础模型</a></li>
+        <li><a href="../../../zh/concepts/action-chunking/">动作分块</a></li>
+        </ul>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

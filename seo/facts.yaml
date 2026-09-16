@@ -1,0 +1,211 @@
+# Single source of truth for the HEAR project page.
+#
+# Every generated artifact — page HTML, JSON-LD, project.json, citation.cff,
+# codemeta.json, sitemaps, feed.xml — reads its numbers and identifiers from
+# this file. Do not hard-code a result number anywhere else: if a figure
+# changes, it must change in exactly one place so that search engines and LLM
+# retrievers never see two versions of the same fact.
+#
+# Rebuild everything with:  python3 seo/build.py
+
+project:
+  short_name: "HEAR"
+  canonical_url: "https://hear.irmv.top/"
+  title: "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation"
+  short_title: "HEAR: Vision-Sound-Language-Action for Sound-Centric Manipulation"
+  category: "Vision-Sound-Language-Action robotics"
+  machine_aliases:
+    - "HEAR"
+    - "HEAR-VSLA"
+    - "HEAR framework"
+    - "HEAR robot"
+    - "HEAR Vision-Sound-Language-Action"
+  updated: "2026-09-16"
+  license:
+    page: "https://creativecommons.org/licenses/by-sa/4.0/"
+    code: "https://www.apache.org/licenses/LICENSE-2.0"
+
+paper:
+  arxiv_id: "2603.16086"
+  arxiv_url: "https://arxiv.org/abs/2603.16086"
+  pdf_url: "https://arxiv.org/pdf/2603.16086.pdf"
+  first_posted: "2026-03-17"          # ISO for machine use
+  first_posted_scholar: "2026/03/17"  # Google Scholar requires YYYY/MM/DD
+  journal: "The International Journal of Robotics Research"
+  journal_abbrev: "IJRR"
+  journal_issn: "0278-3649"
+  publisher: "SAGE Publications"
+  status: "Accepted for publication"
+  doi: null            # set when IJRR assigns one; build.py will emit citation_doi
+  volume: null
+  issue: null
+  firstpage: null
+  bibtex_key: "nie2026visionsoundlanguageactionparadigmhearframework"
+  bibtex_key_short: "nie2026hear"
+
+# Every figure quoted on the site comes from here.
+results:
+  hear_bench_avg: 0.81
+  hear_bench_no_pretrain: 0.69
+  hear_bench_no_historian: 0.57
+  hear_bench_no_advancer: 0.73
+  hear_bench_realizer_regression: 0.70
+  baseline_waveform_best: 0.61          # pi0.5-Waveform
+  baseline_asr_best: 0.35               # pi0.5-ASR
+  baseline_vision_only_best: 0.14       # pi0.5
+  baseline_audio_native_best: 0.28      # Play it by Ear
+  real_robot_calibrated: 0.70
+  real_robot_uniform: 0.54
+  real_robot_baseline_best: 0.45        # pi0.5-Waveform
+  openx_sound_sync_accuracy: 0.987
+  openx_sound_sync_tolerance_ms: 100
+  trials_per_task: 100
+  bei_seconds: 2.3
+  chunk_interval_seconds: 2.1
+  chunk_horizon: 16
+
+benchmark:
+  name: "HEAR-Bench"
+  base: "RoboTwin 2.0"
+  simulation_tasks: 7
+  cue_categories: 4
+  url: "https://github.com/IRMVLab/HEAR"
+  tasks:
+    - {category: "Event-triggered alarms", name: "Alarm Clock", cue: "alarm ringing"}
+    - {category: "Event-triggered alarms", name: "Microwave", cue: "completion beep"}
+    - {category: "Human speech", name: "Check Yes", cue: "prosody-driven speech"}
+    - {category: "Human speech", name: "Interrupt", cue: "spoken interruption"}
+    - {category: "Continuous process sounds", name: "Pour Water", cue: "pouring sound evolution"}
+    - {category: "Continuous process sounds", name: "Boil Water", cue: "boiling sound evolution"}
+    - {category: "Physical interaction feedback", name: "Check Materials", cue: "contact acoustics"}
+  real_robot_tasks: ["Moka Coffee", "Answer Phone", "Shake Bottle", "Real Alarm Clock"]
+
+robot:
+  platform: "Franka Panda"
+  simulator: "RoboTwin 2.0 (dual-arm)"
+
+entities:
+  dataset:
+    name: "OpenX-Sound"
+    url: "https://huggingface.co/datasets/biubiu2/OpenX-Sound"
+    full_url: "https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main"
+    base: "Open X-Embodiment"
+  code:
+    name: "HEAR code release"
+    url: "https://github.com/IRMVLab/HEAR"
+  models:
+    name: "HEAR pretrained model weights"
+    url: "https://huggingface.co/biubiu2"
+    checkpoints:
+      - "HEAR-Qwen3-Omni-30B-A3B-Instruct-Pruned"
+      - "HEAR-Qwen3-0.6B"
+      - "HEAR-mimi"
+  benchmark:
+    name: "HEAR-Bench"
+    url: "https://hear.irmv.top/benchmark/"
+  lab:
+    name: "IRMV Lab"
+    full_name: "Intelligent Robotics and Machine Vision Lab, Shanghai Jiao Tong University"
+    url: "https://irmv.sjtu.edu.cn/"
+
+affiliations:
+  sjtu:
+    name: "Shanghai Jiao Tong University"
+    name_zh: "上海交通大学"
+    url: "https://en.sjtu.edu.cn/"
+    department: "School of Automation and Intelligent Sensing"
+  cambridge:
+    name: "University of Cambridge"
+    name_zh: "剑桥大学"
+    url: "https://www.cam.ac.uk/"
+    department: "Department of Engineering"
+
+# ORCID / Scholar / homepage are intentionally null until the authors supply
+# verified identifiers. Do NOT invent them — a wrong ORCID mis-attributes the
+# paper, which is worse than an absent one.
+authors:
+  - name: "Chang Nie"
+    name_zh: "聂畅"
+    affiliation: sjtu
+    orcid: null
+    scholar: null
+    homepage: null
+  - name: "Tianchen Deng"
+    name_zh: "邓天辰"
+    affiliation: sjtu
+    orcid: null
+    scholar: null
+    homepage: null
+  - name: "Guangming Wang"
+    name_zh: "王光明"
+    affiliation: cambridge
+    orcid: null
+    scholar: null
+    homepage: null
+  - name: "Zhe Liu"
+    name_zh: "刘哲"
+    affiliation: sjtu
+    orcid: null
+    scholar: null
+    homepage: null
+  - name: "Hesheng Wang"
+    name_zh: "王贺升"
+    affiliation: sjtu
+    orcid: null
+    scholar: null
+    homepage: null
+    email: "wanghesheng@sjtu.edu.cn"
+    corresponding: true
+
+# Videos are regenerated into /videos/<slug>/ pages and a video sitemap.
+videos:
+  - slug: moka-coffee
+    title: "Moka Coffee"
+    file: "moka_pot_all_web.mp4"
+    poster: "moka-coffee.jpg"
+    caption: "moka-coffee.en.vtt"
+    duration: 50
+    duration_iso: "PT50S"
+    date: "2026-07-27"
+    what: "Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring."
+    why: "A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound."
+  - slug: answer-phone
+    title: "Answer Phone"
+    file: "telephone_all.mp4"
+    poster: "answer-phone.jpg"
+    caption: "answer-phone.en.vtt"
+    duration: 41
+    duration_iso: "PT41S"
+    date: "2026-07-27"
+    what: "Multi-stage progress tracking with ring detection, speech understanding and end-of-call recognition under severe visual aliasing."
+    why: "The robot revisits nearly identical visual states at different semantic stages of the task."
+  - slug: shake-bottle-empty
+    title: "Shake Bottle (Empty)"
+    file: "empty_all.mp4"
+    poster: "shake-bottle-empty.jpg"
+    caption: "shake-empty.en.vtt"
+    duration: 32
+    duration_iso: "PT32S"
+    date: "2026-07-27"
+    what: "Active acoustic sensing, where perception depends on generating a repeatable motion that elicits a discriminative sound."
+    why: "The hidden state cannot be recovered passively; the robot must first create the evidence itself."
+  - slug: shake-bottle-occupied
+    title: "Shake Bottle (Occupied)"
+    file: "occupied_all.mp4"
+    poster: "shake-bottle-occupied.jpg"
+    caption: "shake-occupied.en.vtt"
+    duration: 32
+    duration_iso: "PT32S"
+    date: "2026-07-27"
+    what: "Whether the policy can use self-generated rattling sound to distinguish occupied from empty bottles consistently across trials."
+    why: "The companion case showing the same active sensing behaviour under a different hidden physical state."
+  - slug: real-alarm-clock
+    title: "Real Alarm Clock"
+    file: "alarm_all.mp4"
+    poster: "real-alarm-clock.jpg"
+    caption: "real-alarm-clock.en.vtt"
+    duration: 31
+    duration_iso: "PT31S"
+    date: "2026-07-27"
+    what: "Whether the model remains sound-causal under real acoustic domain shift and still avoids the visually tempting early press."
+    why: "The simulation alarm setting transferred into the physical world, where reverberation and background chatter distort the cue."

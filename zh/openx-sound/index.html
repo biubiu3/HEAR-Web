@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment</title>
+  <meta name="description" content="OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。">
+  <meta name="keywords" content="OpenX-Sound, 音频增强机器人数据集, Open X-Embodiment 音频, 机器人预训练数据集, 音频视觉动作预训练, VSLA 数据集, 机器人操作数据集, 具身智能数据集, 声音数据集">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <link rel="canonical" href="https://hear.irmv.top/zh/openx-sound/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/openx-sound/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/openx-sound/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/openx-sound/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/openx-sound/index.md">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
+  <meta property="og:title" content="OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment">
+  <meta property="og:description" content="OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/openx-sound/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment">
+  <meta name="twitter:description" content="OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="../../static/images/logo3.png">
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/index.css?v=geo-2026">
+  <link rel="stylesheet" href="../../static/css/subpage.css">
+  <script type="application/ld+json">
+[
+  {
+    "@type": "WebSite",
+    "@id": "https://hear.irmv.top/#website",
+    "url": "https://hear.irmv.top/",
+    "name": "HEAR — Vision-Sound-Language-Action",
+    "alternateName": [
+      "HEAR Project Page",
+      "HEAR VSLA",
+      "HEAR 项目主页"
+    ],
+    "inLanguage": [
+      "en",
+      "zh-Hans"
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://hear.irmv.top/zh/openx-sound/#webpage",
+    "url": "https://hear.irmv.top/zh/openx-sound/",
+    "name": "OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment",
+    "description": "OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#website"
+    },
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "breadcrumb": {
+      "@id": "https://hear.irmv.top/zh/openx-sound/#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://hear.irmv.top/zh/openx-sound/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HEAR 项目主页",
+        "item": "https://hear.irmv.top/zh/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment",
+        "item": "https://hear.irmv.top/zh/openx-sound/"
+      }
+    ]
+  },
+  {
+    "@type": "Dataset",
+    "@id": "https://hear.irmv.top/zh/openx-sound/#dataset",
+    "name": "OpenX-Sound",
+    "description": "OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。",
+    "url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main",
+    "creator": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ],
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "isPartOf": {
+      "@id": "https://hear.irmv.top/#paper"
+    }
+  },
+  {
+    "@type": "Article",
+    "@id": "https://hear.irmv.top/zh/openx-sound/#article",
+    "headline": "OpenX-Sound：面向 VSLA 预训练的音频增强 Open X-Embodiment",
+    "description": "OpenX-Sound 是音频增强的机器人预训练数据集。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。98.7% 的增强片段满足 100 毫秒同步容差。",
+    "inLanguage": "zh-Hans",
+    "dateModified": "2026-09-16",
+    "mainEntityOfPage": {
+      "@id": "https://hear.irmv.top/zh/openx-sound/#webpage"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Chang Nie"
+      },
+      {
+        "@type": "Person",
+        "name": "Tianchen Deng"
+      },
+      {
+        "@type": "Person",
+        "name": "Guangming Wang"
+      },
+      {
+        "@type": "Person",
+        "name": "Zhe Liu"
+      },
+      {
+        "@type": "Person",
+        "name": "Hesheng Wang"
+      }
+    ]
+  }
+]
+</script>
+  
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container is-max-desktop">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="https://hear.irmv.top../../zh/">&larr; 项目主页</a></nav>
+        <h1 class="title is-2 page-title">OpenX-Sound：音频增强的机器人轨迹</h1>
+        <div class="content has-text-justified page-lede"><p>OpenX-Sound 是面向视-声-语言-动作学习的预训练数据集。选定的 Open X-Embodiment 片段保留原有的多视角 RGB 视频、语言指令、本体感觉与专家动作，并增加时间对齐的音轨。它之所以存在，是因为当初推动 VLA 进展的大规模跨本体数据集中不含同步麦克风录音，而在可比规模上采集机器人音频需要硬件标准化，目前没有任何实验室做到。</p></div>
+        <h2 class="title is-4 section-heading">包含什么</h2>
+        <div class="content has-text-justified">
+        <p>每个片段保留原有的多视角 RGB、语言指令、本体感觉状态与专家动作序列，并增加与视频对齐的音轨。98.7% 的增强片段经校验满足 100 毫秒同步容差。审核过程中，语义不一致、事件时序不合理或存在明显同步错误的片段被修正或移除。</p>
+        </div>
+        <h2 class="title is-4 section-heading">应当如何使用、不应当如何使用</h2>
+        <div class="content has-text-justified">
+        <p>作者对适用范围有明确说明。由于基础全方位骨干已具备广泛的通用音频-视频多模态预训练，OpenX-Sound 被用作<b>机器人特有的音频-视觉-动作时间对齐阶段</b>——不是通用多模态预训练，也不是原生机器人音频的替代品。完全跳过这一阶段会使 HEAR-Bench 从 0.81 降到 0.69，作者将其解读为“收益来自机器人音频-视觉-动作耦合”而非规模。</p>
+        <p>已声明的局限是合成到真实的差距：视频转音频生成可能遗漏细微的接触线索、改变事件时序，或产生没有物理来源的声音。对于像声音因果操作这样时序敏感的任务，这限制了纯离线预训练能达到的上限，因此在真实录音上微调仍然必要。</p>
+        </div>
+        <h2 class="title is-4 section-heading">许可与获取</h2>
+        <div class="content has-text-justified">
+        <p>数据集发布于 Hugging Face。基础轨迹来自 Open X-Embodiment，底层片段的许可请参阅该项目。</p>
+        </div>
+        
+        <div class="subpage-footer"><p>机器可读入口：<a href="https://hear.irmv.top/llms.txt">llms.txt</a> · <a href="https://hear.irmv.top/llms-full.txt">llms-full.txt</a> · <a href="https://hear.irmv.top/project.json">project.json</a> · <a href="https://hear.irmv.top/cite.bib">cite.bib</a> · <a href="https://hear.irmv.top/sitemap.xml">sitemap.xml</a> · <a href="https://hear.irmv.top/">English</a></p><p class="subpage-cite">引用：Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
