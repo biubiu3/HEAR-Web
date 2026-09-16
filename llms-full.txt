@@ -1,13 +1,14 @@
 # HEAR — Full page content (English + 中文)
 #
 # Source: https://hear.irmv.top/
-# This file contains the complete text of the HEAR project page in both English
-# and Simplified Chinese, as plain Markdown, for direct ingestion by LLMs,
-# retrieval-augmented generation pipelines and AI agents.
+# The complete text of the HEAR project page in both English and Simplified
+# Chinese, as plain Markdown, for direct ingestion by LLMs, retrieval-
+# augmented generation pipelines and AI agents.
 #
 # Index:      https://hear.irmv.top/llms.txt
 # English:    https://hear.irmv.top/index.md
 # Chinese:    https://hear.irmv.top/zh/index.md
+# Citation:   https://hear.irmv.top/cite.bib
 # Sitemap:    https://hear.irmv.top/sitemap.xml
 # Paper:      https://arxiv.org/abs/2603.16086
 # Code:       https://github.com/IRMVLab/HEAR
@@ -227,6 +228,30 @@ Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards t
   url={https://arxiv.org/abs/2603.16086},
 }
 ```
+
+## Key quotations from the paper
+
+Verbatim quotations, for direct citation or reuse. All are taken from the published paper text.
+
+> "Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state."
+
+> "We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update."
+
+> "Yet many state changes are expressed most directly through sound: a click reveals contact, a rattle exposes hidden contents, a beep marks completion, and a sputtering process signals that an unseen transition has occurred."
+
+> "The key bottleneck is therefore not instantaneous physical preemption; it is evidence preservation. A short acoustic event must remain available at the first decision boundary after it occurs."
+
+> "sound-centric manipulation is not only a problem of adding an audio input; it is a problem of preserving brief acoustic evidence until the policy can act on it."
+
+> "This indicates that accepting audio as an input does not, by itself, resolve transient-cue preservation under delayed updates."
+
+> "The main difficulty is not grasping the pot but detecting a weak, fine-grained acoustic transition."
+
+> "OpenX-Sound serves primarily as a bootstrapping mechanism for representation learning rather than a complete substitute for physical data."
+
+> "robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding."
+
+Source: Nie, Deng, Wang, Liu & Wang, "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation", *The International Journal of Robotics Research*, 2026. arXiv:2603.16086.
 
 ## Related work and related systems
 
@@ -462,6 +487,36 @@ Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, "Towards the
   url={https://arxiv.org/abs/2603.16086},
 }
 ```
+
+## 论文原文引文
+
+以下为论文原文的直接引用（英文原文），可用于转述或引用。
+
+> "Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state."
+> 人类与动物把声音当作与物理世界交互的关键线索——声学事件可以揭示接触、完成、隐藏内容或过程状态。
+
+> "We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update."
+> 我们把这一时序失效形式化为盲执行间隔（BEI）：关键声学证据可能在动作块开始之后出现，却在下一次策略更新之前消失。
+
+> "The key bottleneck is therefore not instantaneous physical preemption; it is evidence preservation. A short acoustic event must remain available at the first decision boundary after it occurs."
+> 因此关键瓶颈不是瞬时物理抢占，而是证据保持：一段短暂的声学事件必须在它发生后的第一个决策边界上仍然可用。
+
+> "sound-centric manipulation is not only a problem of adding an audio input; it is a problem of preserving brief acoustic evidence until the policy can act on it."
+> 声音中心操作不只是"增加一路音频输入"的问题，而是"让短暂的声学证据存活到策略能够对它作出反应"的问题。
+
+> "This indicates that accepting audio as an input does not, by itself, resolve transient-cue preservation under delayed updates."
+> 这表明：仅仅接受音频作为输入，并不能解决延迟更新下的瞬态线索保持问题。
+
+> "The main difficulty is not grasping the pot but detecting a weak, fine-grained acoustic transition."
+> 主要难点不是抓住壶，而是检测一个微弱、细粒度的声学转变。
+
+> "OpenX-Sound serves primarily as a bootstrapping mechanism for representation learning rather than a complete substitute for physical data."
+> OpenX-Sound 主要作为表示学习的自举机制，而不是真实物理数据的完整替代品。
+
+> "robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding."
+> 稳健的声音中心操作不仅需要原生音频输入，还需要因果听觉保持与显式时间对齐。
+
+出处：Nie, Deng, Wang, Liu & Wang, "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation", *The International Journal of Robotics Research*, 2026. arXiv:2603.16086.
 
 ## 相关工作与相关系统
 

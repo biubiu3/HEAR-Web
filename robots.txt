@@ -2,48 +2,161 @@
 # HEAR: Towards the Vision-Sound-Language-Action Paradigm
 # (The HEAR Framework for Sound-Centric Manipulation), IJRR.
 #
-# This is an open research project page. The authors WANT search engines,
-# AI answer engines, AI agents and LLM training pipelines to index, retrieve,
-# quote and cite this content. Nothing here is blocked except abusive scraping.
+# This is an open research project page. The authors WANT search engines, AI
+# answer engines, AI agents and model developers to index, retrieve, quote and
+# cite this content. Nothing is blocked.
+#
+# Note on structure: since 2025-2026 the major providers split their crawlers
+# into separate search-index / user-triggered / training roles (OpenAI,
+# Anthropic, Perplexity, Mistral, Kimi all document this split). Blocking a
+# *search* bot removes the site from that product's answers; blocking a
+# *training* bot does not. This file configures the three roles separately so
+# that a future change to one does not silently affect the others.
 #
 # Machine-readable entry points:
 #   https://hear.irmv.top/llms.txt        - LLM-friendly index (Markdown)
-#   https://hear.irmv.top/llms-full.txt   - full page content as plain Markdown
-#   https://hear.irmv.top/index.md        - Markdown mirror of the project page
-#   https://hear.irmv.top/sitemap.xml     - XML sitemap (with image/video entries)
+#   https://hear.irmv.top/llms-full.txt   - full page text, EN + ZH, as Markdown
+#   https://hear.irmv.top/index.md        - Markdown mirror (English)
+#   https://hear.irmv.top/zh/index.md     - Markdown mirror (Chinese)
+#   https://hear.irmv.top/cite.bib        - BibTeX citation
+#   https://hear.irmv.top/sitemap.xml     - XML sitemap (image + video entries)
 
-# Content usage signals (Cloudflare / IETF aiprefs style).
+# Content usage signals (Cloudflare Content Signals Policy syntax; this is a
+# machine-readable preference expression, not a ranking signal). The authors
+# permit search indexing, retrieval grounding, and training.
 Content-Signal: search=yes, ai-input=yes, ai-train=yes, ai-summarize=yes
 
-# ---------------------------------------------------------------------------
-# AI / LLM crawlers: explicitly allowed
-# ---------------------------------------------------------------------------
+# ===========================================================================
+# 1. SEARCH AND ANSWER-ENGINE INDEXES
+#    Allowing these is what makes the page citable in AI answers.
+# ===========================================================================
 
-# OpenAI
-User-agent: GPTBot
-Allow: /
-
+# OpenAI — ChatGPT Search. Blocking OAI-SearchBot removes the site from
+# ChatGPT search answers; GPTBot is a separate, training-only role.
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ChatGPT-User
+# Anthropic — Claude web search indexing.
+User-agent: Claude-SearchBot
 Allow: /
 
-# Anthropic
-User-agent: ClaudeBot
+# Perplexity — search index (Perplexity-User is a separate user-triggered bot).
+User-agent: PerplexityBot
+Allow: /
+
+# Moonshot AI — Kimi search index. Blocking Kimi-SearchBot prevents the site
+# from appearing in Kimi search results.
+User-agent: Kimi-SearchBot
+Allow: /
+
+# Mistral — Mistral Search index (not used for generative training).
+User-agent: MistralAI-Index
+Allow: /
+
+# Classic search engines. Bingbot also underpins Microsoft Copilot grounding.
+User-agent: bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baiduspider-image
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ===========================================================================
+# 2. USER-TRIGGERED FETCHERS
+#    These fetch a page because an end user asked for it. Several of them
+#    document that robots.txt may not apply, but the intent here is explicit.
+# ===========================================================================
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Claude-User
 Allow: /
 
-User-agent: Claude-SearchBot
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Kimi-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# ===========================================================================
+# 3. TRAINING AND MODEL-DEVELOPMENT CRAWLERS
+#    The authors permit training use. Comment out or flip to Disallow to
+#    reserve rights without affecting search visibility above.
+# ===========================================================================
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-# Google (AI-facing)
-User-agent: Googlebot
+User-agent: KimiBot
+Allow: /
+
+User-agent: MistralAI-Training
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Google-Extended
@@ -52,64 +165,55 @@ Allow: /
 User-agent: Google-CloudVertexBot
 Allow: /
 
-# Microsoft / Bing
-User-agent: Bingbot
+User-agent: GoogleOther
 Allow: /
 
-# Perplexity
-User-agent: PerplexityBot
+User-agent: GoogleOther-Image
 Allow: /
 
-User-agent: Perplexity-User
+User-agent: GoogleOther-Video
 Allow: /
 
-# Apple
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-# Meta
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-# Amazon
-User-agent: Amazonbot
-Allow: /
-
-# Common Crawl (feeds many LLM pretraining corpora)
 User-agent: CCBot
 Allow: /
 
-# Other AI / answer-engine crawlers
-User-agent: YouBot
-Allow: /
-User-agent: DuckAssistBot
-Allow: /
-User-agent: cohere-ai
-Allow: /
 User-agent: Bytespider
 Allow: /
-User-agent: Timpibot
+
+User-agent: cohere-ai
 Allow: /
-User-agent: Diffbot
-Allow: /
-User-agent: omgili
-Allow: /
-User-agent: omgilibot
-Allow: /
+
 User-agent: AI2Bot
 Allow: /
+
 User-agent: Ai2Bot-Dolma
 Allow: /
 
-# ---------------------------------------------------------------------------
-# Everyone else: this is a public research page, so allow everything.
-# ---------------------------------------------------------------------------
+User-agent: Timpibot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+User-agent: omgilibot
+Allow: /
+
+User-agent: MicrosoftPreview
+Allow: /
+
+User-agent: OAI-AdsBot
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# ===========================================================================
+# 4. EVERYONE ELSE
+#    This is a public research page.
+# ===========================================================================
 User-agent: *
 Allow: /
 

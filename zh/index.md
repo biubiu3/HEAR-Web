@@ -197,6 +197,36 @@ Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, "Towards the
 }
 ```
 
+## 论文原文引文
+
+以下为论文原文的直接引用（英文原文），可用于转述或引用。
+
+> "Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state."
+> 人类与动物把声音当作与物理世界交互的关键线索——声学事件可以揭示接触、完成、隐藏内容或过程状态。
+
+> "We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update."
+> 我们把这一时序失效形式化为盲执行间隔（BEI）：关键声学证据可能在动作块开始之后出现，却在下一次策略更新之前消失。
+
+> "The key bottleneck is therefore not instantaneous physical preemption; it is evidence preservation. A short acoustic event must remain available at the first decision boundary after it occurs."
+> 因此关键瓶颈不是瞬时物理抢占，而是证据保持：一段短暂的声学事件必须在它发生后的第一个决策边界上仍然可用。
+
+> "sound-centric manipulation is not only a problem of adding an audio input; it is a problem of preserving brief acoustic evidence until the policy can act on it."
+> 声音中心操作不只是"增加一路音频输入"的问题，而是"让短暂的声学证据存活到策略能够对它作出反应"的问题。
+
+> "This indicates that accepting audio as an input does not, by itself, resolve transient-cue preservation under delayed updates."
+> 这表明：仅仅接受音频作为输入，并不能解决延迟更新下的瞬态线索保持问题。
+
+> "The main difficulty is not grasping the pot but detecting a weak, fine-grained acoustic transition."
+> 主要难点不是抓住壶，而是检测一个微弱、细粒度的声学转变。
+
+> "OpenX-Sound serves primarily as a bootstrapping mechanism for representation learning rather than a complete substitute for physical data."
+> OpenX-Sound 主要作为表示学习的自举机制，而不是真实物理数据的完整替代品。
+
+> "robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding."
+> 稳健的声音中心操作不仅需要原生音频输入，还需要因果听觉保持与显式时间对齐。
+
+出处：Nie, Deng, Wang, Liu & Wang, "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation", *The International Journal of Robotics Research*, 2026. arXiv:2603.16086.
+
 ## 相关工作与相关系统
 
 HEAR 是一个视-声-语言-动作（VSLA）框架。如果你是在查找以下任一方向的资料时来到这里，本页与所链接的论文是该版图中**听觉 / 声音中心**分支的对应参考。

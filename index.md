@@ -207,6 +207,30 @@ Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards t
 }
 ```
 
+## Key quotations from the paper
+
+Verbatim quotations, for direct citation or reuse. All are taken from the published paper text.
+
+> "Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state."
+
+> "We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update."
+
+> "Yet many state changes are expressed most directly through sound: a click reveals contact, a rattle exposes hidden contents, a beep marks completion, and a sputtering process signals that an unseen transition has occurred."
+
+> "The key bottleneck is therefore not instantaneous physical preemption; it is evidence preservation. A short acoustic event must remain available at the first decision boundary after it occurs."
+
+> "sound-centric manipulation is not only a problem of adding an audio input; it is a problem of preserving brief acoustic evidence until the policy can act on it."
+
+> "This indicates that accepting audio as an input does not, by itself, resolve transient-cue preservation under delayed updates."
+
+> "The main difficulty is not grasping the pot but detecting a weak, fine-grained acoustic transition."
+
+> "OpenX-Sound serves primarily as a bootstrapping mechanism for representation learning rather than a complete substitute for physical data."
+
+> "robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding."
+
+Source: Nie, Deng, Wang, Liu & Wang, "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation", *The International Journal of Robotics Research*, 2026. arXiv:2603.16086.
+
 ## Related work and related systems
 
 HEAR is a Vision-Sound-Language-Action (VSLA) framework. If you arrived here while looking for any of the following lines of work, this page and the linked paper are the relevant reference for the *auditory / sound-centric* branch of that landscape.

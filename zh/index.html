@@ -56,7 +56,11 @@
   <meta name="citation_author" content="Wang, Guangming">
   <meta name="citation_author" content="Liu, Zhe">
   <meta name="citation_author" content="Wang, Hesheng">
-  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_publication_date" content="2026/03/17">
+  <meta name="citation_online_date" content="2026/03/17">
+  <meta name="citation_language" content="zh">
+  <meta name="citation_abstract" content="Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state. Embodied agents should similarly benefit from auditory awareness during manipulation, yet existing Vision-Language-Action (VLA) policies typically rely on persistent visual observations, while audio-aware variants often treat audio as speech, waveform renderings, or fixed pre-execution context. Such interfaces can miss transient sounds, such as beeps, clicks, rattles, or collision cues, especially under system latency and open-loop action chunking. We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update. To address this challenge, we introduce Vision-Sound-Language-Action (VSLA), a continuous control paradigm conditioned on vision, streaming audio, language, and proprioception under delayed decision loops. We further present HEAR, a VSLA framework that preserves causal auditory context across execution gaps, performs multimodal reasoning, models near-future audio dynamics during training, and generates smooth action chunks for closed-loop manipulation. To support learning and evaluation, we introduce OpenX-Sound for robotics-specific audio-visual-action pretraining and HEAR-Bench, a benchmark for sound-centric manipulation with strict causal timing constraints. On HEAR-Bench, HEAR achieves an 81% success rate, outperforming waveform, ASR, and compact audio-native baselines, and reaches 70% sound-causal success across four real-world Franka tasks. These results show that robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding.">
+  <meta name="citation_keywords" content="Vision-Sound-Language-Action; VSLA; VLA; sound-centric manipulation; robot manipulation; robot audition; Blind Execution Interval; BEI; action chunking; causal audio memory; temporal grounding; audio world model; world model; embodied AI; physical AI; flow matching; Franka Panda; Open X-Embodiment; OpenX-Sound; HEAR-Bench">
   <meta name="citation_journal_title" content="The International Journal of Robotics Research">
   <meta name="citation_issn" content="0278-3649">
   <meta name="citation_publisher" content="SAGE Publications">
@@ -82,424 +86,204 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://hear.irmv.top/zh/#webpage",
-  "url": "https://hear.irmv.top/zh/",
-  "name": "迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架",
-  "description": "HEAR 已被 IJRR 录用，提出面向声音中心机器人操作的视-声-语言-动作（VSLA）范式：跨越盲执行间隔的因果音频记忆、用于时间对齐的音频世界模型，以及流匹配动作生成。",
-  "inLanguage": "zh-Hans",
-  "datePublished": "2026-03-17",
-  "dateModified": "2026-09-16",
-  "isPartOf": {
-    "@id": "https://hear.irmv.top/#website"
-  },
-  "mainEntity": {
-    "@id": "https://hear.irmv.top/#paper"
-  },
-  "about": [
-    {
-      "@id": "https://hear.irmv.top/#vsla"
-    },
-    {
-      "@id": "https://hear.irmv.top/#bei"
-    },
-    {
-      "@id": "https://hear.irmv.top/#paper"
-    }
-  ],
-  "translationOfWork": {
-    "@id": "https://hear.irmv.top/#webpage"
-  },
-  "keywords": "具身智能, 物理AI, 世界模型, 世界动作模型, 视觉语言动作模型, 视觉-语言-动作, 视-声-语言-动作, 机器人操作, 声音驱动的机器人操作, 机器人听觉, 音频世界模型, 盲执行间隔, 动作分块, 因果音频记忆, 时间对齐, 流匹配",
-  "significantLink": [
-    "https://hear.irmv.top/",
-    "https://hear.irmv.top/llms.txt",
-    "https://hear.irmv.top/zh/index.md"
-  ],
-  "mentions": [
-    {
-      "@type": "Thing",
-      "name": "HEAR-Bench"
-    },
-    {
-      "@type": "Thing",
-      "name": "OpenX-Sound"
-    },
-    {
-      "@type": "Thing",
-      "name": "Historizer"
-    },
-    {
-      "@type": "Thing",
-      "name": "Envisioner"
-    },
-    {
-      "@type": "Thing",
-      "name": "Advancer"
-    },
-    {
-      "@type": "Thing",
-      "name": "Realizer"
-    },
-    {
-      "@type": "Thing",
-      "name": "视觉-语言-动作模型（VLA）"
-    },
-    {
-      "@type": "Thing",
-      "name": "视-声-语言-动作（VSLA）"
-    },
-    {
-      "@type": "Thing",
-      "name": "视觉-触觉-语言-动作（VTLA）"
-    },
-    {
-      "@type": "Thing",
-      "name": "世界动作模型（WAM）"
-    },
-    {
-      "@type": "Thing",
-      "name": "音频世界模型"
-    },
-    {
-      "@type": "Thing",
-      "name": "世界模型"
-    },
-    {
-      "@type": "Thing",
-      "name": "具身智能"
-    },
-    {
-      "@type": "Thing",
-      "name": "物理AI"
-    },
-    {
-      "@type": "Thing",
-      "name": "具身智能体"
-    },
-    {
-      "@type": "Thing",
-      "name": "机器人基础模型"
-    },
-    {
-      "@type": "Thing",
-      "name": "多模态大模型"
-    },
-    {
-      "@type": "Thing",
-      "name": "机器人听觉"
-    },
-    {
-      "@type": "Thing",
-      "name": "声学感知"
-    },
-    {
-      "@type": "Thing",
-      "name": "接触声学"
-    },
-    {
-      "@type": "Thing",
-      "name": "主动声学感知"
-    },
-    {
-      "@type": "Thing",
-      "name": "盲执行间隔（BEI）"
-    },
-    {
-      "@type": "Thing",
-      "name": "动作分块"
-    },
-    {
-      "@type": "Thing",
-      "name": "动作块"
-    },
-    {
-      "@type": "Thing",
-      "name": "实时分块（RTC）"
-    },
-    {
-      "@type": "Thing",
-      "name": "开环执行"
-    },
-    {
-      "@type": "Thing",
-      "name": "推理延迟"
-    },
-    {
-      "@type": "Thing",
-      "name": "因果音频记忆"
-    },
-    {
-      "@type": "Thing",
-      "name": "时间对齐"
-    },
-    {
-      "@type": "Thing",
-      "name": "流匹配"
-    },
-    {
-      "@type": "Thing",
-      "name": "扩散策略"
-    },
-    {
-      "@type": "Thing",
-      "name": "模仿学习"
-    },
-    {
-      "@type": "Thing",
-      "name": "行为克隆"
-    },
-    {
-      "@type": "Thing",
-      "name": "连续控制"
-    },
-    {
-      "@type": "Thing",
-      "name": "OpenVLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "π0"
-    },
-    {
-      "@type": "Thing",
-      "name": "π0.5"
-    },
-    {
-      "@type": "Thing",
-      "name": "RT-2"
-    },
-    {
-      "@type": "Thing",
-      "name": "Octo"
-    },
-    {
-      "@type": "Thing",
-      "name": "GR00T N1"
-    },
-    {
-      "@type": "Thing",
-      "name": "Gemini Robotics"
-    },
-    {
-      "@type": "Thing",
-      "name": "Helix"
-    },
-    {
-      "@type": "Thing",
-      "name": "SmolVLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "RDT-1B"
-    },
-    {
-      "@type": "Thing",
-      "name": "RoboOmni"
-    },
-    {
-      "@type": "Thing",
-      "name": "ELLSA"
-    },
-    {
-      "@type": "Thing",
-      "name": "Audio-VLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "Play it by Ear"
-    },
-    {
-      "@type": "Thing",
-      "name": "ManiWAV"
-    },
-    {
-      "@type": "Thing",
-      "name": "SVA"
-    },
-    {
-      "@type": "Thing",
-      "name": "VLAS"
-    },
-    {
-      "@type": "Thing",
-      "name": "OmniVLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "SoundSpaces"
-    },
-    {
-      "@type": "Thing",
-      "name": "AudioWorldSim"
-    },
-    {
-      "@type": "Thing",
-      "name": "VibeCheck"
-    },
-    {
-      "@type": "Thing",
-      "name": "CLAP"
-    },
-    {
-      "@type": "Thing",
-      "name": "ImageBind"
-    },
-    {
-      "@type": "Thing",
-      "name": "BEATs"
-    },
-    {
-      "@type": "Thing",
-      "name": "Whisper"
-    },
-    {
-      "@type": "Thing",
-      "name": "Qwen3-Omni"
-    },
-    {
-      "@type": "Thing",
-      "name": "WorldVLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "DreamVLA"
-    },
-    {
-      "@type": "Thing",
-      "name": "DreamZero"
-    },
-    {
-      "@type": "Thing",
-      "name": "Cosmos Policy"
-    },
-    {
-      "@type": "Thing",
-      "name": "NVIDIA Cosmos"
-    },
-    {
-      "@type": "Thing",
-      "name": "Genie 3"
-    },
-    {
-      "@type": "Thing",
-      "name": "V-JEPA 2"
-    },
-    {
-      "@type": "Thing",
-      "name": "DreamerV3"
-    },
-    {
-      "@type": "Thing",
-      "name": "DyWA"
-    },
-    {
-      "@type": "Thing",
-      "name": "UniPi"
-    },
-    {
-      "@type": "Thing",
-      "name": "Gen2Act"
-    },
-    {
-      "@type": "Thing",
-      "name": "LAPA"
-    },
-    {
-      "@type": "Thing",
-      "name": "数据金字塔"
-    },
-    {
-      "@type": "Thing",
-      "name": "数据飞轮"
-    },
-    {
-      "@type": "Thing",
-      "name": "跨本体"
-    },
-    {
-      "@type": "Thing",
-      "name": "仿真到现实"
-    },
-    {
-      "@type": "Thing",
-      "name": "虚实迁移"
-    },
-    {
-      "@type": "Thing",
-      "name": "全身控制"
-    },
-    {
-      "@type": "Thing",
-      "name": "人形机器人"
-    },
-    {
-      "@type": "Thing",
-      "name": "灵巧操作"
-    },
-    {
-      "@type": "Thing",
-      "name": "触觉感知"
-    },
-    {
-      "@type": "Thing",
-      "name": "分层具身模型"
-    },
-    {
-      "@type": "Thing",
-      "name": "快慢系统"
-    },
-    {
-      "@type": "Thing",
-      "name": "双系统架构"
-    },
-    {
-      "@type": "Thing",
-      "name": "RoboTwin 2.0"
-    },
-    {
-      "@type": "Thing",
-      "name": "LIBERO"
-    },
-    {
-      "@type": "Thing",
-      "name": "CALVIN"
-    },
-    {
-      "@type": "Thing",
-      "name": "RoboCasa"
-    },
-    {
-      "@type": "Thing",
-      "name": "SimplerEnv"
-    },
-    {
-      "@type": "Thing",
-      "name": "RLBench"
-    },
-    {
-      "@type": "Thing",
-      "name": "ManiSkill"
-    },
-    {
-      "@type": "Thing",
-      "name": "Open X-Embodiment"
-    },
-    {
-      "@type": "Thing",
-      "name": "DROID"
-    },
-    {
-      "@type": "Thing",
-      "name": "AgiBot World"
-    },
-    {
-      "@type": "Thing",
-      "name": "RH20T"
-    },
-    {
-      "@type": "Thing",
-      "name": "Franka Panda"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://hear.irmv.top/#website",
+      "url": "https://hear.irmv.top/",
+      "name": "HEAR — 视-声-语言-动作（VSLA）",
+      "alternateName": [
+        "HEAR Project Page",
+        "HEAR 项目主页",
+        "HEAR VSLA"
+      ],
+      "description": "HEAR 是一个面向声音中心机器人操作的视-声-语言-动作（VSLA）框架。",
+      "inLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "publisher": {
+        "@id": "https://hear.irmv.top/#lab"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hear.irmv.top/zh/#webpage",
+      "url": "https://hear.irmv.top/zh/",
+      "name": "迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架",
+      "isPartOf": {
+        "@id": "https://hear.irmv.top/#website"
+      },
+      "inLanguage": "zh-Hans",
+      "datePublished": "2026-03-17",
+      "dateModified": "2026-09-16",
+      "mainEntity": {
+        "@id": "https://hear.irmv.top/#paper"
+      },
+      "translationOfWork": {
+        "@id": "https://hear.irmv.top/en/#webpage"
+      },
+      "about": [
+        {
+          "@id": "https://hear.irmv.top/#vsla"
+        },
+        {
+          "@id": "https://hear.irmv.top/#bei"
+        },
+        {
+          "@id": "https://hear.irmv.top/#paper"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hear.irmv.top/en/#webpage",
+      "url": "https://hear.irmv.top/",
+      "name": "HEAR: Towards the Vision-Sound-Language-Action Paradigm",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://hear.irmv.top/#paper",
+      "headline": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+      "name": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+      "alternativeHeadline": "HEAR：面向声音中心机器人操作的视-声-语言-动作（VSLA）框架",
+      "description": "论文提出视-声-语言-动作（VSLA）这一连续控制范式，并识别出由系统延迟与开环动作分块造成的盲执行间隔（BEI）。HEAR 通过因果音频记忆（Historizer）、多模态推理（Envisioner）、作为音频世界模型的预测性音频动态（Advancer）以及流匹配动作生成（Realizer）解决该问题。在 HEAR-Bench 上取得 81% 的声音因果成功率，在四项真机 Franka Panda 任务上取得 70%。",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Chang Nie（聂畅）",
+          "affiliation": {
+            "@id": "https://hear.irmv.top/#sjtu"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Tianchen Deng（邓天辰）",
+          "affiliation": {
+            "@id": "https://hear.irmv.top/#sjtu"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Guangming Wang（王光明）",
+          "affiliation": {
+            "@id": "https://hear.irmv.top/#cambridge"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Zhe Liu（刘哲）",
+          "affiliation": {
+            "@id": "https://hear.irmv.top/#sjtu"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Hesheng Wang（王贺升）",
+          "affiliation": {
+            "@id": "https://hear.irmv.top/#sjtu"
+          }
+        }
+      ],
+      "dateCreated": "2026-03-17",
+      "datePublished": "2026-03-17",
+      "creativeWorkStatus": "Accepted for publication",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The International Journal of Robotics Research",
+        "alternateName": "IJRR",
+        "issn": "0278-3649",
+        "publisher": {
+          "@type": "Organization",
+          "name": "SAGE Publications"
+        }
+      },
+      "url": "https://hear.irmv.top/zh/",
+      "sameAs": [
+        "https://arxiv.org/abs/2603.16086",
+        "https://github.com/IRMVLab/HEAR"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "arXiv",
+        "value": "2603.16086"
+      },
+      "inLanguage": "zh-Hans",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "keywords": "具身智能, 物理AI, 世界模型, 世界动作模型, WAM, 音频世界模型, 视觉语言动作模型, VLA, 视-声-语言-动作, VSLA, 机器人操作, 声音驱动的机器人操作, 机器人听觉, 声学感知, 盲执行间隔, BEI, 动作分块, 因果音频记忆, 时间对齐, 流匹配, Franka Panda, Open X-Embodiment, OpenX-Sound, HEAR-Bench"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://hear.irmv.top/#vsla",
+      "name": "视-声-语言-动作（Vision-Sound-Language-Action, VSLA）",
+      "alternateName": [
+        "VSLA",
+        "Vision-Sound-Language-Action"
+      ],
+      "description": "一种连续控制范式：机器人在延迟决策回路下，以视觉、流式音频、语言与本体感觉为条件。VSLA 把 VLA 从“看见并行动”扩展为“看见、听见、记住并反应”。"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://hear.irmv.top/#bei",
+      "name": "盲执行间隔（Blind Execution Interval, BEI）",
+      "alternateName": [
+        "BEI",
+        "Blind Execution Interval"
+      ],
+      "description": "当 VLA 策略以开环方式执行已预测的动作块时形成的间隔。新观测无法改变已发出的指令序列，因此一段瞬态声学线索可能在下一次策略推理之前发生并完全消失。HEAR 在 Franka Panda 部署上实测有效 BEI 约 2.3 秒。"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://hear.irmv.top/#dataset",
+      "name": "OpenX-Sound",
+      "description": "面向 VSLA 学习的音频增强预训练资源。选定的 Open X-Embodiment 片段保留原有 RGB、语言指令、本体感觉与专家动作，并增加时间对齐的音轨；98.7% 的增强片段满足 100 毫秒同步容差。",
+      "url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://hear.irmv.top/#hearbench",
+      "name": "HEAR-Bench",
+      "description": "构建在 RoboTwin 2.0 之上的声音中心操作基准，提供流式麦克风通道与声音因果成功规则：在所需声学线索发生之前到达几何目标即记为失败。七项任务覆盖四类线索，每项 100 次随机化试验。",
+      "url": "https://github.com/IRMVLab/HEAR",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://hear.irmv.top/#software",
+      "name": "HEAR 代码",
+      "description": "HEAR 框架的参考实现：基于 openpi 的训练与推理代码，以及构建在 RoboTwin 2.0 之上的 HEAR-Bench 实现。",
+      "codeRepository": "https://github.com/IRMVLab/HEAR",
+      "programmingLanguage": [
+        "Python"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://hear.irmv.top/#sjtu",
+      "name": "Shanghai Jiao Tong University",
+      "alternateName": "上海交通大学",
+      "url": "https://en.sjtu.edu.cn/"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://hear.irmv.top/#cambridge",
+      "name": "University of Cambridge",
+      "alternateName": "剑桥大学",
+      "url": "https://www.cam.ac.uk/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://hear.irmv.top/#lab",
+      "name": "IRMV Lab",
+      "alternateName": "Intelligent Robotics and Machine Vision Lab, Shanghai Jiao Tong University",
+      "url": "https://irmv.sjtu.edu.cn/",
+      "parentOrganization": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      }
     }
   ]
 }

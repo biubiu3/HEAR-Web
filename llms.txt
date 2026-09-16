@@ -3,6 +3,7 @@
 > HEAR is a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation, accepted for publication in The International Journal of Robotics Research (IJRR). It formalizes the Blind Execution Interval (BEI) — the timing gap created by system latency and open-loop action chunking in which transient acoustic evidence (a beep, click, rattle, boiling transition or spoken confirmation) can appear and vanish between two policy queries — and solves it with causal audio memory (Historizer), omni-sensory multimodal reasoning (Envisioner), audio world-model temporal grounding (Advancer) and smooth flow-matching action generation (Realizer). HEAR reaches 81% sound-causal success on HEAR-Bench and 70% across four real-world Franka Panda tasks. The project also releases OpenX-Sound (audio-augmented Open X-Embodiment pretraining data) and HEAR-Bench (the first sound-causal manipulation benchmark with strict causal timing rules).
 
 Authors: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang — Shanghai Jiao Tong University (IRMV Lab) and University of Cambridge.
+Access policy: fully open. Search-index, user-triggered and training crawlers are all allowed; see https://hear.irmv.top/robots.txt for the explicit per-crawler configuration.
 Project page: https://hear.irmv.top/ · arXiv: 2603.16086 · Code: https://github.com/IRMVLab/HEAR · License: Apache-2.0
 
 Keywords: Vision-Sound-Language-Action, VSLA, VLA, Vision-Language-Action, sound-centric manipulation, robot audition, audio-conditioned robot manipulation, Blind Execution Interval, BEI, action chunking, embodied AI, embodied intelligence, physical AI, robot foundation model, world model, audio world model, world action model, WAM, agentic robotics, multimodal learning, robot learning, flow matching, imitation learning, Franka Panda, Open X-Embodiment, 具身智能, 物理AI, 视听语言动作模型.
@@ -21,7 +22,8 @@ Related systems and terms also covered on this page (for people searching for th
 
 - [arXiv abstract](https://arxiv.org/abs/2603.16086): "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation" (arXiv:2603.16086, cs.RO).
 - [arXiv PDF](https://arxiv.org/pdf/2603.16086.pdf): Full paper PDF.
-- [BibTeX](https://hear.irmv.top/#BibTeX): Citation entry under the key `nie2026visionsoundlanguageactionparadigmhearframework`.
+- [BibTeX file](https://hear.irmv.top/cite.bib): Ready-to-fetch citation file. Keys `nie2026visionsoundlanguageactionparadigmhearframework` and `nie2026hear`.
+- [BibTeX (on page)](https://hear.irmv.top/#BibTeX): The same entry, displayed on the project page.
 
 ## Code, data and models
 
@@ -49,5 +51,6 @@ Related systems and terms also covered on this page (for people searching for th
 ## Optional
 
 - [Full results tables](https://hear.irmv.top/index.md): Sound-causal success rates for HEAR and every baseline on HEAR-Bench and on the four real-robot Franka tasks.
+- [Key quotations from the paper](https://hear.irmv.top/index.md): Verbatim quotations for direct citation or reuse — see the "Key quotations from the paper" section of the Markdown mirror.
 - [Supplementary material](https://hear.irmv.top/): Extended motivation, dataset construction, implementation settings and auxiliary diagnostics are provided with the IJRR submission.
 - [Experiment videos](https://hear.irmv.top/#videos): Five selected real-robot demonstrations (Moka Coffee, Answer Phone, Shake Bottle empty/occupied, Real Alarm Clock) with English captions.

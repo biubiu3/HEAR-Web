@@ -58,7 +58,11 @@
   <meta name="citation_author" content="Wang, Guangming">
   <meta name="citation_author" content="Liu, Zhe">
   <meta name="citation_author" content="Wang, Hesheng">
-  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_publication_date" content="2026/03/17">
+  <meta name="citation_online_date" content="2026/03/17">
+  <meta name="citation_language" content="en">
+  <meta name="citation_abstract" content="Humans and animals use sound as a crucial cue for interacting with the physical world, as acoustic events can reveal contact, completion, hidden contents, or process state. Embodied agents should similarly benefit from auditory awareness during manipulation, yet existing Vision-Language-Action (VLA) policies typically rely on persistent visual observations, while audio-aware variants often treat audio as speech, waveform renderings, or fixed pre-execution context. Such interfaces can miss transient sounds, such as beeps, clicks, rattles, or collision cues, especially under system latency and open-loop action chunking. We formalize this timing failure as the Blind Execution Interval (BEI), in which critical acoustic evidence may occur after an action chunk begins but disappear before the next policy update. To address this challenge, we introduce Vision-Sound-Language-Action (VSLA), a continuous control paradigm conditioned on vision, streaming audio, language, and proprioception under delayed decision loops. We further present HEAR, a VSLA framework that preserves causal auditory context across execution gaps, performs multimodal reasoning, models near-future audio dynamics during training, and generates smooth action chunks for closed-loop manipulation. To support learning and evaluation, we introduce OpenX-Sound for robotics-specific audio-visual-action pretraining and HEAR-Bench, a benchmark for sound-centric manipulation with strict causal timing constraints. On HEAR-Bench, HEAR achieves an 81% success rate, outperforming waveform, ASR, and compact audio-native baselines, and reaches 70% sound-causal success across four real-world Franka tasks. These results show that robust sound-centric manipulation requires not only native audio input, but also causal auditory persistence and explicit temporal grounding.">
+  <meta name="citation_keywords" content="Vision-Sound-Language-Action; VSLA; VLA; sound-centric manipulation; robot manipulation; robot audition; Blind Execution Interval; BEI; action chunking; causal audio memory; temporal grounding; audio world model; world model; embodied AI; physical AI; flow matching; Franka Panda; Open X-Embodiment; OpenX-Sound; HEAR-Bench">
   <meta name="citation_journal_title" content="The International Journal of Robotics Research">
   <meta name="citation_issn" content="0278-3649">
   <meta name="citation_publisher" content="SAGE Publications">
@@ -998,95 +1002,6 @@
       "targetProduct": {
         "@id": "https://hear.irmv.top/#paper"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://hear.irmv.top/#faq",
-      "isPartOf": {
-        "@id": "https://hear.irmv.top/#webpage"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is HEAR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HEAR is a robot manipulation framework that lets a policy use sound while it is acting. It is built on the Vision-Sound-Language-Action (VSLA) paradigm and combines four components: a Historizer that keeps a compact causal memory of streaming audio across execution gaps, an Envisioner that fuses vision, language, proprioception and audio into control-ready features, an Advancer that acts as an audio world model by predicting near-future audio codes during training, and a Realizer that generates smooth action chunks with conditional flow matching. HEAR is published in The International Journal of Robotics Research (IJRR)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Vision-Sound-Language-Action (VSLA)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "VSLA is a continuous control paradigm in which a robot policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops. Standard Vision-Language-Action (VLA) policies assume that task-relevant evidence is visually persistent, and they usually treat audio as a static pre-execution prompt or as speech understanding only. VSLA instead treats raw audio as a first-class, continuously streaming observation that must be preserved until the policy can act on it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Blind Execution Interval (BEI)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Blind Execution Interval is the gap created when a large VLA policy predicts a chunk of actions and executes them open-loop for smooth motion. During that interval new sensor observations cannot change the commands already being sent to the robot. For a brief sound such as a beep, click, rattle or collision, the event can occur and finish entirely inside the gap. On the authors' Franka Panda deployment the executed action-chunk interval is about 2.1 seconds and the effective BEI is about 2.3 seconds. The bottleneck is therefore not instantaneous preemption but evidence preservation: a short acoustic event must remain available at the first decision boundary after it happens."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is HEAR different from audio-aware robot policies and ASR-based VLA models?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Automatic speech recognition transcribes speech into text, which discards non-speech cues and prosody. Waveform-as-image adapters render a short audio clip as a 2D plot and pass it as another camera view, which collapses a temporal signal into a static snapshot. Both are episodic: they describe sound heard before acting rather than sound heard while acting. HEAR encodes the raw 1D waveform, maintains causal audio memory across execution gaps, and is evaluated with a strict sound-causal success rule. On HEAR-Bench, HEAR reaches 81% average success versus 61% for the strongest waveform-adapter baseline, 35% for the strongest ASR baseline and 14% for the vision-only baseline."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is HEAR-Bench?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HEAR-Bench is a sound-centric manipulation benchmark built on RoboTwin 2.0. It provides a streaming microphone channel and enforces a sound-causal success rule: if the robot reaches the geometric goal before the required acoustic cue has occurred, the trial is recorded as a failure. Seven tasks cover four cue categories — event-triggered alarms (Alarm Clock, Microwave), human speech (Check Yes, Interrupt), continuous process sounds (Pour Water, Boil Water) and physical interaction feedback (Check Materials). Cue timings and initial visual states are randomized and each task is evaluated over 100 independent trials."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is OpenX-Sound?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "OpenX-Sound is an audio-augmented pretraining resource for VSLA learning. Selected Open X-Embodiment episodes keep their original multi-view RGB, language instructions, proprioception and expert actions, and gain a temporally aligned audio track. 98.7% of augmented clips were verified within a 100 ms synchronization tolerance. It is used as a robotics-specific audio-visual-action temporal-alignment stage rather than as a replacement for native robot audio."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does HEAR relate to world models and World Action Models (WAM)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HEAR's Advancer is formulated as an audio world model: it predicts near-future discrete audio codes from latent representations, which injects explicit temporal grounding into the policy and helps disambiguate long visually quasi-static waiting phases. It is a training-time objective and is removed at deployment, so HEAR couples predictive state modelling with action generation while keeping inference cost unchanged."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What results does HEAR achieve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "On HEAR-Bench, HEAR reaches 81% average sound-causal success across seven simulation tasks, compared with 61% for the strongest waveform-as-image VLA baseline, 35% for the strongest ASR baseline and 14% for the vision-only backbone. On a physical Franka Panda across four real-world tasks, HEAR reaches 70% average success under the calibrated acoustic and data setup used for the comparison, versus 45% for the strongest VLA adapter baseline; under a uniform, uncalibrated acoustic setup HEAR averages 54%. Ablations show the Historizer is the single most important module: removing it drops HEAR-Bench average success from 0.81 to 0.57."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the limitations of HEAR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "OpenX-Sound audio is synthesized from video using video-to-audio generation, so it can omit subtle contact cues, shift event timing or hallucinate sounds without a physical source; it is a bootstrapping mechanism for representation learning rather than a substitute for native robot audio. On the physical robot, the two hardest long-horizon tasks are strongly affected by acoustic capture quality and dialogue coverage. Long-horizon physical tasks remain system-level deployment challenges, motivating future work on acoustic sensing, source separation, recovery policies and longer-term memory."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I cite HEAR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cite the article as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, 'Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation', The International Journal of Robotics Research, 2026. BibTeX key: nie2026visionsoundlanguageactionparadigmhearframework. arXiv:2603.16086."
-          }
-        }
-      ]
     },
     {
       "@type": "Person",
