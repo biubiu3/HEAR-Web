@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架">
+  <meta name="description" content="HEAR 已被《The International Journal of Robotics Research》(IJRR) 录用，提出面向声音中心机器人操作的视-声-语言-动作（VSLA）范式：跨越盲执行间隔的因果音频记忆、用于时间对齐的音频世界模型，以及流匹配动作生成。HEAR-Bench 81%，真实 Franka Panda 任务 70%。">
+  <meta name="keywords" content="HEAR, HEAR 框架, 具身智能, 物理AI, 物理人工智能, 世界模型, 世界动作模型, WAM, 音频世界模型, VLA, 视觉语言动作模型, 视觉-语言-动作, VSLA, 视-声-语言-动作, 视觉听觉语言动作模型, 机器人操作, 机器人操控, 声音驱动的机器人操作, 声学条件操作, 声音中心操作, sound-centric manipulation, 机器人听觉, 具身听觉, 声学感知, 接触声学, 主动声学感知, 盲执行间隔, BEI, 动作分块, 动作块, 开环执行, 推理延迟, 实时分块, 因果音频记忆, 时间对齐, 时间接地, 流匹配, 扩散策略, 模仿学习, 行为克隆, 连续控制, 闭环操作, 多模态大模型, MLLM, 多模态学习, 多模态基础模型, 具身大模型, 具身基础模型, 具身大脑, 机器人基础模型, 端到端机器人, 机器人学习, 机器人策略, 泛化能力, 跨本体, 数据飞轮, 仿真到现实, 虚实迁移, 遥操作, 真机数据, 长时序操作, 过程监控, 灵巧操作, 全身控制, 人形机器人, 触觉感知, 视触觉, 工业机器人, 服务机器人, Franka Panda, Franka 机械臂, RoboTwin, RoboTwin 2.0, Open X-Embodiment, OpenX-Sound, HEAR-Bench, 声音因果成功率, 基准测试, 评测基准, 瞬态声学线索, 语音韵律, 自动语音识别, ASR, Qwen3-Omni, 音频分词器, Mimi, Historizer, Envisioner, Advancer, Realizer, 流式音频, 音频词元, 离散音频编码, 智能体, 具身智能体, 机器人智能体, 自主智能体, AI智能体, 上海交通大学, 剑桥大学, IRMV, π0, π0.5, OpenVLA, RT-2, Octo, GR00T N1, Gemini Robotics, Helix, SmolVLA, RDT-1B, RoboOmni, ELLSA, Audio-VLA, SoundSpaces, VibeCheck, CLAP, ImageBind, BEATs, Whisper, WorldVLA, DreamZero, Cosmos Policy, Genie 3, V-JEPA, DreamerV3, DyWA, UniPi, LAPA, 视觉-触觉-语言-动作, VTLA, 视觉语言触觉, 分层具身模型, 快慢系统, 双系统架构, 实时分块, 异步推理, 测试时计算, RL微调, 数据金字塔, 数据飞轮, LIBERO, CALVIN, RoboCasa, SimplerEnv, RLBench, ManiSkill, DROID, AgiBot World, RH20T, 人形机器人, 机器人智能体">
+  <meta name="author" content="Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="Chinese">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self' data:; frame-src 'none'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; form-action 'none'; upgrade-insecure-requests">
+
+  <link rel="canonical" href="https://hear.irmv.top/zh/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/">
+  <link rel="alternate" hreflang="zh-CN" href="https://hear.irmv.top/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/zh/index.md" title="本页 Markdown 版本，供大模型与 AI 智能体读取">
+  <link rel="alternate" type="text/plain" href="https://hear.irmv.top/llms.txt" title="llms.txt — 面向大模型的索引文件">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HEAR — 视-声-语言-动作（VSLA）">
+  <meta property="og:title" content="HEAR — 已被 IJRR 录用">
+  <meta property="og:description" content="面向声音中心机器人操作的 VSLA 框架，具备因果音频保持与时间对齐能力。">
+  <meta property="og:url" content="https://hear.irmv.top/zh/">
+  <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta property="og:image:width" content="3200">
+  <meta property="og:image:height" content="2092">
+  <meta property="og:image:alt" content="HEAR 架构总览：Historizer、Envisioner、Advancer 与 Realizer">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="article:author" content="Chang Nie">
+  <meta property="article:published_time" content="2026-03-17">
+  <meta property="article:modified_time" content="2026-09-16">
+  <meta property="article:section" content="机器人学">
+  <meta property="article:tag" content="具身智能">
+  <meta property="article:tag" content="视觉语言动作模型">
+  <meta property="article:tag" content="世界模型">
+  <meta property="article:tag" content="机器人操作">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HEAR — 已被 IJRR 录用">
+  <meta name="twitter:description" content="面向声音中心机器人操作的 VSLA 框架，具备因果音频保持与时间对齐能力。">
+  <meta name="twitter:image" content="https://hear.irmv.top/static/images/overview.png">
+  <meta name="twitter:image:alt" content="HEAR 架构总览">
+
+  <meta name="citation_title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
+  <meta name="citation_author" content="Nie, Chang">
+  <meta name="citation_author" content="Deng, Tianchen">
+  <meta name="citation_author" content="Wang, Guangming">
+  <meta name="citation_author" content="Liu, Zhe">
+  <meta name="citation_author" content="Wang, Hesheng">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="The International Journal of Robotics Research">
+  <meta name="citation_issn" content="0278-3649">
+  <meta name="citation_publisher" content="SAGE Publications">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2603.16086.pdf">
+  <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2603.16086">
+  <meta name="citation_arxiv_id" content="2603.16086">
+
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <title>HEAR：视-声-语言-动作（VSLA）| 声音中心机器人操作 | IJRR</title>
+
+  <link rel="icon" type="image/png" href="../static/images/logo3.png">
+  <link rel="apple-touch-icon" href="../static/images/logo3.png">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/index.css?v=geo-2026">
+
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script defer src="../static/js/index.js"></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hear.irmv.top/zh/#webpage",
+  "url": "https://hear.irmv.top/zh/",
+  "name": "迈向视-声-语言-动作范式：面向声音中心机器人操作的 HEAR 框架",
+  "description": "HEAR 已被 IJRR 录用，提出面向声音中心机器人操作的视-声-语言-动作（VSLA）范式：跨越盲执行间隔的因果音频记忆、用于时间对齐的音频世界模型，以及流匹配动作生成。",
+  "inLanguage": "zh-Hans",
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-09-16",
+  "isPartOf": {
+    "@id": "https://hear.irmv.top/#website"
+  },
+  "mainEntity": {
+    "@id": "https://hear.irmv.top/#paper"
+  },
+  "about": [
+    {
+      "@id": "https://hear.irmv.top/#vsla"
+    },
+    {
+      "@id": "https://hear.irmv.top/#bei"
+    },
+    {
+      "@id": "https://hear.irmv.top/#paper"
+    }
+  ],
+  "translationOfWork": {
+    "@id": "https://hear.irmv.top/#webpage"
+  },
+  "keywords": "具身智能, 物理AI, 世界模型, 世界动作模型, 视觉语言动作模型, 视觉-语言-动作, 视-声-语言-动作, 机器人操作, 声音驱动的机器人操作, 机器人听觉, 音频世界模型, 盲执行间隔, 动作分块, 因果音频记忆, 时间对齐, 流匹配",
+  "significantLink": [
+    "https://hear.irmv.top/",
+    "https://hear.irmv.top/llms.txt",
+    "https://hear.irmv.top/zh/index.md"
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "name": "HEAR-Bench"
+    },
+    {
+      "@type": "Thing",
+      "name": "OpenX-Sound"
+    },
+    {
+      "@type": "Thing",
+      "name": "Historizer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Envisioner"
+    },
+    {
+      "@type": "Thing",
+      "name": "Advancer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Realizer"
+    },
+    {
+      "@type": "Thing",
+      "name": "视觉-语言-动作模型（VLA）"
+    },
+    {
+      "@type": "Thing",
+      "name": "视-声-语言-动作（VSLA）"
+    },
+    {
+      "@type": "Thing",
+      "name": "视觉-触觉-语言-动作（VTLA）"
+    },
+    {
+      "@type": "Thing",
+      "name": "世界动作模型（WAM）"
+    },
+    {
+      "@type": "Thing",
+      "name": "音频世界模型"
+    },
+    {
+      "@type": "Thing",
+      "name": "世界模型"
+    },
+    {
+      "@type": "Thing",
+      "name": "具身智能"
+    },
+    {
+      "@type": "Thing",
+      "name": "物理AI"
+    },
+    {
+      "@type": "Thing",
+      "name": "具身智能体"
+    },
+    {
+      "@type": "Thing",
+      "name": "机器人基础模型"
+    },
+    {
+      "@type": "Thing",
+      "name": "多模态大模型"
+    },
+    {
+      "@type": "Thing",
+      "name": "机器人听觉"
+    },
+    {
+      "@type": "Thing",
+      "name": "声学感知"
+    },
+    {
+      "@type": "Thing",
+      "name": "接触声学"
+    },
+    {
+      "@type": "Thing",
+      "name": "主动声学感知"
+    },
+    {
+      "@type": "Thing",
+      "name": "盲执行间隔（BEI）"
+    },
+    {
+      "@type": "Thing",
+      "name": "动作分块"
+    },
+    {
+      "@type": "Thing",
+      "name": "动作块"
+    },
+    {
+      "@type": "Thing",
+      "name": "实时分块（RTC）"
+    },
+    {
+      "@type": "Thing",
+      "name": "开环执行"
+    },
+    {
+      "@type": "Thing",
+      "name": "推理延迟"
+    },
+    {
+      "@type": "Thing",
+      "name": "因果音频记忆"
+    },
+    {
+      "@type": "Thing",
+      "name": "时间对齐"
+    },
+    {
+      "@type": "Thing",
+      "name": "流匹配"
+    },
+    {
+      "@type": "Thing",
+      "name": "扩散策略"
+    },
+    {
+      "@type": "Thing",
+      "name": "模仿学习"
+    },
+    {
+      "@type": "Thing",
+      "name": "行为克隆"
+    },
+    {
+      "@type": "Thing",
+      "name": "连续控制"
+    },
+    {
+      "@type": "Thing",
+      "name": "OpenVLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "π0"
+    },
+    {
+      "@type": "Thing",
+      "name": "π0.5"
+    },
+    {
+      "@type": "Thing",
+      "name": "RT-2"
+    },
+    {
+      "@type": "Thing",
+      "name": "Octo"
+    },
+    {
+      "@type": "Thing",
+      "name": "GR00T N1"
+    },
+    {
+      "@type": "Thing",
+      "name": "Gemini Robotics"
+    },
+    {
+      "@type": "Thing",
+      "name": "Helix"
+    },
+    {
+      "@type": "Thing",
+      "name": "SmolVLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "RDT-1B"
+    },
+    {
+      "@type": "Thing",
+      "name": "RoboOmni"
+    },
+    {
+      "@type": "Thing",
+      "name": "ELLSA"
+    },
+    {
+      "@type": "Thing",
+      "name": "Audio-VLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "Play it by Ear"
+    },
+    {
+      "@type": "Thing",
+      "name": "ManiWAV"
+    },
+    {
+      "@type": "Thing",
+      "name": "SVA"
+    },
+    {
+      "@type": "Thing",
+      "name": "VLAS"
+    },
+    {
+      "@type": "Thing",
+      "name": "OmniVLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "SoundSpaces"
+    },
+    {
+      "@type": "Thing",
+      "name": "AudioWorldSim"
+    },
+    {
+      "@type": "Thing",
+      "name": "VibeCheck"
+    },
+    {
+      "@type": "Thing",
+      "name": "CLAP"
+    },
+    {
+      "@type": "Thing",
+      "name": "ImageBind"
+    },
+    {
+      "@type": "Thing",
+      "name": "BEATs"
+    },
+    {
+      "@type": "Thing",
+      "name": "Whisper"
+    },
+    {
+      "@type": "Thing",
+      "name": "Qwen3-Omni"
+    },
+    {
+      "@type": "Thing",
+      "name": "WorldVLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "DreamVLA"
+    },
+    {
+      "@type": "Thing",
+      "name": "DreamZero"
+    },
+    {
+      "@type": "Thing",
+      "name": "Cosmos Policy"
+    },
+    {
+      "@type": "Thing",
+      "name": "NVIDIA Cosmos"
+    },
+    {
+      "@type": "Thing",
+      "name": "Genie 3"
+    },
+    {
+      "@type": "Thing",
+      "name": "V-JEPA 2"
+    },
+    {
+      "@type": "Thing",
+      "name": "DreamerV3"
+    },
+    {
+      "@type": "Thing",
+      "name": "DyWA"
+    },
+    {
+      "@type": "Thing",
+      "name": "UniPi"
+    },
+    {
+      "@type": "Thing",
+      "name": "Gen2Act"
+    },
+    {
+      "@type": "Thing",
+      "name": "LAPA"
+    },
+    {
+      "@type": "Thing",
+      "name": "数据金字塔"
+    },
+    {
+      "@type": "Thing",
+      "name": "数据飞轮"
+    },
+    {
+      "@type": "Thing",
+      "name": "跨本体"
+    },
+    {
+      "@type": "Thing",
+      "name": "仿真到现实"
+    },
+    {
+      "@type": "Thing",
+      "name": "虚实迁移"
+    },
+    {
+      "@type": "Thing",
+      "name": "全身控制"
+    },
+    {
+      "@type": "Thing",
+      "name": "人形机器人"
+    },
+    {
+      "@type": "Thing",
+      "name": "灵巧操作"
+    },
+    {
+      "@type": "Thing",
+      "name": "触觉感知"
+    },
+    {
+      "@type": "Thing",
+      "name": "分层具身模型"
+    },
+    {
+      "@type": "Thing",
+      "name": "快慢系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "双系统架构"
+    },
+    {
+      "@type": "Thing",
+      "name": "RoboTwin 2.0"
+    },
+    {
+      "@type": "Thing",
+      "name": "LIBERO"
+    },
+    {
+      "@type": "Thing",
+      "name": "CALVIN"
+    },
+    {
+      "@type": "Thing",
+      "name": "RoboCasa"
+    },
+    {
+      "@type": "Thing",
+      "name": "SimplerEnv"
+    },
+    {
+      "@type": "Thing",
+      "name": "RLBench"
+    },
+    {
+      "@type": "Thing",
+      "name": "ManiSkill"
+    },
+    {
+      "@type": "Thing",
+      "name": "Open X-Embodiment"
+    },
+    {
+      "@type": "Thing",
+      "name": "DROID"
+    },
+    {
+      "@type": "Thing",
+      "name": "AgiBot World"
+    },
+    {
+      "@type": "Thing",
+      "name": "RH20T"
+    },
+    {
+      "@type": "Thing",
+      "name": "Franka Panda"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" type="button" title="回到顶部" aria-label="回到顶部">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <div class="more-works-container">
+    <button class="more-works-btn" type="button" title="项目快捷链接" aria-expanded="false" aria-controls="moreWorksDropdown">
+      <i class="fas fa-link"></i>
+      快捷链接
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>项目资源</h4>
+        <button class="close-btn" type="button" aria-label="关闭项目快捷链接">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="#paper" class="work-item">
+          <div class="work-info">
+            <h5>IJRR 发表</h5>
+            <p>录用状态与公开预印本。</p>
+            <span class="work-venue">发表</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#story" class="work-item">
+          <div class="work-info">
+            <h5>从 VLA 到 VSLA</h5>
+            <p>音频如何暴露标准 VLA 控制的局限。</p>
+            <span class="work-venue">章节</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#framework" class="work-item">
+          <div class="work-info">
+            <h5>HEAR 框架</h5>
+            <p>系统总览与各模块的作用。</p>
+            <span class="work-venue">章节</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#evaluation" class="work-item">
+          <div class="work-info">
+            <h5>评测设计</h5>
+            <p>基准与真机实验是如何构建的。</p>
+            <span class="work-venue">章节</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="work-item">
+          <div class="work-info">
+            <h5>OpenX-Sound 数据集</h5>
+            <p>发布在 Hugging Face 上的音频增强机器人轨迹。</p>
+            <span class="work-venue">数据集</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#videos" class="work-item">
+          <div class="work-info">
+            <h5>实验视频</h5>
+            <p>真机定性演示。</p>
+            <span class="work-venue">章节</span>
+          </div>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-fluid">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <img src="../static/images/logo2.webp" alt="HEAR 项目标识 — 视-声-语言-动作机器人操作" class="project-logo" loading="eager">
+              <h1 class="title is-1 publication-title">
+                迈向视-声-语言-动作范式：<br>
+                面向声音中心机器人操作的 HEAR 框架
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Chang Nie<sup>1</sup>,</span>
+                <span class="author-block">Tianchen Deng<sup>1</sup>,</span>
+                <span class="author-block">Guangming Wang<sup>2</sup>,</span>
+                <span class="author-block">Zhe Liu<sup>1</sup>,</span>
+                <span class="author-block">Hesheng Wang<sup>1</sup></span>
+              </div>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><sup>1</sup>上海交通大学，中国</span>
+                <span class="author-block"><sup>2</sup>剑桥大学，英国</span>
+              </div>
+              <div class="publication-status" role="status">
+                <span class="status-label">已录用</span>
+                <span class="status-venue">The International Journal of Robotics Research (IJRR)</span>
+              </div>
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>论文全文</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/IRMVLab/HEAR" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>代码</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2603.16086" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-book-open"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>数据集</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="../" hreflang="en" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-language"></i></span>
+                    <span>English</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">从 VLA 到 VSLA</h2>
+        <div class="content has-text-justified">
+          <p>
+            现代视觉-语言-动作（VLA）策略已经证明，大型多模态模型可以把图像、语言与机器人状态直接映射为动作。
+            当任务相关证据在视觉上持续存在时，这一范式工作得很好：杯子一直在桌上，抽屉开着，相机可以在许多控制周期里反复观察到这些事实。
+            近期一些系统开始引入音频，但在多数情况下，声音仍被当作动作之前的一次性输入，或者主要用于语音理解。
+          </p>
+          <p>
+            声音中心操作则完全不同。
+            这里的关键证据可能是一声提示音、一次碰撞咔哒、煮水声的细微变化，或者一句口头确认的语调。
+            这些线索往往短暂、不可重复，只有当机器人在执行过程中的正确时刻聆听时才具有意义。
+            问题不只是"多加一个模态"，而是音频在时间上的分布方式与视觉截然不同。
+            在更广阔的具身智能与物理AI 图景中，听觉是告诉智能体<i>事情在何时发生</i>的模态，而不只是<i>它在哪里</i>。
+          </p>
+          <p>
+            现有的把声音接到 VLA 上的做法往往过于静态。
+            自动语音识别会丢弃非语音线索与韵律信息；而"波形转图像"适配器则把时间信号压扁成一张静态快照。
+            当线索很短、发生在两次策略推理之间，或者任务依赖声音如何演变而非某个孤立事件时，这两种做法都变得脆弱。
+          </p>
+          <p>
+            这也正是现代动作分块（action chunking）成为问题的地方。
+            大型策略通常一次预测一个动作块，并以开环方式执行以保持运动平滑。
+            在这一区间内，新的观测无法改变已经发出的指令序列。
+            对声音中心任务而言，这形成了一个结构性的盲区：一段很短的线索可能在下一次决策看到它之前就已经发生并消失。
+            我们称之为<b>盲执行间隔（Blind Execution Interval）</b>。
+          </p>
+          <p>
+            这些局限促使我们提出<b>视-声-语言-动作（VSLA）</b>范式。
+            VSLA 把 VLA 从"看见并行动"扩展为"看见、听见、记住并反应"，并且是在延迟、异步的控制条件下。
+            本文用 <b>HEAR</b> 实例化这一范式，并配套一个预训练数据集与一个声音因果评测基准，使整条流程可以被一致地训练与评估。
+          </p>
+        </div>
+        <figure class="image figure-panel">
+          <img src="../static/images/headpic.webp" alt="HEAR 框架与声音中心操作总览：语音、事件触发提示音、连续过程声音与物理交互反馈" loading="lazy">
+        </figure>
+        <p class="figure-caption">
+          HEAR 把操作任务从"视觉主导"重新定义为"声音因果"：策略必须保留稍纵即逝的声学证据、对多感官上下文进行推理，并且只在正确的声音条件真正发生之后才动作。
+        </p>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">我们提出了什么</h2>
+        <div class="content has-text-justified">
+          <p>
+            我们的回应分为三部分。
+            第一，我们把 VSLA 形式化为一种控制设定：每一次决策都接收延迟的多视角视觉、一段因果音频、语言与本体感觉。
+            第二，我们为这一设定设计了 HEAR 这一具体架构。
+            第三，我们构建了规模化训练与测试这类系统所需的配套资源。
+          </p>
+          <p>
+            HEAR 围绕论文识别出的两个瓶颈设计。
+            第一个是<b>因果保持</b>：瞬态线索必须能够跨执行空档存活下来。
+            第二个是<b>时间对齐</b>：在视觉准静态的长时间等待中，策略仍然需要对任务进展有感知。
+          </p>
+          <p>
+            除模型本身之外，论文还贡献了用于大规模音频增强预训练的 <b>OpenX-Sound</b>，以及用于严格声音因果评测的 <b>HEAR-Bench</b>。
+            这一点很重要：只有当基准明确拒绝"看起来合理但声学上错误"的行为时，像 HEAR 这样的系统才有意义。
+          </p>
+        </div>
+        <div class="columns is-multiline story-grid">
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">VSLA</h3>
+              <p>面向延迟机器人决策的控制范式，以视觉、流式声音、语言与本体感觉为条件。</p>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">HEAR</h3>
+              <p>把因果音频记忆与多模态推理、时间预测和平滑动作生成耦合起来的架构。</p>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">OpenX-Sound</h3>
+              <p>在 Open X-Embodiment 基础上扩展同步声音的预训练资源。</p>
+              <a class="inline-resource-link" href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-database"></i>
+                查看数据集
+              </a>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-quarter-desktop">
+            <div class="box text-card">
+              <h3 class="title is-5">HEAR-Bench</h3>
+              <p>拒绝过早动作的声音因果基准，检验策略是否真的先聆听再行动。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="framework">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">HEAR 如何工作</h2>
+        <div class="content has-text-justified">
+          <p>
+            HEAR 的整体逻辑与问题本身的推进顺序一致。
+            如果声音会在两次策略推理之间丢失，系统首先需要一种记忆机制。
+            如果长时间等待使任务在时间上变得含糊，系统随后需要一种理解"随时间推进"的表示。
+            如果最终策略以动作块方式执行，它还需要一个足够平滑的动作生成器，以免引入不必要的自噪声。
+          </p>
+        </div>
+        <figure class="image figure-panel">
+          <img src="../static/images/overview.webp" alt="HEAR 完整架构总览：面向视-声-语言-动作操作的 Historizer、Envisioner、Advancer 与 Realizer" loading="lazy">
+        </figure>
+        <p class="figure-caption">
+          HEAR 持续处理声音，在决策时刻对整合后的多感官上下文进行推理，通过预测未来音频学习时间推进，并生成平滑的动作块用于执行。
+        </p>
+
+        <h3 class="title is-4 has-text-centered module-title">Historizer</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="../static/images/Historizer.webp" alt="Historizer 模块：以流式有状态 Transformer 跨越盲执行间隔维护因果音频记忆" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              <b>Historizer</b> 是一个流式有状态 Transformer，从持续到来的音频数据包中更新一个紧凑的因果记忆。
+              它直接针对 BEI 问题：保住那些在固定单次查询窗口里本会消失的短暂线索。
+            </p>
+            <p>
+              它并不强迫主干网络处理极长的原始窗口，而是携带一个与真实执行空档对齐的压缩记忆状态。
+              正是这一点让下一次决策知道"关键线索刚刚发生过"，即使线索本身已经消失。
+            </p>
+            <p>
+              换句话说，Historizer 是让系统对最近的声音过去保持因果感知的部件。
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Envisioner</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="../static/images/Envisioner.webp" alt="Envisioner 模块：融合视觉、语言、本体感觉与音频的分层多模态推理器" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              <b>Envisioner</b> 是一个分层多模态推理器。
+              高层全方位模型把视觉、语言、本体感觉、当前音频窗口与 Historizer 记忆融合为语义上下文；
+              低层模型复用这一上下文以得到面向控制的特征。
+            </p>
+            <p>
+              这种分工很重要，因为声音中心任务常常包含视觉上相似但意图不同的阶段，例如等待、监控、反应，或者中止正在进行的动作。
+              Envisioner 把这些细微差别转变成可直接用于控制的表示。
+            </p>
+            <p>
+              它也是 HEAR 把声音证据与任务上下文绑定起来的模块，而不是把音频当作一条孤立的旁路通道。
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Advancer</h3>
+        <div class="module-panel">
+          <figure class="image figure-panel">
+            <img src="../static/images/Advancer.webp" alt="Advancer 模块：预测近未来离散音频编码的音频世界模型" loading="lazy">
+          </figure>
+          <div class="content has-text-justified">
+            <p>
+              <b>Advancer</b> 从隐表示中预测近未来的音频编码。
+              它被形式化为一个<b>音频世界模型</b>：不只学习从观测到动作的反应式映射，而是学习声学场景预期会如何演变。
+              这一辅助目标注入了显式的时间对齐信息，帮助策略在长时间的准静态等待阶段消除歧义。
+            </p>
+            <p>
+              这一点在过程监控类任务中最为重要：机器人必须检测随时间推进的过程，而不是对单一尖峰作出反应。
+              Advancer 促使隐空间编码场景在声学上如何演变。
+            </p>
+            <p>
+              这把音频从一个单纯的检测信号，变成了长时序控制中时间结构的来源。
+            </p>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered module-title">Realizer</h3>
+        <div class="module-panel text-only-panel">
+          <div class="content has-text-justified">
+            <p>
+              <b>Realizer</b> 使用条件流匹配把推断出的控制状态转换成平滑的关节位置动作块。
+              这一设计不只是为了让运动更好看。
+              在声音中心操作中，抖动会引入自噪声，可能掩盖微弱的、与任务相关的声学线索。
+            </p>
+            <p>
+              通过生成更平滑的动作块，Realizer 同时改善了控制质量与声学可观测性，这在"等待、聆听、快速反应"交替出现的任务中尤为重要。
+            </p>
+            <p>
+              Realizer 让动作侧与任务的听觉需求保持一致，从而闭合整个回路。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="evaluation">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">训练数据与评测流程</h2>
+        <div class="content has-text-justified">
+          <p>
+            论文指出，仅有新架构是不够的。
+            声音中心操作同样缺乏当初推动 VLA 进展的大规模预训练数据与时序敏感的评测基准。
+            因此，HEAR 同时配备了一项训练资源与一套专门的评测套件。
+          </p>
+          <p>
+            <b>OpenX-Sound</b> 为 Open X-Embodiment 轨迹增强同步音频，使模型能够先学到广谱的多感官表示。
+            在该预训练阶段之后，HEAR 在任务特定示教数据上微调，并在声音对成功真正必要的设定下评测。
+          </p>
+          <p>
+            <b>HEAR-Bench</b> 专为声音因果操作设计。
+            其任务覆盖四类声学线索：事件触发的提示音、人类语音、连续过程声音，以及物理交互反馈。
+            在整个套件中，成功与时序强相关：如果机器人在所需声音线索发生之前就到达了目标，该次试验记为失败。
+          </p>
+        </div>
+        <div class="dataset-panel">
+          <div>
+            <h3 class="title is-5">OpenX-Sound 数据集</h3>
+            <p>
+              我们在 Hugging Face 上发布音频增强的预训练数据，为 VSLA 设定下的大规模机器人轨迹学习提供同步声音。
+            </p>
+          </div>
+          <a href="https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fas fa-database"></i></span>
+            <span>打开数据集</span>
+          </a>
+        </div>
+        <div class="columns is-multiline story-grid">
+          <div class="column is-half">
+            <div class="box text-card">
+              <h3 class="title is-5">仿真基准</h3>
+              <p>
+                七项仿真任务被精心选取以覆盖互补的声音中心挑战。
+                Alarm Clock 与 Microwave 测试等待与瞬态触发；Check Yes 与 Interrupt 测试语音时序与韵律；
+                Check Materials 测试撞击声学；Pour Water 与 Boil Water 测试长时序过程监控。
+              </p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box text-card">
+              <h3 class="title is-5">真机部署</h3>
+              <p>
+                物理任务通过房间混响、背景噪声、机械自噪声以及更强的视觉混淆来提升难度。
+                Moka Coffee 需要过程监控，Answer Phone 是语音与事件的多阶段任务，Shake Bottle 使用主动声学感知，
+                Real Alarm Clock 测试域偏移下的稳健等待。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            这些实验是刻意构造而非简单采集的。
+            每项任务隔离出无记忆音频集成的一种特定失效模式：瞬态线索丢失、韵律信息损失、视觉混淆，或长时序过程监控。
+            在这一评测协议下，HEAR 在 HEAR-Bench 上取得 <b>81%</b> 的声音因果成功率，在四项真实 Franka 任务上取得 <b>70%</b>，
+            在短暂的非语音触发与过程监控场景中提升尤为明显。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">实验视频</h2>
+        <div class="content has-text-justified">
+          <p>
+            本页保留一组精炼的<b>真实机器人核心演示</b>。
+            它们覆盖长时序监控、主动声学感知、语音条件化的进程跟踪，以及真实噪声与混响下的瞬态线索反应。
+            每个示例都回答一个关于"模型学到了什么样的声音因果能力"的具体问题。
+            视频由本站提供，仅在你主动播放时加载。
+          </p>
+        </div>
+
+        <h3 class="title is-5">外部视角真机部署</h3>
+        <div class="columns is-multiline single-video-list">
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Moka Coffee</b></p>
+              <p class="video-note"><b>为什么选这个任务：</b>传统摩卡壶几乎没有清晰的视觉完成信号，进展只能从声音推断。</p>
+              <p class="video-note"><b>它测试什么：</b>噪声真实环境中的长时序过程监控——机器人必须在倒出之前检测到进入喷溅阶段的转变。</p>
+              <video controls playsinline preload="metadata" width="1280" height="720">
+                <source src="../static/videos/moka_pot_all_web.mp4?v=681a0fb" type="video/mp4">
+                <track kind="captions" src="../static/captions/moka-coffee.en.vtt" srclang="en" label="English">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Answer Phone</b></p>
+              <p class="video-note"><b>为什么选这个任务：</b>机器人在任务的不同语义阶段反复回到几乎相同的视觉状态。</p>
+              <p class="video-note"><b>它测试什么：</b>严重视觉混淆下的多阶段进程跟踪，包括铃声检测、语音理解与通话结束识别。</p>
+              <video controls playsinline preload="metadata" width="1280" height="720">
+                <source src="../static/videos/telephone_all.mp4?v=681a0fb" type="video/mp4">
+                <track kind="captions" src="../static/captions/answer-phone.en.vtt" srclang="en" label="English">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Shake Bottle（空瓶）</b></p>
+              <p class="video-note"><b>为什么选这个任务：</b>隐藏状态无法被动恢复，机器人必须自己先制造出证据。</p>
+              <p class="video-note"><b>它测试什么：</b>主动声学感知——感知依赖于生成一段可重复的动作以激发出具有判别力的声音。</p>
+              <video controls playsinline preload="metadata" width="1280" height="720">
+                <source src="../static/videos/empty_all.mp4?v=681a0fb" type="video/mp4">
+                <track kind="captions" src="../static/captions/shake-empty.en.vtt" srclang="en" label="English">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Shake Bottle（有物）</b></p>
+              <p class="video-note"><b>为什么选这个任务：</b>这一对照案例展示机器人在另一种隐藏物理状态下相同的主动感知行为。</p>
+              <p class="video-note"><b>它测试什么：</b>策略能否利用自身产生的晃动声，在不同试验中稳定地区分有物与空瓶。</p>
+              <video controls playsinline preload="metadata" width="1280" height="720">
+                <source src="../static/videos/occupied_all.mp4?v=681a0fb" type="video/mp4">
+                <track kind="captions" src="../static/captions/shake-occupied.en.vtt" srclang="en" label="English">
+              </video>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box video-card">
+              <p class="mb-3"><b>Real Alarm Clock</b></p>
+              <p class="video-note"><b>为什么选这个任务：</b>把仿真中的闹钟设定迁移到物理世界，混响与背景交谈会扭曲线索。</p>
+              <p class="video-note"><b>它测试什么：</b>在真实声学域偏移下模型是否仍保持声音因果性，并且仍然避免"看起来诱人"的提前按下。</p>
+              <video controls playsinline preload="metadata" width="1280" height="720">
+                <source src="../static/videos/alarm_all.mp4?v=681a0fb" type="video/mp4">
+                <track kind="captions" src="../static/captions/real-alarm-clock.en.vtt" srclang="en" label="English">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section publication-note" id="paper">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title has-text-centered">发表信息</h2>
+          <p class="has-text-centered publication-copy">
+            本工作已被《The International Journal of Robotics Research》录用。
+            正式 DOI 尚未分配，公开的 arXiv 预印本可在下方获取。
+          </p>
+          <div class="has-text-centered mb-4">
+            <a href="https://arxiv.org/pdf/2603.16086.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>打开 arXiv 预印本</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" type="button" title="复制 BibTeX 到剪贴板" aria-label="复制 BibTeX 到剪贴板">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">复制</span>
+          </button>
+        </div>
+<pre id="bibtex-code" tabindex="0"><code>@article{nie2026visionsoundlanguageactionparadigmhearframework,
+  title={Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation},
+  author={Chang Nie and Tianchen Deng and Guangming Wang and Zhe Liu and Hesheng Wang},
+  journal={The International Journal of Robotics Research},
+  year={2026},
+  note={Accepted for publication},
+  eprint={2603.16086},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2603.16086},
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop content has-text-centered">
+      <p>
+        本项目主页不使用分析脚本、Cookie 或第三方嵌入。
+        图片与视频由本站提供，外部资源仅在你主动点击链接后打开。
+      </p>
+      <p>
+        面向搜索引擎与 AI 系统的机器可读入口：
+        <a href="../llms.txt">llms.txt</a> · <a href="../llms-full.txt">llms-full.txt</a> ·
+        <a href="../zh/index.md">index.md</a> · <a href="../sitemap.xml">sitemap.xml</a> ·
+        <a href="../robots.txt">robots.txt</a> · <a href="../" hreflang="en">English</a>
+      </p>
+      <p class="footer-update">IJRR 录用后更新于 2026 年 9 月。</p>
+    </div>
+  </footer>
+</body>
+</html>

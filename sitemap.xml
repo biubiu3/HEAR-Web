@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- English project page -->
+  <url>
+    <loc>https://hear.irmv.top/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hear.irmv.top/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/"/>
+
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/headpic.webp</image:loc>
+      <image:title>HEAR framework for Vision-Sound-Language-Action (VSLA) sound-centric robot manipulation</image:title>
+      <image:caption>HEAR reframes robot manipulation from a vision-dominant setting into a sound-causal one, covering speech, event-triggered alarms, continuous process sounds and physical interaction feedback.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/overview.webp</image:loc>
+      <image:title>HEAR architecture overview: Historizer, Envisioner, Advancer and Realizer</image:title>
+      <image:caption>HEAR processes streaming audio continuously, reasons over multi-sensory context, learns temporal progression through future-audio prediction, and produces smooth flow-matching action chunks.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Historizer.webp</image:loc>
+      <image:title>Historizer: streaming causal audio memory across the Blind Execution Interval</image:title>
+      <image:caption>The Historizer is a streaming stateful transformer that maintains a compact causal audio memory across execution gaps.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Envisioner.webp</image:loc>
+      <image:title>Envisioner: hierarchical omni-modal reasoning for Vision-Sound-Language-Action control</image:title>
+      <image:caption>The Envisioner fuses vision, language, proprioception, the current audio window and causal audio memory into a control-ready representation.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hear.irmv.top/static/images/Advancer.webp</image:loc>
+      <image:title>Advancer: audio world model predicting near-future audio codes</image:title>
+      <image:caption>The Advancer is formulated as an audio world model that injects temporal grounding by predicting near-future audio codes during training.</image:caption>
+    </image:image>
+
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/moka-coffee.jpg</video:thumbnail_loc>
+      <video:title>HEAR real-robot Moka Coffee: listening for the sputtering phase</video:title>
+      <video:description>A Franka Panda monitors the acoustics of an uninstrumented Moka pot and starts pouring only after detecting the characteristic sputtering phase. Long-horizon sound-centric process monitoring with a single ambient microphone.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/moka_pot_all_web.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/answer-phone.jpg</video:thumbnail_loc>
+      <video:title>HEAR real-robot Answer Phone: multi-stage speech and event tracking</video:title>
+      <video:description>The robot waits for a ringtone, retrieves a handset, listens to a call, and returns the phone after the end-of-call cue, under severe visual aliasing.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/telephone_all.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/shake-bottle-empty.jpg</video:thumbnail_loc>
+      <video:title>HEAR real-robot Shake Bottle (Empty): active acoustic sensing</video:title>
+      <video:description>Hidden container state cannot be recovered passively; the policy generates a repeatable shaking motion and reads the resulting rattle to decide whether the bottle is empty.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/empty_all.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/shake-bottle-occupied.jpg</video:thumbnail_loc>
+      <video:title>HEAR real-robot Shake Bottle (Occupied): discriminating hidden physical state by sound</video:title>
+      <video:description>The companion case to the empty bottle: the same active acoustic probing behaviour under a different hidden physical state.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/occupied_all.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://hear.irmv.top/static/images/posters/real-alarm-clock.jpg</video:thumbnail_loc>
+      <video:title>HEAR real-robot Real Alarm Clock: sound-causal waiting under domain shift</video:title>
+      <video:description>The simulated alarm task transferred to the physical world, where reverberation and background chatter distort the cue. The robot suppresses the visually tempting early press and acts only after the sustained ring begins.</video:description>
+      <video:content_loc>https://hear.irmv.top/static/videos/alarm_all.mp4</video:content_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2026-07-27</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+
+  <!-- Simplified Chinese project page -->
+  <url>
+    <loc>https://hear.irmv.top/zh/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hear.irmv.top/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/"/>
+  </url>
+
+  <!-- Markdown mirrors for LLMs and AI agents -->
+  <url>
+    <loc>https://hear.irmv.top/llms.txt</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/llms-full.txt</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/index.md</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hear.irmv.top/zh/index.md</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

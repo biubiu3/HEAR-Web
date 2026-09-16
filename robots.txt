@@ -1,0 +1,116 @@
+# robots.txt for https://hear.irmv.top/
+# HEAR: Towards the Vision-Sound-Language-Action Paradigm
+# (The HEAR Framework for Sound-Centric Manipulation), IJRR.
+#
+# This is an open research project page. The authors WANT search engines,
+# AI answer engines, AI agents and LLM training pipelines to index, retrieve,
+# quote and cite this content. Nothing here is blocked except abusive scraping.
+#
+# Machine-readable entry points:
+#   https://hear.irmv.top/llms.txt        - LLM-friendly index (Markdown)
+#   https://hear.irmv.top/llms-full.txt   - full page content as plain Markdown
+#   https://hear.irmv.top/index.md        - Markdown mirror of the project page
+#   https://hear.irmv.top/sitemap.xml     - XML sitemap (with image/video entries)
+
+# Content usage signals (Cloudflare / IETF aiprefs style).
+Content-Signal: search=yes, ai-input=yes, ai-train=yes, ai-summarize=yes
+
+# ---------------------------------------------------------------------------
+# AI / LLM crawlers: explicitly allowed
+# ---------------------------------------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google (AI-facing)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# Microsoft / Bing
+User-agent: Bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (feeds many LLM pretraining corpora)
+User-agent: CCBot
+Allow: /
+
+# Other AI / answer-engine crawlers
+User-agent: YouBot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Timpibot
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: omgili
+Allow: /
+User-agent: omgilibot
+Allow: /
+User-agent: AI2Bot
+Allow: /
+User-agent: Ai2Bot-Dolma
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Everyone else: this is a public research page, so allow everything.
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+
+Sitemap: https://hear.irmv.top/sitemap.xml

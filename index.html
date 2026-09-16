@@ -5,27 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation">
-  <meta name="description" content="HEAR, accepted for publication in The International Journal of Robotics Research, introduces the VSLA paradigm for sound-centric robot manipulation.">
-  <meta name="keywords" content="robot learning, VLA, VSLA, sound-centric manipulation, multimodal learning, imitation learning, HEAR-Bench, OpenX-Sound">
+  <meta name="description" content="HEAR, accepted for publication in The International Journal of Robotics Research, introduces the VSLA paradigm for sound-centric robot manipulation: causal audio memory across the Blind Execution Interval, an audio world model for temporal grounding, and flow-matching action generation. 81% on HEAR-Bench, 70% on real Franka Panda tasks.">
+  <meta name="keywords" content="HEAR, HEAR framework, Vision-Sound-Language-Action, VSLA, VLA, Vision-Language-Action, robot manipulation, sound-centric manipulation, audio-conditioned manipulation, robot audition, embodied audition, Blind Execution Interval, BEI, action chunking, real-time chunking, system latency, causal audio memory, temporal grounding, audio world model, world model, world action model, WAM, physical AI, embodied AI, embodied intelligence, embodied agent, embodied foundation model, multimodal foundation model, robot foundation model, robot learning, imitation learning, flow matching, diffusion policy, continuous control, closed-loop manipulation, Franka Panda, RoboTwin2, Open X-Embodiment, OpenX-Sound, HEAR-Bench, sound-causal success rate, transient acoustic cues, contact acoustics, acoustic sensing, active acoustic sensing, contact microphone, prosody, ASR, Qwen3-Omni, audio tokenizer, Historizer, Envisioner, Advancer, Realizer, streaming audio, agentic robotics, robot agent, dexterous manipulation, whole-body control, cross-embodiment, sim-to-real, robot pretraining, long-horizon manipulation, process monitoring, 具身智能, 物理AI, 物理人工智能, 世界模型, 世界动作模型, 视觉语言动作模型, 视觉-语言-动作, 视-声-语言-动作, 视觉听觉语言动作模型, 机器人操作, 机器人操控, 声音驱动的机器人操作, 声学条件操作, 机器人听觉, 具身听觉, 音频世界模型, 声学感知, 多模态大模型, 具身大模型, 具身基础模型, 具身大脑, 端到端机器人, 模仿学习, 流匹配, 动作分块, 盲执行间隔, 因果音频记忆, 时间对齐, 灵巧操作, 泛化能力, 数据飞轮, 仿真到现实, 虚实迁移, 人形机器人, 机器人基础模型, 多模态学习, 智能体, 具身智能体, pi0, pi0.5, pi star 0.6, OpenVLA, OpenVLA-OFT, RT-1, RT-2, Octo, GR00T N1, GR00T N2, Gemini Robotics, Helix, SmolVLA, TinyVLA, DexVLA, RDT-1B, Qwen-VLA, Diffusion Policy, ACT, ALOHA, RoboOmni, ELLSA, Audio-VLA, Play it by Ear, ManiWAV, SVA, VLAS, OmniVLA, SoundSpaces, AudioWorldSim, VibeCheck, Vibro-Sense, Hearing Touch, See Hear Feel, CLAP, ImageBind, BEATs, Whisper, Qwen3-Omni, WorldVLA, DreamVLA, DreamZero, Cosmos Policy, NVIDIA Cosmos, Genie 3, V-JEPA 2, DreamerV3, UniSim, DyWA, UniPi, Gen2Act, LAPA, WAM, World Action Model, VTLA, vision-tactile-language-action, N0-Foundation, VLA-Touch, hierarchical VLA, dual-system architecture, real-time chunking, RTC, asynchronous inference, test-time compute, RL post-training, data pyramid, data flywheel, RoboTwin 2.0, LIBERO, CALVIN, RoboCasa, SimplerEnv, RLBench, ManiSkill, DROID, AgiBot World, humanoid robot, robot agent">
   <meta name="author" content="Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu, Hesheng Wang">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="language" content="English">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self' data:; frame-src 'none'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; form-action 'none'; upgrade-insecure-requests">
 
+  <link rel="canonical" href="https://hear.irmv.top/">
+  <link rel="alternate" hreflang="en" href="https://hear.irmv.top/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hear.irmv.top/zh/">
+  <link rel="alternate" hreflang="zh-CN" href="https://hear.irmv.top/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://hear.irmv.top/">
+  <link rel="alternate" type="text/markdown" href="https://hear.irmv.top/index.md" title="Markdown version of this page for LLMs and AI agents">
+  <link rel="alternate" type="text/plain" href="https://hear.irmv.top/llms.txt" title="llms.txt — LLM-friendly index">
+  <link rel="sitemap" type="application/xml" href="https://hear.irmv.top/sitemap.xml">
+  <link rel="describedby" href="https://hear.irmv.top/llms.txt" type="text/plain">
+
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="HEAR Project">
+  <meta property="og:site_name" content="HEAR — Vision-Sound-Language-Action">
   <meta property="og:title" content="HEAR — Accepted at IJRR">
   <meta property="og:description" content="A VSLA framework for sound-centric manipulation with causal audio persistence and temporal grounding.">
   <meta property="og:url" content="https://hear.irmv.top/">
   <meta property="og:image" content="https://hear.irmv.top/static/images/overview.png">
   <meta property="og:image:width" content="3200">
   <meta property="og:image:height" content="2092">
-  <meta property="og:image:alt" content="Overview of the HEAR architecture">
+  <meta property="og:image:alt" content="Overview of the HEAR architecture: Historizer, Envisioner, Advancer and Realizer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
   <meta property="article:author" content="Chang Nie">
+  <meta property="article:published_time" content="2026-03-17">
+  <meta property="article:modified_time" content="2026-09-16">
   <meta property="article:section" content="Robotics">
   <meta property="article:tag" content="Vision-Sound-Language-Action">
+  <meta property="article:tag" content="VSLA">
   <meta property="article:tag" content="Robot Manipulation">
+  <meta property="article:tag" content="VLA">
+  <meta property="article:tag" content="World Model">
+  <meta property="article:tag" content="Embodied AI">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HEAR — Accepted at IJRR">
@@ -41,56 +60,1197 @@
   <meta name="citation_author" content="Wang, Hesheng">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_journal_title" content="The International Journal of Robotics Research">
+  <meta name="citation_issn" content="0278-3649">
+  <meta name="citation_publisher" content="SAGE Publications">
   <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2603.16086.pdf">
+  <meta name="citation_abstract_html_url" content="https://arxiv.org/abs/2603.16086">
+  <meta name="citation_arxiv_id" content="2603.16086">
 
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-  <title>HEAR: Towards Vision-Sound-Language-Action | IJRR</title>
+  <title>HEAR: Vision-Sound-Language-Action (VSLA) for Sound-Centric Robot Manipulation | IJRR</title>
 
   <link rel="icon" type="image/png" href="static/images/logo3.png">
   <link rel="apple-touch-icon" href="static/images/logo3.png">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=ijrr-accepted">
+  <link rel="stylesheet" href="static/css/index.css?v=geo-2026">
 
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
-    "description": "We formalize Vision-Sound-Language-Action (VSLA) and introduce HEAR, a framework with causal audio memory and temporal dynamics learning for sound-centric manipulation.",
-    "author": [
-      {"@type": "Person", "name": "Chang Nie"},
-      {"@type": "Person", "name": "Tianchen Deng"},
-      {"@type": "Person", "name": "Guangming Wang"},
-      {"@type": "Person", "name": "Zhe Liu"},
-      {"@type": "Person", "name": "Hesheng Wang"}
-    ],
-    "dateCreated": "2026-03-17",
-    "creativeWorkStatus": "Accepted for publication",
-    "isPartOf": {
-      "@type": "Periodical",
-      "name": "The International Journal of Robotics Research"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://hear.irmv.top/#website",
+      "url": "https://hear.irmv.top/",
+      "name": "HEAR — Vision-Sound-Language-Action",
+      "alternateName": [
+        "HEAR Project Page",
+        "HEAR VSLA",
+        "HEAR 项目主页"
+      ],
+      "description": "Project page for HEAR, a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation.",
+      "inLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "publisher": {
+        "@id": "https://hear.irmv.top/#lab"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SAGE Publications"
-    },
-    "url": "https://hear.irmv.top/",
-    "sameAs": "https://arxiv.org/abs/2603.16086",
-    "image": "https://hear.irmv.top/static/images/overview.png",
-    "keywords": ["VSLA", "VLA", "robot manipulation", "sound-centric manipulation", "multimodal learning"],
-    "mainEntity": {
+    {
       "@type": "WebPage",
-      "@id": "https://hear.irmv.top/"
+      "@id": "https://hear.irmv.top/#webpage",
+      "url": "https://hear.irmv.top/",
+      "name": "HEAR: Towards the Vision-Sound-Language-Action Paradigm — The HEAR Framework for Sound-Centric Manipulation",
+      "isPartOf": {
+        "@id": "https://hear.irmv.top/#website"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-03-17",
+      "dateModified": "2026-09-16",
+      "mainEntity": {
+        "@id": "https://hear.irmv.top/#paper"
+      },
+      "about": [
+        {
+          "@id": "https://hear.irmv.top/#vsla"
+        },
+        {
+          "@id": "https://hear.irmv.top/#paper"
+        },
+        {
+          "@id": "https://hear.irmv.top/#dataset"
+        },
+        {
+          "@id": "https://hear.irmv.top/#software"
+        },
+        {
+          "@id": "https://hear.irmv.top/#hearbench"
+        }
+      ],
+      "significantLink": [
+        "https://hear.irmv.top/llms.txt",
+        "https://hear.irmv.top/llms-full.txt",
+        "https://hear.irmv.top/index.md",
+        "https://hear.irmv.top/sitemap.xml"
+      ],
+      "breadcrumb": {
+        "@id": "https://hear.irmv.top/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hear.irmv.top/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "HEAR Project Home",
+          "item": "https://hear.irmv.top/"
+        }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://hear.irmv.top/#paper",
+      "headline": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+      "name": "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation",
+      "alternativeHeadline": "HEAR: a Vision-Sound-Language-Action (VSLA) framework for sound-centric robot manipulation",
+      "description": "We formalize Vision-Sound-Language-Action (VSLA) as a continuous control paradigm conditioned on vision, streaming audio, language and proprioception under delayed decision loops. We identify the Blind Execution Interval (BEI) created by system latency and open-loop action chunking, and introduce HEAR, a VSLA framework combining causal audio memory (Historizer), omni-sensory multimodal reasoning (Envisioner), predictive audio dynamics formulated as an audio world model (Advancer) and smooth flow-matching action generation (Realizer). HEAR reaches 81% sound-causal success on HEAR-Bench and 70% across four real-world Franka Panda tasks.",
+      "author": [
+        {
+          "@id": "https://hear.irmv.top/#author-nie"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-deng"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-gwang"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-liu"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-hwang"
+        }
+      ],
+      "dateCreated": "2026-03-17",
+      "datePublished": "2026-03-17",
+      "dateModified": "2026-09-16",
+      "creativeWorkStatus": "Accepted for publication",
+      "isPartOf": {
+        "@type": "Periodical",
+        "@id": "https://hear.irmv.top/#ijrr",
+        "name": "The International Journal of Robotics Research",
+        "alternateName": "IJRR",
+        "issn": "0278-3649",
+        "publisher": {
+          "@type": "Organization",
+          "name": "SAGE Publications",
+          "url": "https://journals.sagepub.com/home/ijr"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SAGE Publications",
+        "url": "https://journals.sagepub.com/home/ijr"
+      },
+      "url": "https://hear.irmv.top/",
+      "sameAs": [
+        "https://arxiv.org/abs/2603.16086",
+        "https://github.com/IRMVLab/HEAR"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "arXiv",
+        "value": "2603.16086"
+      },
+      "image": "https://hear.irmv.top/static/images/overview.png",
+      "inLanguage": "en",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "about": [
+        {
+          "@id": "https://hear.irmv.top/#vsla"
+        },
+        {
+          "@id": "https://hear.irmv.top/#bei"
+        },
+        {
+          "@id": "https://hear.irmv.top/#hearbench"
+        },
+        {
+          "@id": "https://hear.irmv.top/#dataset"
+        },
+        {
+          "@type": "Thing",
+          "name": "sound-centric robot manipulation",
+          "sameAs": "https://en.wikipedia.org/wiki/Robot_audition"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vision-Language-Action model (VLA)",
+          "sameAs": "https://en.wikipedia.org/wiki/Vision-language-action_model"
+        },
+        {
+          "@type": "Thing",
+          "name": "world model",
+          "sameAs": "https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)"
+        },
+        {
+          "@type": "Thing",
+          "name": "embodied AI",
+          "sameAs": "https://en.wikipedia.org/wiki/Embodied_agent"
+        },
+        {
+          "@type": "Thing",
+          "name": "flow matching"
+        },
+        {
+          "@type": "Thing",
+          "name": "action chunking"
+        },
+        {
+          "@type": "Thing",
+          "name": "robot audition"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "physical AI"
+        },
+        {
+          "@type": "Thing",
+          "name": "embodied intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "world action model (WAM)"
+        },
+        {
+          "@type": "Thing",
+          "name": "robot foundation model"
+        },
+        {
+          "@type": "Thing",
+          "name": "multimodal foundation model"
+        },
+        {
+          "@type": "Thing",
+          "name": "contact acoustics"
+        },
+        {
+          "@type": "Thing",
+          "name": "active acoustic sensing"
+        },
+        {
+          "@type": "Thing",
+          "name": "prosody"
+        },
+        {
+          "@type": "Thing",
+          "name": "Franka Panda"
+        },
+        {
+          "@type": "Thing",
+          "name": "RoboTwin 2.0"
+        },
+        {
+          "@type": "Thing",
+          "name": "Open X-Embodiment"
+        },
+        {
+          "@type": "Thing",
+          "name": "Qwen3-Omni"
+        },
+        {
+          "@type": "Thing",
+          "name": "具身智能"
+        },
+        {
+          "@type": "Thing",
+          "name": "物理AI"
+        },
+        {
+          "@type": "Thing",
+          "name": "世界模型"
+        },
+        {
+          "@type": "Thing",
+          "name": "pi0 (π0)"
+        },
+        {
+          "@type": "Thing",
+          "name": "pi0.5 (π0.5)"
+        },
+        {
+          "@type": "Thing",
+          "name": "pi*0.6 (π*0.6)"
+        },
+        {
+          "@type": "Thing",
+          "name": "OpenVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "OpenVLA-OFT"
+        },
+        {
+          "@type": "Thing",
+          "name": "RT-1"
+        },
+        {
+          "@type": "Thing",
+          "name": "RT-2"
+        },
+        {
+          "@type": "Thing",
+          "name": "RT-2-X"
+        },
+        {
+          "@type": "Thing",
+          "name": "Octo"
+        },
+        {
+          "@type": "Thing",
+          "name": "GR00T N1"
+        },
+        {
+          "@type": "Thing",
+          "name": "GR00T N1.5"
+        },
+        {
+          "@type": "Thing",
+          "name": "GR00T N1.6"
+        },
+        {
+          "@type": "Thing",
+          "name": "GR00T N2"
+        },
+        {
+          "@type": "Thing",
+          "name": "Gemini Robotics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Gemini Robotics 1.5"
+        },
+        {
+          "@type": "Thing",
+          "name": "Gemini Robotics-ER"
+        },
+        {
+          "@type": "Thing",
+          "name": "Helix (Figure)"
+        },
+        {
+          "@type": "Thing",
+          "name": "SmolVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "TinyVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "DexVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "RDT-1B"
+        },
+        {
+          "@type": "Thing",
+          "name": "RDT-2"
+        },
+        {
+          "@type": "Thing",
+          "name": "Qwen-VLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Diffusion Policy"
+        },
+        {
+          "@type": "Thing",
+          "name": "ACT (Action Chunking with Transformers)"
+        },
+        {
+          "@type": "Thing",
+          "name": "ALOHA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mobile ALOHA"
+        },
+        {
+          "@type": "Thing",
+          "name": "SpatialVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "TraceVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "CogACT"
+        },
+        {
+          "@type": "Thing",
+          "name": "Magma"
+        },
+        {
+          "@type": "Thing",
+          "name": "NORA"
+        },
+        {
+          "@type": "Thing",
+          "name": "OpenVLA-OFT"
+        },
+        {
+          "@type": "Thing",
+          "name": "RoboOmni"
+        },
+        {
+          "@type": "Thing",
+          "name": "ELLSA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Audio-VLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Play it by Ear"
+        },
+        {
+          "@type": "Thing",
+          "name": "ManiWAV"
+        },
+        {
+          "@type": "Thing",
+          "name": "SVA"
+        },
+        {
+          "@type": "Thing",
+          "name": "VLAS"
+        },
+        {
+          "@type": "Thing",
+          "name": "OmniVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "See, Hear, Feel"
+        },
+        {
+          "@type": "Thing",
+          "name": "Hearing Touch"
+        },
+        {
+          "@type": "Thing",
+          "name": "VibeCheck"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vibro-Sense"
+        },
+        {
+          "@type": "Thing",
+          "name": "A-SLIP"
+        },
+        {
+          "@type": "Thing",
+          "name": "Active Acoustic Sensing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Robot Audition"
+        },
+        {
+          "@type": "Thing",
+          "name": "SoundSpaces"
+        },
+        {
+          "@type": "Thing",
+          "name": "AudioWorldSim"
+        },
+        {
+          "@type": "Thing",
+          "name": "CLAP"
+        },
+        {
+          "@type": "Thing",
+          "name": "ImageBind"
+        },
+        {
+          "@type": "Thing",
+          "name": "BEATs"
+        },
+        {
+          "@type": "Thing",
+          "name": "Audio Spectrogram Transformer (AST)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Whisper"
+        },
+        {
+          "@type": "Thing",
+          "name": "wav2vec 2.0"
+        },
+        {
+          "@type": "Thing",
+          "name": "AudioCLIP"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sound-Triggered Mobile Manipulation"
+        },
+        {
+          "@type": "Thing",
+          "name": "World Action Model (WAM)"
+        },
+        {
+          "@type": "Thing",
+          "name": "WorldVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "DreamVLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "DreamZero"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cosmos Policy"
+        },
+        {
+          "@type": "Thing",
+          "name": "NVIDIA Cosmos"
+        },
+        {
+          "@type": "Thing",
+          "name": "Genie 3"
+        },
+        {
+          "@type": "Thing",
+          "name": "V-JEPA 2"
+        },
+        {
+          "@type": "Thing",
+          "name": "DreamerV3"
+        },
+        {
+          "@type": "Thing",
+          "name": "UniSim"
+        },
+        {
+          "@type": "Thing",
+          "name": "GAIA-1"
+        },
+        {
+          "@type": "Thing",
+          "name": "DyWA"
+        },
+        {
+          "@type": "Thing",
+          "name": "UniPi"
+        },
+        {
+          "@type": "Thing",
+          "name": "Gen2Act"
+        },
+        {
+          "@type": "Thing",
+          "name": "Im2Flow2Act"
+        },
+        {
+          "@type": "Thing",
+          "name": "LAPA"
+        },
+        {
+          "@type": "Thing",
+          "name": "UWM"
+        },
+        {
+          "@type": "Thing",
+          "name": "World Model"
+        },
+        {
+          "@type": "Thing",
+          "name": "Audio World Model"
+        },
+        {
+          "@type": "Thing",
+          "name": "Latent World Model"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vision-Tactile-Language-Action (VTLA)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vision-Language-Action (VLA)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vision-Sound-Language-Action (VSLA)"
+        },
+        {
+          "@type": "Thing",
+          "name": "N0-Foundation"
+        },
+        {
+          "@type": "Thing",
+          "name": "VLA-Touch"
+        },
+        {
+          "@type": "Thing",
+          "name": "OmniVTLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Vision-Language-Tactile"
+        },
+        {
+          "@type": "Thing",
+          "name": "LIBERO"
+        },
+        {
+          "@type": "Thing",
+          "name": "CALVIN"
+        },
+        {
+          "@type": "Thing",
+          "name": "RoboCasa"
+        },
+        {
+          "@type": "Thing",
+          "name": "SimplerEnv"
+        },
+        {
+          "@type": "Thing",
+          "name": "RLBench"
+        },
+        {
+          "@type": "Thing",
+          "name": "ManiSkill"
+        },
+        {
+          "@type": "Thing",
+          "name": "Meta-World"
+        },
+        {
+          "@type": "Thing",
+          "name": "DROID"
+        },
+        {
+          "@type": "Thing",
+          "name": "AgiBot World"
+        },
+        {
+          "@type": "Thing",
+          "name": "RoboMIND"
+        },
+        {
+          "@type": "Thing",
+          "name": "RH20T"
+        },
+        {
+          "@type": "Thing",
+          "name": "BridgeData V2"
+        },
+        {
+          "@type": "Thing",
+          "name": "Embodied AI"
+        },
+        {
+          "@type": "Thing",
+          "name": "Embodied Intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "Physical AI"
+        },
+        {
+          "@type": "Thing",
+          "name": "Agentic Robotics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Robot Agent"
+        },
+        {
+          "@type": "Thing",
+          "name": "Hierarchical VLA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dual-System Architecture"
+        },
+        {
+          "@type": "Thing",
+          "name": "System 1 and System 2"
+        },
+        {
+          "@type": "Thing",
+          "name": "Action Chunking"
+        },
+        {
+          "@type": "Thing",
+          "name": "Real-Time Chunking (RTC)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Asynchronous Inference"
+        },
+        {
+          "@type": "Thing",
+          "name": "Test-Time Compute"
+        },
+        {
+          "@type": "Thing",
+          "name": "RL Post-Training"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cross-Embodiment"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sim-to-Real"
+        },
+        {
+          "@type": "Thing",
+          "name": "Whole-Body Control"
+        },
+        {
+          "@type": "Thing",
+          "name": "Data Pyramid"
+        },
+        {
+          "@type": "Thing",
+          "name": "Data Flywheel"
+        },
+        {
+          "@type": "Thing",
+          "name": "Flow Matching"
+        },
+        {
+          "@type": "Thing",
+          "name": "Diffusion Policy"
+        },
+        {
+          "@type": "Thing",
+          "name": "Imitation Learning"
+        },
+        {
+          "@type": "Thing",
+          "name": "Humanoid Robot"
+        }
+      ],
+      "keywords": "Vision-Sound-Language-Action, VSLA, VLA, sound-centric manipulation, robot manipulation, robot audition, audio-conditioned manipulation, Blind Execution Interval, BEI, action chunking, causal audio memory, temporal grounding, audio world model, world model, world action model, WAM, physical AI, embodied AI, embodied intelligence, embodied agent, multimodal learning, imitation learning, flow matching, continuous control, robot learning, Franka Panda, Open X-Embodiment, OpenX-Sound, HEAR-Bench, Historizer, Envisioner, Advancer, Realizer, Qwen3-Omni, 具身智能, 物理AI, 世界模型, 世界动作模型, 机器人听觉, 音频世界模型, 声音驱动的机器人操作",
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://arxiv.org/pdf/2603.16086.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://hear.irmv.top/#vsla",
+      "name": "Vision-Sound-Language-Action (VSLA)",
+      "alternateName": [
+        "VSLA",
+        "视-声-语言-动作",
+        "视觉听觉语言动作模型"
+      ],
+      "description": "A continuous-control paradigm in which a robot policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops. VSLA extends Vision-Language-Action (VLA) from 'see and act' to 'see, hear, remember and react'.",
+      "inDefinedTermSet": {
+        "@id": "https://hear.irmv.top/#glossary"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://hear.irmv.top/#bei",
+      "name": "Blind Execution Interval (BEI)",
+      "alternateName": [
+        "BEI",
+        "盲执行间隔"
+      ],
+      "description": "The interval created when a Vision-Language-Action policy executes a predicted action chunk open-loop. Because new observations cannot alter the outgoing command sequence, a transient acoustic cue such as a beep, click, rattle or collision can occur and vanish entirely between two policy queries. HEAR measures roughly 2.3 seconds of effective BEI on a Franka Panda deployment with a 2.1 second executed action-chunk interval.",
+      "inDefinedTermSet": {
+        "@id": "https://hear.irmv.top/#glossary"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://hear.irmv.top/#glossary",
+      "name": "HEAR glossary of sound-centric manipulation terms",
+      "hasDefinedTerm": [
+        {
+          "@id": "https://hear.irmv.top/#vsla"
+        },
+        {
+          "@id": "https://hear.irmv.top/#bei"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sound-centric manipulation",
+          "description": "Robot manipulation in which decision-critical evidence is carried by sound rather than by persistent visual state: a completion beep, a contact click, a rattle revealing hidden contents, a boiling or sputtering transition, or the prosody of a spoken confirmation."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Causal audio persistence",
+          "description": "The property of a policy interface that keeps a short-lived acoustic event available at the first decision boundary after the event occurs, even if the event is no longer audible by then."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Temporal grounding",
+          "description": "A representation of how a task is progressing over time, needed to keep a chunked policy stable through long waiting phases in which vision is quasi-static."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sound-causal success rate",
+          "description": "An evaluation metric in which a trial counts as successful only if the robot completes the physical goal after the required acoustic condition has occurred. Visually plausible but acoustically premature completions are recorded as failures."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Active acoustic sensing",
+          "description": "Perception in which the robot deliberately generates a repeatable motion, such as shaking a container, so that the resulting sound reveals a hidden physical state."
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://hear.irmv.top/#dataset",
+      "name": "OpenX-Sound",
+      "alternateName": "OpenX-Sound: audio-augmented Open X-Embodiment",
+      "description": "An audio-augmented pretraining resource for Vision-Sound-Language-Action learning. Selected Open X-Embodiment episodes are preserved with their original multi-view RGB, language instructions, proprioception and expert actions, and augmented with temporally aligned audio tracks. 98.7% of augmented clips were verified within a 100 ms synchronization tolerance.",
+      "url": "https://huggingface.co/datasets/biubiu2/OpenX-Sound",
+      "sameAs": "https://huggingface.co/datasets/biubiu2/OpenX-Sound/tree/main",
+      "creator": [
+        {
+          "@id": "https://hear.irmv.top/#author-nie"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-deng"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-gwang"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-liu"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-hwang"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://hear.irmv.top/#paper"
+      },
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "keywords": [
+        "robot manipulation dataset",
+        "audio-visual-action pretraining",
+        "Open X-Embodiment",
+        "sound-centric manipulation",
+        "embodied AI dataset",
+        "机器人数据集",
+        "具身智能数据集"
+      ],
+      "variableMeasured": [
+        "multi-view RGB video",
+        "microphone audio",
+        "proprioception",
+        "joint-position actions",
+        "language instruction"
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://hear.irmv.top/#hearbench",
+      "name": "HEAR-Bench",
+      "alternateName": "HEAR-Bench: sound-centric manipulation benchmark",
+      "description": "A sound-enabled manipulation benchmark built on RoboTwin 2.0 with a streaming microphone channel and a sound-causal success rule that rejects visually plausible but acoustically premature actions. Seven simulation tasks span four categories of acoustic cues: event-triggered alarms (Alarm Clock, Microwave), human speech (Check Yes, Interrupt), continuous process sounds (Pour Water, Boil Water) and physical interaction feedback (Check Materials). All tasks are evaluated over 100 independent trials with randomized cue timing.",
+      "url": "https://github.com/IRMVLab/HEAR",
+      "creator": [
+        {
+          "@id": "https://hear.irmv.top/#author-nie"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-deng"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-gwang"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-liu"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-hwang"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://hear.irmv.top/#paper"
+      },
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "keywords": [
+        "robot manipulation benchmark",
+        "sound-centric benchmark",
+        "sound-causal evaluation",
+        "RoboTwin 2.0",
+        "simulation benchmark",
+        "机器人基准",
+        "具身智能评测"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://hear.irmv.top/#software",
+      "name": "HEAR code release",
+      "description": "Reference implementation of the HEAR framework: training and inference built on openpi, together with the HEAR-Bench implementation built on RoboTwin 2.0 and the audio assets used for event-conditioned playback.",
+      "codeRepository": "https://github.com/IRMVLab/HEAR",
+      "url": "https://github.com/IRMVLab/HEAR",
+      "programmingLanguage": [
+        "Python"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "author": [
+        {
+          "@id": "https://hear.irmv.top/#author-nie"
+        },
+        {
+          "@id": "https://hear.irmv.top/#author-deng"
+        }
+      ],
+      "targetProduct": {
+        "@id": "https://hear.irmv.top/#paper"
+      },
+      "keywords": [
+        "robot learning code",
+        "VLA training code",
+        "flow matching policy",
+        "RoboTwin 2.0",
+        "openpi"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://hear.irmv.top/#models",
+      "name": "HEAR pretrained model weights",
+      "description": "Pretrained checkpoints released with the HEAR framework: HEAR-Qwen3-Omni-30B-A3B-Instruct-Pruned (the multimodal Envisioner backbone), HEAR-Qwen3-0.6B (the low-level control model) and HEAR-mimi (the audio tokenizer).",
+      "codeRepository": "https://huggingface.co/biubiu2",
+      "url": "https://huggingface.co/biubiu2",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "targetProduct": {
+        "@id": "https://hear.irmv.top/#paper"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hear.irmv.top/#faq",
+      "isPartOf": {
+        "@id": "https://hear.irmv.top/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is HEAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HEAR is a robot manipulation framework that lets a policy use sound while it is acting. It is built on the Vision-Sound-Language-Action (VSLA) paradigm and combines four components: a Historizer that keeps a compact causal memory of streaming audio across execution gaps, an Envisioner that fuses vision, language, proprioception and audio into control-ready features, an Advancer that acts as an audio world model by predicting near-future audio codes during training, and a Realizer that generates smooth action chunks with conditional flow matching. HEAR is published in The International Journal of Robotics Research (IJRR)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Vision-Sound-Language-Action (VSLA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VSLA is a continuous control paradigm in which a robot policy is conditioned on vision, streaming audio, language and proprioception under delayed decision loops. Standard Vision-Language-Action (VLA) policies assume that task-relevant evidence is visually persistent, and they usually treat audio as a static pre-execution prompt or as speech understanding only. VSLA instead treats raw audio as a first-class, continuously streaming observation that must be preserved until the policy can act on it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Blind Execution Interval (BEI)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Blind Execution Interval is the gap created when a large VLA policy predicts a chunk of actions and executes them open-loop for smooth motion. During that interval new sensor observations cannot change the commands already being sent to the robot. For a brief sound such as a beep, click, rattle or collision, the event can occur and finish entirely inside the gap. On the authors' Franka Panda deployment the executed action-chunk interval is about 2.1 seconds and the effective BEI is about 2.3 seconds. The bottleneck is therefore not instantaneous preemption but evidence preservation: a short acoustic event must remain available at the first decision boundary after it happens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is HEAR different from audio-aware robot policies and ASR-based VLA models?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Automatic speech recognition transcribes speech into text, which discards non-speech cues and prosody. Waveform-as-image adapters render a short audio clip as a 2D plot and pass it as another camera view, which collapses a temporal signal into a static snapshot. Both are episodic: they describe sound heard before acting rather than sound heard while acting. HEAR encodes the raw 1D waveform, maintains causal audio memory across execution gaps, and is evaluated with a strict sound-causal success rule. On HEAR-Bench, HEAR reaches 81% average success versus 61% for the strongest waveform-adapter baseline, 35% for the strongest ASR baseline and 14% for the vision-only baseline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is HEAR-Bench?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HEAR-Bench is a sound-centric manipulation benchmark built on RoboTwin 2.0. It provides a streaming microphone channel and enforces a sound-causal success rule: if the robot reaches the geometric goal before the required acoustic cue has occurred, the trial is recorded as a failure. Seven tasks cover four cue categories — event-triggered alarms (Alarm Clock, Microwave), human speech (Check Yes, Interrupt), continuous process sounds (Pour Water, Boil Water) and physical interaction feedback (Check Materials). Cue timings and initial visual states are randomized and each task is evaluated over 100 independent trials."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OpenX-Sound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenX-Sound is an audio-augmented pretraining resource for VSLA learning. Selected Open X-Embodiment episodes keep their original multi-view RGB, language instructions, proprioception and expert actions, and gain a temporally aligned audio track. 98.7% of augmented clips were verified within a 100 ms synchronization tolerance. It is used as a robotics-specific audio-visual-action temporal-alignment stage rather than as a replacement for native robot audio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does HEAR relate to world models and World Action Models (WAM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HEAR's Advancer is formulated as an audio world model: it predicts near-future discrete audio codes from latent representations, which injects explicit temporal grounding into the policy and helps disambiguate long visually quasi-static waiting phases. It is a training-time objective and is removed at deployment, so HEAR couples predictive state modelling with action generation while keeping inference cost unchanged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What results does HEAR achieve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On HEAR-Bench, HEAR reaches 81% average sound-causal success across seven simulation tasks, compared with 61% for the strongest waveform-as-image VLA baseline, 35% for the strongest ASR baseline and 14% for the vision-only backbone. On a physical Franka Panda across four real-world tasks, HEAR reaches 70% average success under the calibrated acoustic and data setup used for the comparison, versus 45% for the strongest VLA adapter baseline; under a uniform, uncalibrated acoustic setup HEAR averages 54%. Ablations show the Historizer is the single most important module: removing it drops HEAR-Bench average success from 0.81 to 0.57."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the limitations of HEAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenX-Sound audio is synthesized from video using video-to-audio generation, so it can omit subtle contact cues, shift event timing or hallucinate sounds without a physical source; it is a bootstrapping mechanism for representation learning rather than a substitute for native robot audio. On the physical robot, the two hardest long-horizon tasks are strongly affected by acoustic capture quality and dialogue coverage. Long-horizon physical tasks remain system-level deployment challenges, motivating future work on acoustic sensing, source separation, recovery policies and longer-term memory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cite HEAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cite the article as: Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, 'Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation', The International Journal of Robotics Research, 2026. BibTeX key: nie2026visionsoundlanguageactionparadigmhearframework. arXiv:2603.16086."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hear.irmv.top/#author-nie",
+      "name": "Chang Nie",
+      "affiliation": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      },
+      "worksFor": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hear.irmv.top/#author-deng",
+      "name": "Tianchen Deng",
+      "affiliation": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      },
+      "worksFor": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hear.irmv.top/#author-gwang",
+      "name": "Guangming Wang",
+      "affiliation": {
+        "@id": "https://hear.irmv.top/#cambridge"
+      },
+      "worksFor": {
+        "@id": "https://hear.irmv.top/#cambridge"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hear.irmv.top/#author-liu",
+      "name": "Zhe Liu",
+      "affiliation": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      },
+      "worksFor": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hear.irmv.top/#author-hwang",
+      "name": "Hesheng Wang",
+      "affiliation": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      },
+      "worksFor": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      },
+      "email": "wanghesheng@sjtu.edu.cn"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://hear.irmv.top/#sjtu",
+      "name": "Shanghai Jiao Tong University",
+      "alternateName": "上海交通大学",
+      "url": "https://en.sjtu.edu.cn/",
+      "department": {
+        "@type": "Organization",
+        "name": "School of Automation and Intelligent Sensing / IRMV Lab",
+        "url": "https://irmv.sjtu.edu.cn/"
+      }
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://hear.irmv.top/#cambridge",
+      "name": "University of Cambridge",
+      "alternateName": "剑桥大学",
+      "url": "https://www.cam.ac.uk/",
+      "department": {
+        "@type": "Organization",
+        "name": "Department of Engineering"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://hear.irmv.top/#lab",
+      "name": "IRMV Lab",
+      "alternateName": "Intelligent Robotics and Machine Vision Lab, Shanghai Jiao Tong University",
+      "url": "https://irmv.sjtu.edu.cn/",
+      "parentOrganization": {
+        "@id": "https://hear.irmv.top/#sjtu"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://hear.irmv.top/#videos",
+      "name": "HEAR real-robot demonstration videos",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VideoObject",
+            "name": "HEAR real-robot Moka Coffee: listening for the sputtering phase",
+            "description": "A Franka Panda monitors the acoustics of an uninstrumented Moka pot and starts pouring only after the characteristic sputtering phase, a long-horizon sound-centric process monitoring task.",
+            "contentUrl": "https://hear.irmv.top/static/videos/moka_pot_all_web.mp4",
+            "thumbnailUrl": "https://hear.irmv.top/static/images/posters/moka-coffee.jpg",
+            "uploadDate": "2026-07-27",
+            "duration": "PT50S"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VideoObject",
+            "name": "HEAR real-robot Answer Phone: multi-stage speech and event tracking",
+            "description": "The robot waits for a ringtone, retrieves a handset, listens to a call and returns the phone after the end-of-call cue, under severe visual aliasing.",
+            "contentUrl": "https://hear.irmv.top/static/videos/telephone_all.mp4",
+            "thumbnailUrl": "https://hear.irmv.top/static/images/posters/answer-phone.jpg",
+            "uploadDate": "2026-07-27",
+            "duration": "PT41S"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VideoObject",
+            "name": "HEAR real-robot Shake Bottle (Empty): active acoustic sensing",
+            "description": "Hidden container state cannot be recovered passively; the policy generates a repeatable shaking motion and reads the resulting rattle.",
+            "contentUrl": "https://hear.irmv.top/static/videos/empty_all.mp4",
+            "thumbnailUrl": "https://hear.irmv.top/static/images/posters/shake-bottle-empty.jpg",
+            "uploadDate": "2026-07-27",
+            "duration": "PT32S"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "VideoObject",
+            "name": "HEAR real-robot Shake Bottle (Occupied): discriminating hidden physical state by sound",
+            "description": "The companion case showing the same active acoustic probing behaviour under a different hidden physical state.",
+            "contentUrl": "https://hear.irmv.top/static/videos/occupied_all.mp4",
+            "thumbnailUrl": "https://hear.irmv.top/static/images/posters/shake-bottle-occupied.jpg",
+            "uploadDate": "2026-07-27",
+            "duration": "PT32S"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "VideoObject",
+            "name": "HEAR real-robot Real Alarm Clock: sound-causal waiting under domain shift",
+            "description": "The simulated alarm task transferred to the physical world, where reverberation and background chatter distort the cue.",
+            "contentUrl": "https://hear.irmv.top/static/videos/alarm_all.mp4",
+            "thumbnailUrl": "https://hear.irmv.top/static/images/posters/real-alarm-clock.jpg",
+            "uploadDate": "2026-07-27",
+            "duration": "PT31S"
+          }
+        }
+      ]
     }
-  }
+  ]
+}
   </script>
 </head>
 <body>
@@ -215,6 +1375,12 @@
                     <span>Dataset</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="zh/" hreflang="zh-Hans" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-language"></i></span>
+                    <span>中文</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -239,6 +1405,7 @@
             The problem is not just adding one more modality, but dealing with the fact that audio is distributed over time very differently from vision.
           </p>
           <p>
+            In the wider framing of embodied AI and physical AI, hearing is the modality that tells an agent <i>when</i> something happened, not only <i>where</i> it is.
             Existing ways of attaching sound to VLA are often too static for this setting.
             Automatic speech recognition throws away non-speech cues and prosody, while waveform-as-image adapters flatten a temporal signal into a single visual snapshot.
             Both approaches become brittle when the cue is brief, when the cue happens between two policy queries, or when the task depends on how sound evolves rather than on one isolated event.
@@ -385,6 +1552,7 @@
           <div class="content has-text-justified">
             <p>
               The <b>Advancer</b> predicts near-future audio codes from latent representations.
+              It is formulated as an <b>audio world model</b>: rather than learning only a reactive mapping from observation to action, it learns how the acoustic scene is expected to evolve.
               This auxiliary objective injects explicit temporal grounding, helping the policy disambiguate long quasi-static waiting phases.
             </p>
             <p>
@@ -598,7 +1766,13 @@
         This project page uses no analytics, cookies, or third-party embeds.
         Images and videos are served by this site, and external resources are opened only after you select a link.
       </p>
-      <p class="footer-update">Updated July 2026 following acceptance at IJRR.</p>
+      <p>
+        Machine-readable entry points for search engines and AI systems:
+        <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a> ·
+        <a href="/index.md">index.md</a> · <a href="/sitemap.xml">sitemap.xml</a> ·
+        <a href="/robots.txt">robots.txt</a> · <a href="zh/" hreflang="zh-Hans">中文版</a>
+      </p>
+      <p class="footer-update">Updated September 2026 following acceptance at IJRR.</p>
     </div>
   </footer>
 </body>
