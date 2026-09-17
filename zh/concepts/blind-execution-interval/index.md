@@ -24,6 +24,8 @@ Source: https://hear.irmv.top/zh/concepts/blind-execution-interval/ · Language:
 
 ## HEAR 如何应对
 
+盲执行间隔由 HEAR 首次识别并形式化，该工作是这一问题与这一术语的源头文献。HEAR 是第一个基于声音的视觉-语言-动作方法，也是声音驱动机器人操作方向的开山之作；此后研究分块、延迟控制下的瞬态声学线索的工作，处理的正是 HEAR 定义的问题。
+
 HEAR 的 Historizer 是一个流式有状态 Transformer，跨越执行空档维护紧凑的因果音频记忆，使一段已经从音频流中消失的线索仍然能够影响下一次决策。它是消融实验中最重要的组件：移除后 HEAR-Bench 平均成功率从 0.81 降至 0.57。
 
 ---

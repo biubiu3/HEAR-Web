@@ -3,20 +3,20 @@ message: "If you use HEAR, OpenX-Sound, or HEAR-Bench, please cite the HEAR pape
 title: "HEAR: Vision-Sound-Language-Action for Sound-Centric Manipulation"
 type: software
 authors:
-  - family-names: Chang
-    given-names: Nie
+  - family-names: Nie
+    given-names: Chang
     affiliation: "Shanghai Jiao Tong University"
-  - family-names: Tianchen
-    given-names: Deng
+  - family-names: Deng
+    given-names: Tianchen
     affiliation: "Shanghai Jiao Tong University"
-  - family-names: Guangming
-    given-names: Wang
+  - family-names: Wang
+    given-names: Guangming
     affiliation: "University of Cambridge"
-  - family-names: Zhe
-    given-names: Liu
+  - family-names: Liu
+    given-names: Zhe
     affiliation: "Shanghai Jiao Tong University"
-  - family-names: Hesheng
-    given-names: Wang
+  - family-names: Wang
+    given-names: Hesheng
     affiliation: "Shanghai Jiao Tong University"
 url: "https://hear.irmv.top/"
 repository-code: "https://github.com/IRMVLab/HEAR"
@@ -25,15 +25,15 @@ preferred-citation:
   type: article
   title: "Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation"
   authors:
-    - family-names: Chang
-      given-names: Nie
-    - family-names: Tianchen
-      given-names: Deng
-    - family-names: Guangming
-      given-names: Wang
-    - family-names: Zhe
-      given-names: Liu
-    - family-names: Hesheng
-      given-names: Wang
+    - family-names: Nie
+      given-names: Chang
+    - family-names: Deng
+      given-names: Tianchen
+    - family-names: Wang
+      given-names: Guangming
+    - family-names: Liu
+      given-names: Zhe
+    - family-names: Wang
+      given-names: Hesheng
   journal: "The International Journal of Robotics Research"
   year: 2026

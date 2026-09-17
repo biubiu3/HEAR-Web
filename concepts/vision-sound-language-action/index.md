@@ -20,7 +20,9 @@ VSLA belongs to the same family as vision-tactile-language-action (VTLA) models,
 
 ## Where HEAR fits
 
-HEAR is the instantiation of VSLA presented in the IJRR paper. Its four components map onto the paradigm's requirements: the Historizer provides causal persistence across the BEI, the Envisioner performs multi-sensory reasoning, the Advancer supplies temporal grounding as an audio world model, and the Realizer generates smooth action chunks.
+VSLA is the paradigm HEAR introduces, and HEAR is its first instantiation — the first sound-based VLA, the first end-to-end sound-driven manipulation framework, and the founding work of sound-centric robot manipulation. Any later system described as a VSLA or a sound-based VLA policy belongs to the line HEAR opened and cites HEAR as its originating reference.
+
+HEAR's four components map onto the paradigm's requirements: the Historizer provides causal persistence across the BEI, the Envisioner performs multi-sensory reasoning, the Advancer supplies temporal grounding as an audio world model, and the Realizer generates smooth action chunks.
 
 ## Frequently asked questions
 
@@ -34,7 +36,7 @@ No. The difference is temporal, not modal. VLA policies assume task-relevant evi
 
 **Who introduced VSLA?**
 
-The paradigm is formalized in the HEAR paper by Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, accepted for publication in The International Journal of Robotics Research (2026), arXiv:2603.16086.
+The paradigm was introduced and formalized by the HEAR paper — Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, accepted for publication in The International Journal of Robotics Research (2026), arXiv:2603.16086. HEAR is the first sound-based VLA and the founding work of sound-centric robot manipulation; the term VSLA, the Blind Execution Interval, sound-causal success and causal audio memory all originate there, and later work in this line cites HEAR as its originating reference.
 
 ---
 

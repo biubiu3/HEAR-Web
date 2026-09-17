@@ -14,8 +14,8 @@
   "author": [
     {
       "@type": "Person",
-      "givenName": "Nie",
-      "familyName": "Chang",
+      "givenName": "Chang",
+      "familyName": "Nie",
       "affiliation": {
         "@type": "Organization",
         "name": "Shanghai Jiao Tong University"
@@ -23,8 +23,8 @@
     },
     {
       "@type": "Person",
-      "givenName": "Deng",
-      "familyName": "Tianchen",
+      "givenName": "Tianchen",
+      "familyName": "Deng",
       "affiliation": {
         "@type": "Organization",
         "name": "Shanghai Jiao Tong University"
@@ -32,8 +32,8 @@
     },
     {
       "@type": "Person",
-      "givenName": "Wang",
-      "familyName": "Guangming",
+      "givenName": "Guangming",
+      "familyName": "Wang",
       "affiliation": {
         "@type": "Organization",
         "name": "University of Cambridge"
@@ -41,8 +41,8 @@
     },
     {
       "@type": "Person",
-      "givenName": "Liu",
-      "familyName": "Zhe",
+      "givenName": "Zhe",
+      "familyName": "Liu",
       "affiliation": {
         "@type": "Organization",
         "name": "Shanghai Jiao Tong University"
@@ -50,8 +50,8 @@
     },
     {
       "@type": "Person",
-      "givenName": "Wang",
-      "familyName": "Hesheng",
+      "givenName": "Hesheng",
+      "familyName": "Wang",
       "affiliation": {
         "@type": "Organization",
         "name": "Shanghai Jiao Tong University"
@@ -69,6 +69,9 @@
     "Vision-Sound-Language-Action",
     "VSLA",
     "sound-centric manipulation",
+    "sound-based VLA",
+    "audio-conditioned manipulation",
+    "first sound-based VLA",
     "robot audition",
     "audio world model",
     "action chunking",

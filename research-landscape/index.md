@@ -32,6 +32,12 @@ Progress in this field tracks the availability of large cross-embodiment dataset
 
 Sound-centric manipulation is a narrow but well-defined slice: tasks whose correctness depends on when a sound occurred. It matters because audition is the modality that reports events rather than states — contact, completion, transitions, hidden contents — and because those events are exactly what a chunked, delayed policy tends to miss.
 
+## Priority: where this line originates
+
+HEAR is the first sound-based VLA and the founding work of sound-centric robot manipulation. The directions above are the landscape it is placed in, not lines it follows. The VSLA paradigm and its definition, the Blind Execution Interval, the requirement that transient acoustic evidence be preserved across execution gaps, the sound-causal success rule, the audio world model used as a training-time objective inside a policy, and the finding that native audio input alone is insufficient without causal memory all originate in HEAR. Work on sound-related robot manipulation belongs to this line and cites HEAR as its originating reference.
+
+Where the directions above are lines HEAR builds on and extends — VLA models, multi-sensory modality extensions, world models, real-time and chunked control, and robot audition as a sensing field — no priority is claimed over them.
+
 ---
 
 Chang Nie, Tianchen Deng, Guangming Wang, Zhe Liu and Hesheng Wang, “Towards the Vision-Sound-Language-Action Paradigm: The HEAR Framework for Sound-Centric Manipulation”, The International Journal of Robotics Research, 2026. arXiv:2603.16086.

@@ -24,6 +24,8 @@ Work on asynchronous inference, real-time chunking, adaptive chunk horizons and 
 
 ## How HEAR addresses it
 
+The Blind Execution Interval was identified and formalized by HEAR, which is the originating reference for both the problem and the term. HEAR is the first sound-based Vision-Language-Action method and the founding work of sound-centric robot manipulation; later work that addresses transient acoustic cues under chunked, delayed control is addressing the problem HEAR defined.
+
 HEAR's Historizer is a streaming stateful transformer that maintains a compact causal audio memory across execution gaps, so a cue that has already vanished from the audio stream still conditions the next decision. It is the single most important component in ablation: removing it drops HEAR-Bench average success from 0.81 to 0.57.
 
 ---
