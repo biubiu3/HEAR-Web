@@ -164,8 +164,9 @@ videos:
     file: "moka_pot_all_web.mp4"
     poster: "moka-coffee.jpg"
     caption: "moka-coffee.en.vtt"
-    duration: 50
-    duration_iso: "PT50S"
+    duration: 42
+    duration_iso: "PT42S"
+    version: "54b44d6"
     date: "2026-07-27"
     what: "Long-horizon sound-centric process monitoring: the robot must detect the transition into the sputtering phase before pouring."
     why: "A traditional Moka pot offers almost no clean visual completion signal, so progress must be inferred from sound."

@@ -537,7 +537,8 @@ def build_video_pages():
             f'<figure class="image figure-panel">'
             f'<video controls playsinline preload="metadata" '
             f'poster="{prefix_for(url_path)}static/images/posters/{v["poster"]}" width="1280" height="720">'
-            f'<source src="{prefix_for(url_path)}static/videos/{v["file"]}" type="video/mp4">'
+            f'<source src="{prefix_for(url_path)}static/videos/{v["file"]}'
+            f'{"?v=" + v["version"] if v.get("version") else ""}" type="video/mp4">'
             f'<track kind="captions" src="{prefix_for(url_path)}static/captions/{v["caption"]}" srclang="en" label="English">'
             f"</video></figure>"
         )
